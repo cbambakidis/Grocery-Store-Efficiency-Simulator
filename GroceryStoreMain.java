@@ -28,26 +28,23 @@ public class GroceryStoreMain {
         checkoutCenter.add(lane5);
         checkoutCenter.add(lane6);
         PriorityQueue<Event> events = new PriorityQueue<Event>(500, new EventComparator());
-        ArrayList<Customer> customers = readCustomerList("C:/Users/Costa Bambakidis/Downloads/Project 3 data/Project 3 data/arrivalSimple.txt", events, checkoutCenter);
+        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutCenter);
         Collections.sort(customers, new timeComparator());
         double time = 0;
         while (events.peek() != null) {
             for (int i = 0; i < customers.size(); i++) {
-                time = customers.get(i).getArrivalTime();
                 for (int g = 0; g < checkoutCenter.size(); g++) {
+                    time = events.peek().timeOfOccurence;
                     Collections.sort(checkoutCenter, new LineComparator()); // inside each step.
+                    System.out.println(time);
                     checkoutCenter.get(g).update(time);
                     if (events.peek() != null) {
                         events.poll().execute();
                     } else
                         return;
                 }
-            }
+            } // Checkoutevent is not being added to queue.
         }
-
-        // CheckedOut event is scheduled/added to eventlist based on time returned after
-        // adding customer to queue.
-        //
 
     }
 
