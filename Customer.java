@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Queue;
 
-public class Customer implements Comparable{
+public class Customer implements Comparable {
     // calculate shopping time here.
     double arrivalTime;
     ArrivalEvent myArrivalEvent;
@@ -12,17 +12,23 @@ public class Customer implements Comparable{
     int myCustomerNumber;
     double shoppingSpeed;
     double timeBeforeCheckout;
+    double timeToWait;
     double totalTimeInStore;
+    boolean isElgibleForExpress = false;
 
-    public Customer(double arrivalTime, int shoppingList, double shoppingSpeed, int customerNumber, Queue<Event> eventQ, ArrayList<NormalLane> options) {
+    public Customer(double arrivalTime, int shoppingList, double shoppingSpeed, int customerNumber, Queue<Event> eventQ,
+            checkoutCenter FUCK) {
         this.arrivalTime = arrivalTime;
         this.shoppingList = shoppingList;
         this.shoppingSpeed = shoppingSpeed;
         timeBeforeCheckout = shoppingList * shoppingSpeed;
-        myCustomerNumber = customerNumber; //Based on order in txt file list of customers.
+        myCustomerNumber = customerNumber; // Based on order in txt file list of customers.
         myArrivalEvent = new ArrivalEvent(this);
-        myDoneShoppingEvent = new DoneShoppingEvent(this, options);
+        myDoneShoppingEvent = new DoneShoppingEvent(this, FUCK);
         d = eventQ;
+        if (shoppingList < 10) {
+            isElgibleForExpress = true;
+        }
         d.offer(myArrivalEvent);
         d.offer(scheduleDoneShoppingEvent());
     }
@@ -42,12 +48,13 @@ public class Customer implements Comparable{
     public double getShoppingSpeed() {
         return shoppingSpeed;
     }
-    public void scheduleCheckoutEvent(double x){
+
+    public void scheduleCheckoutEvent(double x) {
         CheckedOutEvent checkoutTime = new CheckedOutEvent(this, x);
         d.add(checkoutTime);
-        //Check how long it will take for the given customer to be checked out. make new
-        //checkout event with timeofoccurence calculated to be added to eventqueue. 
+        System.out.println("checkoutEvent added.");
     }
+
     public Event scheduleDoneShoppingEvent() {
         return myDoneShoppingEvent;
     }

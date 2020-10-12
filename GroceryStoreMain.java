@@ -13,42 +13,48 @@ public class GroceryStoreMain {
         // Arraylist of objects -> Priorityqueue based on time in.
         // will update queues/checkout ques based on in gmae time derived from next
         // customer object.
-        ExpressLane lane1 = new ExpressLane();
-        NormalLane lane2 = new NormalLane();
-        ExpressLane lane3 = new ExpressLane();
-        NormalLane lane4 = new NormalLane();
-        ExpressLane lane5 = new ExpressLane();
-        NormalLane lane6 = new NormalLane();
-        ArrayList<NormalLane> checkoutCenter = new ArrayList<NormalLane>();
-        Collections.sort(checkoutCenter, new LineComparator()); // inside each step.
-        checkoutCenter.add(lane1);
-        checkoutCenter.add(lane2);
-        checkoutCenter.add(lane3);
-        checkoutCenter.add(lane4);
-        checkoutCenter.add(lane5);
-        checkoutCenter.add(lane6);
+        //
+
+        checkoutCenter FUCK = new checkoutCenter();
         PriorityQueue<Event> events = new PriorityQueue<Event>(500, new EventComparator());
-        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutCenter);
+        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, FUCK);
         Collections.sort(customers, new timeComparator());
-        double time = 0;
-        while (events.peek() != null) {
-            for (int i = 0; i < customers.size(); i++) {
-                for (int g = 0; g < checkoutCenter.size(); g++) {
-                    time = events.peek().timeOfOccurence;
-                    Collections.sort(checkoutCenter, new LineComparator()); // inside each step.
-                    System.out.println(time);
-                    checkoutCenter.get(g).update(time);
-                    if (events.peek() != null) {
-                        events.poll().execute();
-                    } else
-                        return;
-                }
-            } // Checkoutevent is not being added to queue.
+
+        while(events.peek() != null){
+        double time = events.peek().timeOfOccurence;
+        Collections.sort(FUCK, new LineComparator());
+        events.peek().execute();
+        events.poll();
+        FUCK.update(time);
+        System.out.println("Time: " + time);
+        System.out.println(events);
+        //update
+        //peek and pop current event.
         }
+
+        double time = 0;
+        // while (events.peek() != null) {
+        //     for (int i = 0; i < customers.size(); i++) {
+        //         for (int g = 0; g < checkoutCenter.size(); g++) {
+        //             if(events.peek() != null){
+        //             time = events.peek().timeOfOccurence;
+        //             }
+        //             else break;
+        //             Collections.sort(checkoutCenter, new LineComparator()); // inside each step.
+        //             System.out.println(time);
+        //             checkoutCenter.get(g).update(time);
+        //             if (events.peek() != null) {
+        //                 events.poll().execute();
+        //             } else
+        //                 return;
+        //         }
+        //     } // Checkoutevent is not being added to queue.
+        // }
+
 
     }
 
-    public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> x, ArrayList<NormalLane> d)
+    public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> x,  checkoutCenter FUCK)
             throws IOException {
         FileReader reader = new FileReader(fileName);
         Scanner fileScanner = new Scanner(reader);
@@ -58,7 +64,7 @@ public class GroceryStoreMain {
             double arrival = fileScanner.nextDouble();
             int itemsList = fileScanner.nextInt();
             double shoppingSpeed = fileScanner.nextDouble();
-            Customer newCusty = new Customer(arrival, itemsList, shoppingSpeed, count, x, d);
+            Customer newCusty = new Customer(arrival, itemsList, shoppingSpeed, count, x, FUCK);
             CustomerList.add(newCusty);
             count++;
         }

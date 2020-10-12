@@ -7,32 +7,32 @@ public class DoneShoppingEvent extends Event {
     Customer n;
     boolean isElgibleForExpress;
     ArrayList<NormalLane> options;
-
-    public DoneShoppingEvent(Customer x, ArrayList<NormalLane> options) {
+    checkoutCenter f;
+    public DoneShoppingEvent(Customer x, checkoutCenter L) {
         doneShoppingTime = x.timeBeforeCheckout;
         super.timeOfOccurence = x.timeBeforeCheckout + x.arrivalTime;
         this.timeOfOccurence = x.timeBeforeCheckout + x.arrivalTime;
-        this.options = options;
+        f = L;
         n = x;
         if (x.shoppingList < 10) {
-            isElgibleForExpress = false;
+            isElgibleForExpress = true;
         }
     }
 
     public void execute() {
+        f.addCustomerToALane(n);
         System.out.println(timeOfOccurence + ": Finished shopping customer " + n.myCustomerNumber);
-        if (this.isElgibleForExpress) {
-            options.get(0).addCustomerToCheckoutLine(n);
-            // code to sort through queues and sort self into one with least people.
-        } else {
-            for (int i = 0; i < options.size(); i++) {
-                if (options.get(i).type == "Normal") {
-                    options.get(i).addCustomerToCheckoutLine(n);
-
-                    break;
-                }
-            }
-        }
+        // if (this.isElgibleForExpress) {
+        //     options.get(0).addCustomerToCheckoutLine(n);
+        //     // code to sort through queues and sort self into one with least people.
+        // } else {
+        //     for (int i = 0; i < options.size(); i++) {
+        //         if (options.get(i).type == "Normal") {
+        //             options.get(i).addCustomerToCheckoutLine(n);
+        //             break;
+        //         }
+        //     }
+        // }
     }
 
 }
