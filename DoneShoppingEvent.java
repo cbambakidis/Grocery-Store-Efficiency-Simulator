@@ -4,39 +4,22 @@ public class DoneShoppingEvent extends Event {
 
     private double doneShoppingTime;
     double timeOfOccurence;
-    Customer n;
+    Customer associatedCustomer;
     boolean isElgibleForExpress;
     ArrayList<NormalLane> options;
-    checkoutCenter f;
-    public DoneShoppingEvent(Customer x, checkoutCenter L) {
-        doneShoppingTime = x.timeBeforeCheckout;
-        super.timeOfOccurence = x.timeBeforeCheckout + x.arrivalTime;
-        this.timeOfOccurence = x.timeBeforeCheckout + x.arrivalTime;
-        f = L;
-        n = x;
-        if (x.shoppingList < 10) {
+    checkoutCenter checkoutLanes;
+    public DoneShoppingEvent(Customer C, checkoutCenter checkoutLanes) {
+        doneShoppingTime = C.getTimeBeforeCheckout();
+        this.timeOfOccurence = C.getTimeBeforeCheckout() + C.arrivalTime;
+        this.checkoutLanes = checkoutLanes;
+        associatedCustomer = C;
+        if (C.getShoppingList() < 10) {
             isElgibleForExpress = true;
         }
     }
 
     public void execute() {
-        f.addCustomerToALane(n);
+        checkoutLanes.addCustomerToALane(associatedCustomer);
     }
 
 }
-
-// 12 queues that represent checkout lines?
-// .update() class that updates all queues in the class.
-// ArrivalEvent
-// ShoppingEvent
-// CheckoutEvent
-// Add to checkout queue based on # of items and lanes open.
-//
-// each event will be derived from the customer objects, then each event object
-// will be added to a list in main and used to update time.
-// event type: arrival, endshopping (setcehckoutlane), endCheckout,
-// this class will define the checkout times and stuff it takes per customer.
-// type: exepress or regular.
-// Methods for each event.
-// prints when customer is added or removed (leaves store/enters line when
-// finished shopping.)

@@ -10,6 +10,5 @@ public class ExpressLane extends NormalLane {
 
     public void addCustomerToCheckoutLine(Customer c) {
         this.offer(c);
-        // Adds the provided customer to this queue, schedules checkout event?
     }
 }

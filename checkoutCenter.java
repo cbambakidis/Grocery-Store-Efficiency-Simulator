@@ -20,16 +20,23 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
     }
 
     public checkoutCenter(int numberOfNormalLanes, int numberOfExpressLanes) {
-
+        for(int a=0; a<numberOfExpressLanes; a++){
+            NormalLane normalCheckoutLane = new NormalLane();
+            this.add(normalCheckoutLane);
+        }
+        for(int b=0; b<numberOfExpressLanes; b++){
+            ExpressLane expressCheckoutLane = new ExpressLane();
+            this.add(expressCheckoutLane);
+        }
     }
 
     public void update(double time) {
         Collections.sort(this, new LineComparator());
         for (int i = 0; i < this.size(); i++) {
             if (this.get(i).peek() != null) {
-                this.get(i).currentWaitTime = this.get(i).peek().shoppingList * this.get(i).checkoutRate
+                this.get(i).currentWaitTime = this.get(i).peek().getShoppingList() * this.get(i).checkoutRate
                         + this.get(i).paymentTime;
-                    System.out.println("Passed statement 1: Customer " + this.get(i).peek().myCustomerNumber + " added to lane " + i + ". Current wait time " + this.get(i).currentWaitTime);
+                    System.out.println("Customer " + this.get(i).peek().getCustomerNumber() + " is ready to checkout. Added to lane " + i + ". Current wait time " + this.get(i).currentWaitTime);
                         this.get(i).peek().scheduleCheckoutEvent(time + this.get(i).currentWaitTime);
                         this.get(i).poll();
                     }
@@ -44,7 +51,7 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
 
     public void addCustomerToALane(Customer C) {
         //Print stats on which lane it's being added to, and wait time.
-        if (C.isElgibleForExpress) {
+        if (C.getExpressElgibility() == true) {
             this.get(0).addCustomerToCheckoutLine(C);
         } else {
             for (int i = 0; i < this.size(); i++) {

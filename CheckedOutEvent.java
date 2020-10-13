@@ -6,11 +6,10 @@ public class CheckedOutEvent extends Event {
         thisCustomer = custy;
         timeCheckoutOccurs = time;
         super.timeOfOccurence = timeCheckoutOccurs;
-        System.out.println(timeOfOccurence + "Checkout event constructed.");
     }
 
     public void execute() {
-        System.out.println(timeOfOccurence + ": Customer " + thisCustomer.myCustomerNumber
+        System.out.println(timeOfOccurence + ": Customer " + thisCustomer.getCustomerNumber()
                 + " has checked out and left the store.");
     }
 

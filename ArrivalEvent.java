@@ -1,11 +1,12 @@
 public class ArrivalEvent extends Event{
     double timeOfOccurence;
-    public ArrivalEvent(Customer c){
-        this.timeOfOccurence = c.getArrivalTime();
-        System.out.println(timeOfOccurence + ": Arrival Customer " + c.myCustomerNumber);
-
+    Customer AssociatedCustomer;
+    public ArrivalEvent(Customer C){
+        this.timeOfOccurence = C.getArrivalTime();
+        AssociatedCustomer = C;
     }
-    public void execute(){        
+    public void execute(){ 
+        System.out.println(timeOfOccurence + ": Arrival Customer " + AssociatedCustomer.getCustomerNumber());
     }
         
     }
