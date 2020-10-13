@@ -16,7 +16,7 @@ public class GroceryStoreMain {
         //
 
         checkoutCenter FUCK = new checkoutCenter();
-        PriorityQueue<Event> events = new PriorityQueue<Event>(500, new EventComparator());
+        PriorityQueue<Event> events = new PriorityQueue<Event>(10, new EventComparator());
         ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, FUCK);
         Collections.sort(customers, new timeComparator());
 
@@ -27,29 +27,9 @@ public class GroceryStoreMain {
         events.poll();
         FUCK.update(time);
         System.out.println("Time: " + time);
-        System.out.println(events);
-        //update
-        //peek and pop current event.
         }
 
         double time = 0;
-        // while (events.peek() != null) {
-        //     for (int i = 0; i < customers.size(); i++) {
-        //         for (int g = 0; g < checkoutCenter.size(); g++) {
-        //             if(events.peek() != null){
-        //             time = events.peek().timeOfOccurence;
-        //             }
-        //             else break;
-        //             Collections.sort(checkoutCenter, new LineComparator()); // inside each step.
-        //             System.out.println(time);
-        //             checkoutCenter.get(g).update(time);
-        //             if (events.peek() != null) {
-        //                 events.poll().execute();
-        //             } else
-        //                 return;
-        //         }
-        //     } // Checkoutevent is not being added to queue.
-        // }
 
 
     }

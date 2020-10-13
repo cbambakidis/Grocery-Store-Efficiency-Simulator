@@ -6,8 +6,7 @@ public class Customer implements Comparable {
     double arrivalTime;
     ArrivalEvent myArrivalEvent;
     DoneShoppingEvent myDoneShoppingEvent;
-    CheckedOutEvent myCheckoutEvent;
-    Queue d;
+    Queue<Event> orderOfEvents;
     int shoppingList;
     int myCustomerNumber;
     double shoppingSpeed;
@@ -16,21 +15,21 @@ public class Customer implements Comparable {
     double totalTimeInStore;
     boolean isElgibleForExpress = false;
 
-    public Customer(double arrivalTime, int shoppingList, double shoppingSpeed, int customerNumber, Queue<Event> eventQ,
+    public Customer(double arrivalTime, int shoppingListSize, double shoppingSpeed, int customerNumber, Queue<Event> eventQ,
             checkoutCenter FUCK) {
         this.arrivalTime = arrivalTime;
-        this.shoppingList = shoppingList;
+        this.shoppingList = shoppingListSize;
         this.shoppingSpeed = shoppingSpeed;
-        timeBeforeCheckout = shoppingList * shoppingSpeed;
+        timeBeforeCheckout = shoppingListSize * shoppingSpeed;
         myCustomerNumber = customerNumber; // Based on order in txt file list of customers.
         myArrivalEvent = new ArrivalEvent(this);
         myDoneShoppingEvent = new DoneShoppingEvent(this, FUCK);
-        d = eventQ;
-        if (shoppingList < 10) {
+        orderOfEvents = eventQ;
+        if (shoppingListSize < 10) {
             isElgibleForExpress = true;
         }
-        d.offer(myArrivalEvent);
-        d.offer(scheduleDoneShoppingEvent());
+        orderOfEvents.offer(myArrivalEvent);
+        orderOfEvents.offer(scheduleDoneShoppingEvent());
     }
 
     public void setTotalTimeInStore(int timeWaitingInLine) {
@@ -51,8 +50,7 @@ public class Customer implements Comparable {
 
     public void scheduleCheckoutEvent(double x) {
         CheckedOutEvent checkoutTime = new CheckedOutEvent(this, x);
-        d.add(checkoutTime);
-        System.out.println("checkoutEvent added.");
+        orderOfEvents.add(checkoutTime);
     }
 
     public Event scheduleDoneShoppingEvent() {

@@ -26,24 +26,24 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
     public void update(double time) {
         Collections.sort(this, new LineComparator());
         for (int i = 0; i < this.size(); i++) {
-
             if (this.get(i).peek() != null) {
                 this.get(i).currentWaitTime = this.get(i).peek().shoppingList * this.get(i).checkoutRate
                         + this.get(i).paymentTime;
-            }
+                    System.out.println("Passed statement 1: Customer " + this.get(i).peek().myCustomerNumber + " added to lane " + i + ". Current wait time " + this.get(i).currentWaitTime);
+                        this.get(i).peek().scheduleCheckoutEvent(time + this.get(i).currentWaitTime);
+                        this.get(i).poll();
+                    }
+                    
 
             else {
                 this.get(i).currentWaitTime = 0;
             }
 
-            if (this.get(i).currentWaitTime >= time) {
-                this.get(i).peek().scheduleCheckoutEvent(time + this.get(i).currentWaitTime);
-                this.get(i).poll();
-            }
         }
     }
 
     public void addCustomerToALane(Customer C) {
+        //Print stats on which lane it's being added to, and wait time.
         if (C.isElgibleForExpress) {
             this.get(0).addCustomerToCheckoutLine(C);
         } else {

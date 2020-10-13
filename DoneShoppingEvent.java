@@ -21,18 +21,6 @@ public class DoneShoppingEvent extends Event {
 
     public void execute() {
         f.addCustomerToALane(n);
-        System.out.println(timeOfOccurence + ": Finished shopping customer " + n.myCustomerNumber);
-        // if (this.isElgibleForExpress) {
-        //     options.get(0).addCustomerToCheckoutLine(n);
-        //     // code to sort through queues and sort self into one with least people.
-        // } else {
-        //     for (int i = 0; i < options.size(); i++) {
-        //         if (options.get(i).type == "Normal") {
-        //             options.get(i).addCustomerToCheckoutLine(n);
-        //             break;
-        //         }
-        //     }
-        // }
     }
 
 }
