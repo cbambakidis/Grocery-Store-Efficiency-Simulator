@@ -9,9 +9,9 @@ import java.util.Collections;
 public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
 
-        checkoutCenter checkoutLanes = new checkoutCenter();
+        checkoutCenter checkoutLanes = new checkoutCenter(4, 2);
         PriorityQueue<Event> events = new PriorityQueue<Event>(10, new EventComparator());
-        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
+        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
         Collections.sort(customers, new timeComparator());
 
         while (events.peek() != null) {
@@ -23,7 +23,9 @@ public class GroceryStoreMain {
         }
 
     }
-
+    /*
+        To fix: fix checkout area scheduling checkout events. The time is not being processed correctly.
+    */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {
         FileReader reader = new FileReader(fileName);

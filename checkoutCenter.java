@@ -37,7 +37,7 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
                 this.get(i).currentWaitTime = this.get(i).peek().getShoppingList() * this.get(i).checkoutRate
                         + this.get(i).paymentTime;
                     System.out.println("Customer " + this.get(i).peek().getCustomerNumber() + " is ready to checkout. Added to lane " + i + ". Current wait time " + this.get(i).currentWaitTime);
-                        this.get(i).peek().scheduleCheckoutEvent(time + this.get(i).currentWaitTime);
+                        this.get(i).peek().scheduleCheckoutEvent(this.get(i).currentWaitTime);
                         this.get(i).poll();
                     }
                     

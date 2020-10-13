@@ -4,7 +4,7 @@ public class DoneShoppingEvent extends Event {
 
     private double doneShoppingTime;
     double timeOfOccurence;
-    Customer associatedCustomer;
+    Customer thisCustomer;
     boolean isElgibleForExpress;
     ArrayList<NormalLane> options;
     checkoutCenter checkoutLanes;
@@ -12,14 +12,15 @@ public class DoneShoppingEvent extends Event {
         doneShoppingTime = C.getTimeBeforeCheckout();
         this.timeOfOccurence = C.getTimeBeforeCheckout() + C.arrivalTime;
         this.checkoutLanes = checkoutLanes;
-        associatedCustomer = C;
+        thisCustomer = C;
+        super.C = thisCustomer;
         if (C.getShoppingList() < 10) {
             isElgibleForExpress = true;
         }
     }
 
     public void execute() {
-        checkoutLanes.addCustomerToALane(associatedCustomer);
+        checkoutLanes.addCustomerToALane(thisCustomer);
     }
 
 }
