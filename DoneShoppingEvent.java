@@ -1,13 +1,18 @@
 import java.util.ArrayList;
 
+/*
+ * The DoneShopping event is what is created when the customer finishes shopping.
+ * It adds the customer to the checkout center when it executes. It also determines if the
+ * Customer can use the express lane.
+*/
 public class DoneShoppingEvent extends Event {
-
     private double doneShoppingTime;
     double timeOfOccurence;
     Customer thisCustomer;
     boolean isElgibleForExpress;
-    ArrayList<NormalLane> options;
+    ArrayList<Lane> options;
     checkoutCenter checkoutLanes;
+
     public DoneShoppingEvent(Customer C, checkoutCenter checkoutLanes) {
         doneShoppingTime = C.getTimeBeforeCheckout();
         this.timeOfOccurence = C.getTimeBeforeCheckout() + C.arrivalTime;

@@ -1,7 +1,10 @@
+/*
+ * The CheckedOut event is the final event for the customer. The time of occurence depends on how long
+ * they waited in line. 
+*/
 public class CheckedOutEvent extends Event {
     double timeCheckoutOccurs;
     Customer thisCustomer;
-
     public CheckedOutEvent(Customer custy, double time) {
         thisCustomer = custy;
         timeCheckoutOccurs = time;

@@ -1,46 +1,48 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<NormalLane> {
+/*
+ * The checkout center represents all the checkout lanes in the store.
+ * Making this class lets me update the status of each lane easier from the main method.
+ * This class creates the desired amount of regular and express lanes, and updates them given a time from 
+ * the main method.
+*/
+public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> {
     private static final long serialVersionUID = 1L;
 
     public checkoutCenter() {
-        ExpressLane lane1 = new ExpressLane();
-        NormalLane lane2 = new NormalLane();
-        ExpressLane lane3 = new ExpressLane();
-        NormalLane lane4 = new NormalLane();
-        ExpressLane lane5 = new ExpressLane();
-        NormalLane lane6 = new NormalLane();
-        this.add(lane1);
-        this.add(lane2);
-        this.add(lane3);
-        this.add(lane4); // MAKE TWO CHECKOUT CENTERS, ONE FOR EXPRESS AND ONE FOR NORMAL
-        this.add(lane5);
-        this.add(lane6);
     }
 
     public checkoutCenter(int numberOfNormalLanes, int numberOfExpressLanes) {
+
         for (int a = 0; a < numberOfExpressLanes; a++) {
-            NormalLane normalCheckoutLane = new NormalLane();
+            Lane normalCheckoutLane = new Lane();
             this.add(normalCheckoutLane);
         }
         for (int b = 0; b < numberOfExpressLanes; b++) {
-            ExpressLane expressCheckoutLane = new ExpressLane();
+            Lane expressCheckoutLane = new Lane(true);
             this.add(expressCheckoutLane);
         }
     }
 
+    /*
+     * This lane takes the current event time and uses it to update all the lines.
+     * It (hopefully) checks people out and schedules CheckedOutEvents
+     */
+
     public void update(double time) {
-        
-        double timeElapsed;
+
         Collections.sort(this, new LineComparator());
         for (int i = 0; i < this.size(); i++) {
             if (this.get(i).peek() != null) {
                 this.get(i).currentWaitTime = (this.get(i).peek().getShoppingList() * this.get(i).checkoutRate
                         + this.get(i).paymentTime + time);
-                this.get(i).peek().scheduleCheckoutEvent(this.get(i).currentWaitTime + this.get(i).peek().getArrivalTime());
+                this.get(i).peek()
+                        .scheduleCheckoutEvent(this.get(i).currentWaitTime + this.get(i).peek().getArrivalTime());
                 this.get(i).poll();
-            //Keep customers in their lines until timeelapsed meets time it takes for them to check out, then schedule checkout event for this time, then move on to next?
+                // Keep customers in their lines until timeelapsed meets time it takes for them
+                // to check out,
+                // then schedule checkout event for this time, then move on to next?
             }
 
             else {
@@ -50,6 +52,11 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
         }
     }
 
+    /*
+     * This method automatically sorts the customer into the best lane depending on
+     * whether or not they get to use an express lane.
+     */
+
     public void addCustomerToALane(Customer C) {
         // Print stats on which lane it's being added to, and wait time.
         if (C.getExpressElgibility() == true) {
@@ -58,6 +65,7 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
             for (int i = 0; i < this.size(); i++) {
                 if (this.get(i).type == "Normal") {
                     this.get(i).addCustomerToCheckoutLine(C);
+
                     break;
                 }
             }
@@ -65,7 +73,7 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
     }
 
     @Override
-    public int compareTo(NormalLane o) {
+    public int compareTo(Lane o) {
         // TODO Auto-generated method stub
         return 0;
     }

@@ -17,8 +17,7 @@ public class GroceryStoreMain {
         while (events.peek() != null) {
             time = events.peek().timeOfOccurence;
             Collections.sort(checkoutLanes, new LineComparator());
-            events.peek().execute();
-            events.poll();
+            events.poll().execute();
             checkoutLanes.update(time);
         }
 

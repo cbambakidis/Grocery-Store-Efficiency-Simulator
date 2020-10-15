@@ -11,8 +11,16 @@ public class Customer implements Comparable {
     private double timeBeforeCheckout;
     private boolean isElgibleForExpress = false;
 
-    public Customer(double arrivalTime, int shoppingListSize, double shoppingSpeed, int customerNumber, Queue<Event> eventList,
-            checkoutCenter checkoutLanes) {
+    /*
+     * Makes a new customer object, using the information from the text file, as well as giving the customer access
+     * to the event list and checkout center so that it can schedule itself to be done shopping.
+     * Upon construction, the customer object calculates how much time it will need to be done shopping, then makes an event for it.
+     * Offers both the arrival and done shopping events to the event list. Does not add Checked Out event,
+     * because that time of occurence depends on how long they wait in line.
+     * We have getters for each of the private variables.
+    */
+    public Customer(double arrivalTime, int shoppingListSize, double shoppingSpeed, int customerNumber,
+            Queue<Event> eventList, checkoutCenter checkoutLanes) {
         this.arrivalTime = arrivalTime;
         this.shoppingList = shoppingListSize;
         this.shoppingSpeed = shoppingSpeed;
@@ -36,13 +44,15 @@ public class Customer implements Comparable {
         return arrivalTime;
     }
 
-    public boolean getExpressElgibility(){
+    public boolean getExpressElgibility() {
         return isElgibleForExpress;
     }
-    public int getCustomerNumber(){
+
+    public int getCustomerNumber() {
         return myCustomerNumber;
     }
-    public double getTimeBeforeCheckout(){
+
+    public double getTimeBeforeCheckout() {
         return timeBeforeCheckout;
     }
 
