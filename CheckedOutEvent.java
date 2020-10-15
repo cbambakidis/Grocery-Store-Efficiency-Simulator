@@ -12,9 +12,11 @@ public class CheckedOutEvent extends Event {
         super.C = thisCustomer;
         this.timeOfOccurence = timeCheckoutOccurs;
     }
+    
 
     public void execute() {
-        System.out.println(timeOfOccurence + ": Customer " + thisCustomer.getCustomerNumber()
+        System.out.printf("%.2f", timeOfOccurence);
+        System.out.println(": Customer " + thisCustomer.getCustomerNumber()
                 + " has checked out and left the store.");
     }
 

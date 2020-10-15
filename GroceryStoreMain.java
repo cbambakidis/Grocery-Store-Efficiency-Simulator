@@ -1,5 +1,8 @@
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -8,11 +11,14 @@ import java.util.Collections;
 
 public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
-
-        checkoutCenter checkoutLanes = new checkoutCenter(4, 2);
+        PrintStream fileOut = new PrintStream("./out.txt"); //This idea via Jerry Zhou on dev2qa
+        System.setOut(fileOut);
+        
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
-        Collections.sort(customers, new timeComparator());
+        checkoutCenter checkoutLanes = new checkoutCenter(4, 2, events);
+        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
+        System.out.println(customers);
+        //Collections.sort(customers, new timeComparator());
         double time = 0;
         while (events.peek() != null) {
             time = events.peek().timeOfOccurence;
@@ -24,8 +30,7 @@ public class GroceryStoreMain {
     }
 
     /*
-     * To fix: fix checkout area scheduling checkout events. The time is not being
-     * processed correctly.
+     * Current issue: the checkout events are not being made correctly/added to event list in the right order.
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {

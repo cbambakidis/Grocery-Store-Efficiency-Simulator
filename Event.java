@@ -1,8 +1,10 @@
-    /*
+import java.io.FileWriter;
+import java.io.IOException;
+/*
      * The event class is pretty straightforward. It has a time of occurence and a field to do something when it
      * executes. 
     */
-public class Event {
+public class Event{
     double timeOfOccurence;
     String type;
     Customer C;

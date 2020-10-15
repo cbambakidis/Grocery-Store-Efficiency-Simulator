@@ -1,0 +1,1357 @@
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451]
+1.19: Arrival Customer 381
+3.29: Arrival Customer 251
+5.13: Arrival Customer 66
+7.1: Arrival Customer 54
+8.75: Arrival Customer 97
+8.8: Arrival Customer 384
+9.34: Arrival Customer 108
+10.13: Arrival Customer 62
+10.97: Arrival Customer 407
+12.89: Finished shopping customer 62
+13.07: Arrival Customer 349
+14.19: Arrival Customer 391
+15.04: Customer 62 has checked out and left the store.
+15.68: Arrival Customer 394
+16.35: Finished shopping customer 97
+18.85: Customer 97 has checked out and left the store.
+19.60: Finished shopping customer 108
+20.03: Arrival Customer 200
+21.50: Customer 108 has checked out and left the store.
+23.0: Arrival Customer 60
+23.11: Arrival Customer 16
+24.09: Finished shopping customer 66
+25.8: Arrival Customer 450
+26.14: Arrival Customer 150
+27.29: Customer 66 has checked out and left the store.
+27.71: Finished shopping customer 381
+28.33: Arrival Customer 17
+29.05: Arrival Customer 94
+30.22: Finished shopping customer 150
+31.01: Customer 381 has checked out and left the store.
+31.52: Customer 150 has checked out and left the store.
+31.73: Finished shopping customer 200
+32.95: Arrival Customer 212
+33.09: Finished shopping customer 391
+33.85: Finished shopping customer 94
+34.10: Finished shopping customer 54
+34.35: Arrival Customer 217
+34.63: Customer 200 has checked out and left the store.
+34.96: Finished shopping customer 212
+35.17: Arrival Customer 357
+35.25: Customer 94 has checked out and left the store.
+35.89: Arrival Customer 290
+35.94: Arrival Customer 315
+36.14: Customer 391 has checked out and left the store.
+36.20: Finished shopping customer 16
+36.26: Customer 212 has checked out and left the store.
+36.31: Finished shopping customer 251
+36.75: Finished shopping customer 60
+37.82: Arrival Customer 180
+37.90: Customer 54 has checked out and left the store.
+38.75: Customer 16 has checked out and left the store.
+38.87: Finished shopping customer 290
+39.30: Customer 60 has checked out and left the store.
+39.61: Customer 251 has checked out and left the store.
+40.07: Customer 290 has checked out and left the store.
+40.32: Arrival Customer 236
+40.52: Arrival Customer 181
+40.72: Arrival Customer 7
+42.13: Finished shopping customer 407
+42.39: Arrival Customer 25
+43.07: Finished shopping customer 349
+43.59: Finished shopping customer 17
+44.62: Arrival Customer 439
+45.47: Finished shopping customer 181
+46.03: Customer 407 has checked out and left the store.
+46.29: Customer 17 has checked out and left the store.
+46.57: Customer 349 has checked out and left the store.
+46.97: Customer 181 has checked out and left the store.
+48.09: Arrival Customer 224
+48.45: Finished shopping customer 25
+49.52: Finished shopping customer 394
+49.52: Arrival Customer 334
+49.76: Arrival Customer 118
+50.05: Customer 25 has checked out and left the store.
+51.41: Arrival Customer 207
+52.72: Customer 394 has checked out and left the store.
+52.85: Arrival Customer 143
+53.56: Arrival Customer 83
+53.57: Arrival Customer 147
+55.42: Arrival Customer 18
+56.22: Arrival Customer 136
+56.52: Arrival Customer 73
+56.82: Finished shopping customer 224
+58.50: Finished shopping customer 73
+59.27: Customer 224 has checked out and left the store.
+59.70: Customer 73 has checked out and left the store.
+60.01: Arrival Customer 335
+60.02: Arrival Customer 146
+60.10: Finished shopping customer 439
+60.81: Finished shopping customer 217
+61.36: Arrival Customer 87
+61.42: Finished shopping customer 136
+62.4: Arrival Customer 152
+62.70: Customer 439 has checked out and left the store.
+63.22: Customer 136 has checked out and left the store.
+63.35: Arrival Customer 325
+63.84: Finished shopping customer 207
+64.24: Arrival Customer 233
+65.26: Customer 217 has checked out and left the store.
+65.36: Finished shopping customer 118
+66.06: Finished shopping customer 335
+66.11: Arrival Customer 174
+66.39: Customer 207 has checked out and left the store.
+67.56: Customer 335 has checked out and left the store.
+67.58: Finished shopping customer 146
+68.07: Arrival Customer 154
+68.21: Finished shopping customer 357
+68.36: Customer 118 has checked out and left the store.
+68.75: Arrival Customer 248
+69.28: Customer 146 has checked out and left the store.
+69.46: Finished shopping customer 87
+69.53: Arrival Customer 98
+69.55: Arrival Customer 30
+69.98: Finished shopping customer 315
+71.76: Customer 87 has checked out and left the store.
+72.0: Arrival Customer 345
+72.87: Arrival Customer 351
+73.16: Customer 357 has checked out and left the store.
+73.83: Customer 315 has checked out and left the store.
+76.43: Finished shopping customer 248
+76.58: Arrival Customer 227
+77.32: Arrival Customer 205
+77.60: Finished shopping customer 227
+77.68: Arrival Customer 253
+78.03: Customer 248 has checked out and left the store.
+78.15: Finished shopping customer 345
+78.72: Finished shopping customer 450
+78.80: Customer 227 has checked out and left the store.
+79.2: Arrival Customer 266
+79.22: Finished shopping customer 18
+79.61: Arrival Customer 170
+79.86: Finished shopping customer 154
+80.19: Finished shopping customer 384
+80.40: Customer 345 has checked out and left the store.
+80.78: Arrival Customer 211
+81.54: Finished shopping customer 266
+81.64: Finished shopping customer 205
+81.72: Finished shopping customer 152
+81.76: Customer 154 has checked out and left the store.
+82.19: Finished shopping customer 147
+82.22: Customer 18 has checked out and left the store.
+82.52: Customer 450 has checked out and left the store.
+82.75: Arrival Customer 291
+82.84: Customer 266 has checked out and left the store.
+83.03: Arrival Customer 178
+83.5: Arrival Customer 198
+83.57: Finished shopping customer 174
+83.84: Customer 205 has checked out and left the store.
+84.42: Customer 152 has checked out and left the store.
+85.14: Customer 384 has checked out and left the store.
+85.64: Arrival Customer 272
+86.47: Customer 174 has checked out and left the store.
+86.89: Customer 147 has checked out and left the store.
+87.12: Arrival Customer 213
+89.05: Finished shopping customer 178
+89.58: Arrival Customer 1
+90.75: Customer 178 has checked out and left the store.
+90.86: Arrival Customer 317
+91.36: Finished shopping customer 272
+92.37: Finished shopping customer 233
+92.76: Customer 272 has checked out and left the store.
+92.98: Finished shopping customer 1
+93.38: Finished shopping customer 211
+93.89: Arrival Customer 238
+95.23: Customer 1 has checked out and left the store.
+95.28: Customer 211 has checked out and left the store.
+95.56: Arrival Customer 258
+95.82: Customer 233 has checked out and left the store.
+96.35: Finished shopping customer 325
+97.33: Arrival Customer 99
+98.25: Finished shopping customer 351
+100.95: Finished shopping customer 236
+101.10: Customer 325 has checked out and left the store.
+101.38: Finished shopping customer 291
+101.60: Customer 351 has checked out and left the store.
+101.97: Finished shopping customer 83
+102.16: Finished shopping customer 334
+103.46: Finished shopping customer 317
+103.59: Arrival Customer 280
+103.78: Finished shopping customer 98
+104.37: Arrival Customer 377
+104.53: Customer 291 has checked out and left the store.
+104.64: Arrival Customer 313
+105.30: Customer 236 has checked out and left the store.
+105.31: Finished shopping customer 143
+105.42: Finished shopping customer 377
+105.96: Customer 317 has checked out and left the store.
+106.32: Customer 83 has checked out and left the store.
+106.51: Customer 334 has checked out and left the store.
+106.52: Customer 377 has checked out and left the store.
+107.03: Customer 98 has checked out and left the store.
+107.99: Finished shopping customer 238
+109.46: Customer 143 has checked out and left the store.
+109.81: Finished shopping customer 258
+110.16: Arrival Customer 426
+110.42: Arrival Customer 50
+110.49: Customer 238 has checked out and left the store.
+110.64: Arrival Customer 185
+111.07: Arrival Customer 166
+111.92: Finished shopping customer 185
+112.23: Arrival Customer 354
+112.76: Customer 258 has checked out and left the store.
+113.02: Customer 185 has checked out and left the store.
+114.28: Finished shopping customer 426
+114.40: Finished shopping customer 166
+114.49: Arrival Customer 114
+115.33: Finished shopping customer 354
+115.68: Customer 426 has checked out and left the store.
+115.82: Finished shopping customer 180
+116.55: Customer 166 has checked out and left the store.
+117.04: Finished shopping customer 198
+117.58: Customer 354 has checked out and left the store.
+117.64: Finished shopping customer 313
+119.52: Arrival Customer 301
+119.95: Arrival Customer 402
+120.29: Customer 313 has checked out and left the store.
+120.38: Arrival Customer 263
+120.82: Customer 180 has checked out and left the store.
+120.96: Finished shopping customer 263
+120.99: Customer 198 has checked out and left the store.
+121.96: Finished shopping customer 114
+122.06: Customer 263 has checked out and left the store.
+122.59: Arrival Customer 235
+123.86: Customer 114 has checked out and left the store.
+123.89: Finished shopping customer 99
+124.96: Arrival Customer 448
+125.52: Finished shopping customer 213
+126.13: Finished shopping customer 30
+126.22: Finished shopping customer 50
+126.47: Arrival Customer 193
+127.35: Finished shopping customer 280
+127.42: Finished shopping customer 402
+127.44: Arrival Customer 390
+127.49: Customer 99 has checked out and left the store.
+128.92: Finished shopping customer 7
+128.94: Arrival Customer 93
+129.22: Customer 50 has checked out and left the store.
+129.32: Customer 402 has checked out and left the store.
+129.65: Arrival Customer 310
+130.43: Customer 30 has checked out and left the store.
+130.52: Customer 213 has checked out and left the store.
+130.55: Customer 280 has checked out and left the store.
+131.03: Arrival Customer 3
+131.99: Finished shopping customer 193
+132.12: Arrival Customer 91
+132.46: Arrival Customer 78
+132.62: Arrival Customer 393
+133.59: Customer 193 has checked out and left the store.
+133.92: Customer 7 has checked out and left the store.
+134.6: Arrival Customer 451
+134.61: Finished shopping customer 170
+135.16: Arrival Customer 396
+135.86: Finished shopping customer 301
+137.44: Arrival Customer 250
+138.24: Finished shopping customer 390
+138.81: Customer 301 has checked out and left the store.
+139.36: Customer 170 has checked out and left the store.
+139.47: Arrival Customer 283
+140.78: Finished shopping customer 451
+140.84: Customer 390 has checked out and left the store.
+142.38: Customer 451 has checked out and left the store.
+143.10: Finished shopping customer 393
+143.79: Finished shopping customer 283
+144.29: Arrival Customer 106
+144.43: Arrival Customer 56
+144.90: Customer 393 has checked out and left the store.
+145.42: Finished shopping customer 310
+145.66: Finished shopping customer 3
+145.98: Arrival Customer 156
+146.19: Customer 283 has checked out and left the store.
+146.86: Arrival Customer 74
+147.03: Arrival Customer 130
+147.06: Finished shopping customer 156
+148.26: Customer 156 has checked out and left the store.
+148.31: Arrival Customer 132
+148.37: Customer 310 has checked out and left the store.
+148.38: Arrival Customer 110
+148.61: Customer 3 has checked out and left the store.
+151.48: Finished shopping customer 253
+151.58: Arrival Customer 270
+152.13: Arrival Customer 122
+152.2: Arrival Customer 225
+153.05: Arrival Customer 65
+153.31: Arrival Customer 189
+154.43: Arrival Customer 309
+154.79: Finished shopping customer 132
+154.87: Finished shopping customer 130
+154.92: Arrival Customer 45
+154.93: Arrival Customer 115
+155.23: Finished shopping customer 56
+155.34: Finished shopping customer 448
+156.39: Customer 132 has checked out and left the store.
+156.42: Arrival Customer 116
+156.48: Customer 253 has checked out and left the store.
+157.19: Arrival Customer 321
+157.27: Customer 130 has checked out and left the store.
+157.40: Finished shopping customer 78
+157.73: Customer 56 has checked out and left the store.
+158.2: Arrival Customer 369
+159.28: Finished shopping customer 270
+159.79: Customer 448 has checked out and left the store.
+161.15: Finished shopping customer 309
+161.39: Arrival Customer 230
+161.55: Customer 78 has checked out and left the store.
+161.78: Customer 270 has checked out and left the store.
+162.71: Arrival Customer 344
+162.75: Customer 309 has checked out and left the store.
+163.43: Arrival Customer 53
+163.57: Finished shopping customer 115
+164.21: Arrival Customer 414
+165.40: Finished shopping customer 396
+165.55: Arrival Customer 218
+166.17: Customer 115 has checked out and left the store.
+166.27: Finished shopping customer 235
+167.69: Arrival Customer 440
+167.97: Finished shopping customer 45
+168.46: Finished shopping customer 91
+169.87: Customer 45 has checked out and left the store.
+170.20: Customer 396 has checked out and left the store.
+171.07: Customer 235 has checked out and left the store.
+171.11: Arrival Customer 292
+171.26: Arrival Customer 415
+171.89: Finished shopping customer 440
+172.24: Finished shopping customer 250
+172.76: Customer 91 has checked out and left the store.
+173.49: Customer 440 has checked out and left the store.
+174.18: Finished shopping customer 110
+174.51: Arrival Customer 356
+174.53: Finished shopping customer 93
+175.04: Arrival Customer 36
+175.33: Finished shopping customer 122
+176.50: Finished shopping customer 36
+176.55: Finished shopping customer 356
+177.24: Customer 250 has checked out and left the store.
+177.60: Customer 36 has checked out and left the store.
+177.68: Arrival Customer 403
+177.95: Customer 356 has checked out and left the store.
+178.33: Customer 110 has checked out and left the store.
+178.88: Customer 93 has checked out and left the store.
+179.33: Customer 122 has checked out and left the store.
+179.97: Arrival Customer 293
+181.19: Finished shopping customer 344
+181.29: Arrival Customer 10
+182.06: Arrival Customer 151
+182.27: Arrival Customer 133
+182.81: Finished shopping customer 189
+183.94: Finished shopping customer 225
+184.13: Finished shopping customer 65
+184.13: Arrival Customer 353
+184.29: Customer 344 has checked out and left the store.
+185.14: Arrival Customer 400
+185.24: Finished shopping customer 151
+185.7: Arrival Customer 444
+186.04: Finished shopping customer 369
+186.41: Arrival Customer 438
+186.84: Customer 151 has checked out and left the store.
+187.76: Customer 189 has checked out and left the store.
+187.98: Customer 65 has checked out and left the store.
+188.24: Customer 225 has checked out and left the store.
+188.41: Arrival Customer 322
+188.50: Finished shopping customer 400
+189.24: Customer 369 has checked out and left the store.
+189.44: Finished shopping customer 414
+189.66: Arrival Customer 432
+190.05: Finished shopping customer 321
+190.08: Arrival Customer 46
+190.10: Customer 400 has checked out and left the store.
+190.31: Arrival Customer 208
+191.23: Finished shopping customer 133
+191.47: Arrival Customer 6
+191.99: Finished shopping customer 230
+192.45: Finished shopping customer 74
+192.89: Customer 414 has checked out and left the store.
+193.03: Customer 133 has checked out and left the store.
+193.60: Customer 321 has checked out and left the store.
+194.65: Finished shopping customer 208
+195.49: Customer 230 has checked out and left the store.
+195.61: Arrival Customer 447
+195.9: Arrival Customer 243
+196.07: Arrival Customer 366
+196.22: Finished shopping customer 415
+196.35: Customer 208 has checked out and left the store.
+196.80: Customer 74 has checked out and left the store.
+196.82: Arrival Customer 160
+197.44: Arrival Customer 278
+197.95: Arrival Customer 57
+198.36: Arrival Customer 364
+199.69: Finished shopping customer 447
+199.82: Arrival Customer 346
+200.62: Customer 415 has checked out and left the store.
+201.09: Customer 447 has checked out and left the store.
+201.90: Finished shopping customer 57
+202.51: Arrival Customer 245
+204.15: Customer 57 has checked out and left the store.
+204.33: Arrival Customer 406
+205.04: Arrival Customer 161
+205.35: Finished shopping customer 366
+205.44: Finished shopping customer 444
+206.01: Finished shopping customer 293
+206.25: Finished shopping customer 218
+206.49: Finished shopping customer 10
+206.88: Finished shopping customer 116
+207.15: Customer 366 has checked out and left the store.
+207.57: Arrival Customer 229
+207.59: Finished shopping customer 292
+207.73: Finished shopping customer 353
+208.09: Arrival Customer 101
+208.14: Customer 444 has checked out and left the store.
+209.20: Finished shopping customer 438
+209.41: Customer 293 has checked out and left the store.
+209.54: Customer 10 has checked out and left the store.
+210.10: Customer 218 has checked out and left the store.
+211.28: Finished shopping customer 403
+211.4: Arrival Customer 195
+211.44: Finished shopping customer 406
+211.73: Customer 353 has checked out and left the store.
+211.78: Customer 116 has checked out and left the store.
+211.83: Finished shopping customer 53
+211.99: Customer 292 has checked out and left the store.
+213.34: Customer 406 has checked out and left the store.
+213.35: Customer 438 has checked out and left the store.
+213.55: Arrival Customer 27
+213.83: Arrival Customer 302
+214.68: Arrival Customer 295
+214.78: Customer 403 has checked out and left the store.
+214.91: Arrival Customer 140
+215.55: Finished shopping customer 322
+215.83: Finished shopping customer 295
+215.83: Customer 53 has checked out and left the store.
+215.92: Arrival Customer 34
+216.8: Arrival Customer 37
+216.93: Customer 295 has checked out and left the store.
+218.53: Arrival Customer 386
+218.56: Finished shopping customer 6
+218.61: Finished shopping customer 195
+218.70: Customer 322 has checked out and left the store.
+218.97: Arrival Customer 38
+219.22: Finished shopping customer 106
+219.30: Finished shopping customer 432
+220.17: Arrival Customer 352
+220.31: Customer 195 has checked out and left the store.
+221.3: Arrival Customer 4
+221.58: Finished shopping customer 243
+221.61: Customer 6 has checked out and left the store.
+221.73: Finished shopping customer 140
+221.75: Arrival Customer 20
+222.96: Arrival Customer 326
+223.20: Customer 432 has checked out and left the store.
+223.23: Arrival Customer 69
+224.17: Customer 106 has checked out and left the store.
+224.28: Customer 140 has checked out and left the store.
+224.78: Customer 243 has checked out and left the store.
+227.52: Arrival Customer 359
+228.33: Arrival Customer 294
+229.23: Arrival Customer 256
+229.35: Finished shopping customer 46
+229.52: Arrival Customer 88
+230.13: Arrival Customer 287
+231.02: Arrival Customer 103
+231.47: Arrival Customer 261
+231.65: Finished shopping customer 20
+231.69: Arrival Customer 429
+232.59: Finished shopping customer 326
+233.01: Arrival Customer 254
+233.90: Customer 46 has checked out and left the store.
+234.18: Finished shopping customer 37
+234.20: Customer 20 has checked out and left the store.
+234.49: Customer 326 has checked out and left the store.
+234.99: Finished shopping customer 294
+235.88: Finished shopping customer 287
+235.89: Finished shopping customer 256
+236.10: Finished shopping customer 4
+236.32: Arrival Customer 423
+236.59: Customer 294 has checked out and left the store.
+236.61: Finished shopping customer 302
+237.28: Customer 37 has checked out and left the store.
+237.49: Customer 256 has checked out and left the store.
+237.99: Arrival Customer 274
+238.13: Customer 287 has checked out and left the store.
+239.10: Customer 4 has checked out and left the store.
+239.63: Finished shopping customer 245
+240.24: Finished shopping customer 161
+240.31: Customer 302 has checked out and left the store.
+240.89: Finished shopping customer 386
+242.07: Arrival Customer 121
+242.29: Arrival Customer 319
+242.87: Finished shopping customer 261
+243.48: Arrival Customer 222
+244.52: Arrival Customer 153
+244.53: Customer 245 has checked out and left the store.
+244.57: Finished shopping customer 359
+244.58: Arrival Customer 23
+244.65: Finished shopping customer 69
+244.99: Customer 161 has checked out and left the store.
+245.04: Customer 386 has checked out and left the store.
+245.37: Customer 261 has checked out and left the store.
+245.71: Arrival Customer 318
+245.90: Finished shopping customer 88
+246.31: Arrival Customer 137
+246.31: Finished shopping customer 160
+246.67: Arrival Customer 117
+246.82: Arrival Customer 328
+247.41: Finished shopping customer 254
+247.70: Customer 69 has checked out and left the store.
+247.84: Arrival Customer 82
+247.97: Arrival Customer 370
+248.12: Customer 359 has checked out and left the store.
+248.24: Finished shopping customer 222
+248.63: Arrival Customer 127
+248.66: Finished shopping customer 346
+248.71: Arrival Customer 333
+248.89: Finished shopping customer 101
+249.20: Customer 88 has checked out and left the store.
+249.67: Arrival Customer 126
+249.67: Finished shopping customer 153
+249.94: Customer 222 has checked out and left the store.
+250.03: Finished shopping customer 127
+250.16: Customer 254 has checked out and left the store.
+250.67: Finished shopping customer 328
+250.76: Customer 160 has checked out and left the store.
+251.17: Customer 153 has checked out and left the store.
+251.23: Customer 127 has checked out and left the store.
+251.96: Finished shopping customer 318
+252.01: Arrival Customer 41
+252.31: Customer 346 has checked out and left the store.
+252.87: Arrival Customer 340
+253.02: Customer 328 has checked out and left the store.
+253.89: Customer 101 has checked out and left the store.
+254.18: Arrival Customer 428
+254.21: Customer 318 has checked out and left the store.
+254.37: Arrival Customer 421
+254.65: Finished shopping customer 126
+255.86: Arrival Customer 31
+256.25: Customer 126 has checked out and left the store.
+256.47: Arrival Customer 29
+256.72: Finished shopping customer 278
+256.74: Finished shopping customer 352
+256.97: Finished shopping customer 82
+257.1: Arrival Customer 129
+257.44: Finished shopping customer 121
+259.12: Finished shopping customer 41
+259.52: Customer 82 has checked out and left the store.
+260.72: Finished shopping customer 103
+260.89: Customer 121 has checked out and left the store.
+261.02: Customer 41 has checked out and left the store.
+261.32: Customer 278 has checked out and left the store.
+261.39: Customer 352 has checked out and left the store.
+261.51: Finished shopping customer 229
+263.54: Arrival Customer 40
+263.86: Arrival Customer 329
+264.06: Finished shopping customer 364
+264.68: Finished shopping customer 31
+265.42: Customer 103 has checked out and left the store.
+265.69: Arrival Customer 331
+266.33: Finished shopping customer 331
+266.41: Customer 229 has checked out and left the store.
+266.45: Finished shopping customer 129
+266.58: Customer 31 has checked out and left the store.
+266.73: Finished shopping customer 319
+266.89: Arrival Customer 307
+267.43: Customer 331 has checked out and left the store.
+268.17: Finished shopping customer 29
+268.31: Customer 364 has checked out and left the store.
+268.41: Arrival Customer 431
+268.43: Finished shopping customer 333
+269.30: Customer 129 has checked out and left the store.
+269.86: Arrival Customer 419
+270.03: Customer 319 has checked out and left the store.
+270.10: Finished shopping customer 40
+270.67: Customer 29 has checked out and left the store.
+271.28: Customer 333 has checked out and left the store.
+271.90: Customer 40 has checked out and left the store.
+273.9: Arrival Customer 395
+274.26: Finished shopping customer 38
+274.27: Finished shopping customer 117
+274.57: Finished shopping customer 27
+275.75: Arrival Customer 323
+277.42: Customer 117 has checked out and left the store.
+277.48: Arrival Customer 95
+277.56: Finished shopping customer 395
+277.72: Finished shopping customer 423
+278.21: Finished shopping customer 370
+278.86: Customer 395 has checked out and left the store.
+279.11: Customer 38 has checked out and left the store.
+279.27: Customer 27 has checked out and left the store.
+279.27: Arrival Customer 300
+280.89: Finished shopping customer 431
+281.03: Arrival Customer 28
+281.97: Customer 423 has checked out and left the store.
+282.01: Customer 370 has checked out and left the store.
+282.03: Finished shopping customer 137
+282.09: Finished shopping customer 429
+283.49: Customer 431 has checked out and left the store.
+283.58: Arrival Customer 271
+283.8: Arrival Customer 39
+283.98: Finished shopping customer 421
+284.4: Arrival Customer 169
+285.5: Arrival Customer 210
+285.57: Finished shopping customer 300
+286.38: Customer 137 has checked out and left the store.
+286.5: Arrival Customer 324
+286.55: Finished shopping customer 39
+287.09: Customer 429 has checked out and left the store.
+287.47: Customer 300 has checked out and left the store.
+287.47: Arrival Customer 52
+287.76: Arrival Customer 197
+287.81: Arrival Customer 55
+288.05: Customer 39 has checked out and left the store.
+288.33: Customer 421 has checked out and left the store.
+288.57: Finished shopping customer 340
+289.24: Finished shopping customer 34
+289.55: Finished shopping customer 307
+292.65: Customer 307 has checked out and left the store.
+292.67: Customer 340 has checked out and left the store.
+293.84: Customer 34 has checked out and left the store.
+295.46: Finished shopping customer 197
+295.72: Finished shopping customer 55
+296.01: Arrival Customer 162
+296.16: Finished shopping customer 169
+296.7: Arrival Customer 61
+297.00: Finished shopping customer 210
+297.02: Finished shopping customer 271
+297.16: Customer 197 has checked out and left the store.
+297.33: Finished shopping customer 162
+297.42: Customer 55 has checked out and left the store.
+298.18: Finished shopping customer 419
+298.53: Customer 162 has checked out and left the store.
+299.21: Customer 169 has checked out and left the store.
+299.91: Finished shopping customer 274
+300.15: Customer 210 has checked out and left the store.
+300.22: Customer 271 has checked out and left the store.
+300.38: Finished shopping customer 23
+301.64: Arrival Customer 68
+301.97: Finished shopping customer 323
+302.58: Customer 419 has checked out and left the store.
+302.59: Arrival Customer 84
+303.74: Finished shopping customer 84
+303.90: Finished shopping customer 428
+304.31: Customer 274 has checked out and left the store.
+304.84: Customer 84 has checked out and left the store.
+305.15: Arrival Customer 234
+305.38: Customer 23 has checked out and left the store.
+305.87: Customer 323 has checked out and left the store.
+306.46: Arrival Customer 284
+308.10: Customer 428 has checked out and left the store.
+308.62: Arrival Customer 306
+310.97: Arrival Customer 134
+312.29: Finished shopping customer 134
+312.52: Finished shopping customer 68
+313.49: Customer 134 has checked out and left the store.
+314.92: Customer 68 has checked out and left the store.
+315.88: Finished shopping customer 61
+317.42: Finished shopping customer 306
+317.65: Finished shopping customer 234
+318.44: Finished shopping customer 28
+318.58: Customer 61 has checked out and left the store.
+318.88: Arrival Customer 168
+319.97: Customer 306 has checked out and left the store.
+320.90: Customer 234 has checked out and left the store.
+320.91: Arrival Customer 35
+322.59: Customer 28 has checked out and left the store.
+323.30: Finished shopping customer 95
+325.52: Arrival Customer 124
+326.35: Finished shopping customer 35
+327.31: Arrival Customer 360
+327.75: Customer 35 has checked out and left the store.
+328.20: Customer 95 has checked out and left the store.
+328.77: Arrival Customer 96
+330.33: Arrival Customer 44
+331.14: Finished shopping customer 324
+331.52: Finished shopping customer 124
+332.06: Arrival Customer 443
+332.08: Arrival Customer 72
+333.02: Customer 124 has checked out and left the store.
+333.07: Finished shopping customer 360
+333.15: Arrival Customer 219
+333.94: Arrival Customer 425
+334.94: Customer 324 has checked out and left the store.
+335.19: Finished shopping customer 219
+335.27: Customer 360 has checked out and left the store.
+336.39: Customer 219 has checked out and left the store.
+337.43: Finished shopping customer 168
+338.06: Finished shopping customer 329
+340.49: Arrival Customer 417
+341.18: Customer 168 has checked out and left the store.
+341.44: Arrival Customer 80
+342.71: Customer 329 has checked out and left the store.
+343.27: Finished shopping customer 96
+345.77: Customer 96 has checked out and left the store.
+346.8: Arrival Customer 416
+347.08: Finished shopping customer 72
+347.08: Finished shopping customer 80
+347.55: Arrival Customer 371
+348.68: Customer 80 has checked out and left the store.
+348.81: Arrival Customer 12
+350.08: Customer 72 has checked out and left the store.
+351.13: Arrival Customer 312
+351.60: Finished shopping customer 52
+352.52: Arrival Customer 363
+353.22: Arrival Customer 286
+353.48: Arrival Customer 167
+354.33: Arrival Customer 100
+354.86: Finished shopping customer 284
+355.48: Arrival Customer 77
+355.75: Arrival Customer 446
+356.25: Customer 52 has checked out and left the store.
+358.18: Finished shopping customer 100
+358.86: Customer 284 has checked out and left the store.
+359.88: Customer 100 has checked out and left the store.
+361.13: Finished shopping customer 12
+362.05: Finished shopping customer 446
+363.19: Arrival Customer 303
+363.83: Customer 12 has checked out and left the store.
+363.93: Finished shopping customer 371
+363.95: Customer 446 has checked out and left the store.
+365.52: Finished shopping customer 44
+366.3: Arrival Customer 420
+366.58: Customer 371 has checked out and left the store.
+366.62: Arrival Customer 398
+366.9: Arrival Customer 175
+367.82: Finished shopping customer 398
+368.07: Arrival Customer 265
+369.02: Customer 398 has checked out and left the store.
+369.59: Arrival Customer 427
+369.75: Finished shopping customer 265
+370.07: Customer 44 has checked out and left the store.
+371.05: Customer 265 has checked out and left the store.
+371.26: Finished shopping customer 443
+371.57: Finished shopping customer 417
+373.31: Arrival Customer 362
+374.6: Arrival Customer 104
+374.97: Customer 417 has checked out and left the store.
+375.02: Arrival Customer 368
+375.18: Arrival Customer 379
+375.26: Customer 443 has checked out and left the store.
+375.32: Arrival Customer 199
+376.93: Finished shopping customer 312
+377.61: Arrival Customer 33
+378.38: Finished shopping customer 379
+379.06: Finished shopping customer 425
+379.13: Finished shopping customer 199
+379.18: Arrival Customer 21
+379.29: Arrival Customer 434
+379.88: Customer 379 has checked out and left the store.
+379.93: Customer 312 has checked out and left the store.
+380.12: Finished shopping customer 77
+380.43: Customer 199 has checked out and left the store.
+381.25: Finished shopping customer 303
+381.31: Finished shopping customer 286
+383.06: Finished shopping customer 167
+383.22: Customer 77 has checked out and left the store.
+383.39: Arrival Customer 11
+383.41: Customer 425 has checked out and left the store.
+384.12: Arrival Customer 276
+384.30: Customer 303 has checked out and left the store.
+385.01: Finished shopping customer 21
+385.96: Customer 286 has checked out and left the store.
+387.56: Customer 21 has checked out and left the store.
+387.61: Customer 167 has checked out and left the store.
+387.77: Arrival Customer 277
+387.97: Arrival Customer 202
+388.31: Finished shopping customer 11
+388.46: Arrival Customer 350
+389.45: Arrival Customer 187
+389.91: Customer 11 has checked out and left the store.
+390.51: Arrival Customer 343
+393.19: Arrival Customer 131
+395.00: Finished shopping customer 363
+395.92: Arrival Customer 330
+396.22: Arrival Customer 413
+397.03: Finished shopping customer 427
+397.50: Finished shopping customer 420
+398.01: Arrival Customer 139
+398.1: Arrival Customer 102
+399.00: Finished shopping customer 33
+399.19: Finished shopping customer 330
+399.72: Finished shopping customer 416
+399.95: Customer 363 has checked out and left the store.
+400.43: Customer 427 has checked out and left the store.
+400.49: Customer 330 has checked out and left the store.
+401.29: Arrival Customer 5
+401.49: Arrival Customer 92
+401.90: Customer 420 has checked out and left the store.
+402.03: Arrival Customer 341
+402.15: Customer 33 has checked out and left the store.
+403.36: Finished shopping customer 413
+403.45: Finished shopping customer 187
+404.05: Finished shopping customer 362
+404.17: Arrival Customer 305
+404.17: Customer 416 has checked out and left the store.
+404.19: Arrival Customer 314
+405.06: Customer 413 has checked out and left the store.
+405.12: Finished shopping customer 368
+405.61: Finished shopping customer 202
+406.15: Customer 187 has checked out and left the store.
+408.15: Finished shopping customer 102
+408.21: Customer 202 has checked out and left the store.
+408.60: Finished shopping customer 104
+408.87: Arrival Customer 336
+408.95: Customer 362 has checked out and left the store.
+409.27: Customer 368 has checked out and left the store.
+409.34: Arrival Customer 138
+409.83: Finished shopping customer 341
+410.23: Finished shopping customer 139
+410.77: Arrival Customer 201
+410.90: Customer 102 has checked out and left the store.
+411.08: Arrival Customer 183
+411.43: Customer 341 has checked out and left the store.
+411.49: Finished shopping customer 5
+411.63: Arrival Customer 191
+412.02: Arrival Customer 320
+412.14: Finished shopping customer 175
+412.88: Customer 139 has checked out and left the store.
+413.10: Customer 104 has checked out and left the store.
+413.73: Finished shopping customer 92
+413.79: Arrival Customer 206
+414.12: Arrival Customer 249
+414.24: Customer 5 has checked out and left the store.
+414.55: Finished shopping customer 434
+415.17: Arrival Customer 215
+416.93: Customer 92 has checked out and left the store.
+416.96: Arrival Customer 9
+417.04: Customer 175 has checked out and left the store.
+418.36: Arrival Customer 389
+418.38: Arrival Customer 365
+418.70: Customer 434 has checked out and left the store.
+419.07: Finished shopping customer 191
+420.67: Customer 191 has checked out and left the store.
+421.04: Arrival Customer 358
+423.23: Finished shopping customer 183
+423.32: Finished shopping customer 249
+423.71: Finished shopping customer 314
+424.06: Arrival Customer 155
+424.49: Arrival Customer 401
+425.13: Customer 183 has checked out and left the store.
+425.59: Arrival Customer 112
+425.82: Customer 249 has checked out and left the store.
+426.18: Arrival Customer 105
+426.51: Customer 314 has checked out and left the store.
+427.27: Finished shopping customer 201
+430.69: Finished shopping customer 112
+430.92: Customer 201 has checked out and left the store.
+431.16: Finished shopping customer 276
+431.18: Finished shopping customer 138
+432.11: Finished shopping customer 305
+432.52: Arrival Customer 418
+432.83: Finished shopping customer 401
+433.19: Customer 112 has checked out and left the store.
+433.35: Arrival Customer 0
+433.50: Finished shopping customer 105
+433.54: Finished shopping customer 389
+433.78: Finished shopping customer 9
+434.06: Finished shopping customer 155
+434.23: Customer 138 has checked out and left the store.
+434.43: Customer 401 has checked out and left the store.
+435.10: Customer 105 has checked out and left the store.
+435.21: Customer 305 has checked out and left the store.
+435.26: Customer 276 has checked out and left the store.
+435.74: Arrival Customer 264
+435.86: Customer 155 has checked out and left the store.
+436.64: Customer 389 has checked out and left the store.
+436.83: Arrival Customer 49
+437.2: Arrival Customer 372
+437.23: Customer 9 has checked out and left the store.
+438.35: Arrival Customer 90
+438.71: Finished shopping customer 0
+439.1: Arrival Customer 304
+439.27: Arrival Customer 380
+440.11: Customer 0 has checked out and left the store.
+440.91: Finished shopping customer 343
+442.33: Arrival Customer 247
+444.57: Finished shopping customer 336
+445.31: Customer 343 has checked out and left the store.
+445.37: Arrival Customer 148
+446.27: Finished shopping customer 350
+446.42: Finished shopping customer 277
+446.87: Finished shopping customer 90
+447.61: Arrival Customer 268
+448.47: Customer 90 has checked out and left the store.
+448.62: Finished shopping customer 304
+449.12: Customer 336 has checked out and left the store.
+449.31: Finished shopping customer 49
+449.53: Arrival Customer 298
+449.53: Arrival Customer 316
+449.64: Arrival Customer 387
+450.32: Customer 350 has checked out and left the store.
+450.32: Customer 304 has checked out and left the store.
+450.39: Finished shopping customer 131
+450.97: Customer 277 has checked out and left the store.
+451.88: Finished shopping customer 365
+452.51: Customer 49 has checked out and left the store.
+453.83: Finished shopping customer 380
+454.65: Finished shopping customer 320
+454.81: Finished shopping customer 268
+454.85: Finished shopping customer 316
+455.13: Customer 365 has checked out and left the store.
+455.14: Customer 131 has checked out and left the store.
+456.40: Finished shopping customer 215
+456.55: Customer 316 has checked out and left the store.
+456.61: Customer 268 has checked out and left the store.
+456.63: Customer 380 has checked out and left the store.
+457.41: Arrival Customer 128
+457.93: Arrival Customer 135
+458.10: Customer 320 has checked out and left the store.
+459.84: Arrival Customer 259
+459.95: Customer 215 has checked out and left the store.
+462.79: Finished shopping customer 206
+462.93: Finished shopping customer 298
+465.43: Customer 298 has checked out and left the store.
+465.65: Arrival Customer 260
+466.54: Customer 206 has checked out and left the store.
+469.47: Finished shopping customer 247
+470.72: Arrival Customer 220
+472.62: Customer 247 has checked out and left the store.
+473.16: Finished shopping customer 372
+473.36: Finished shopping customer 128
+473.9: Arrival Customer 203
+475.32: Finished shopping customer 220
+475.34: Finished shopping customer 264
+475.81: Finished shopping customer 418
+475.91: Customer 128 has checked out and left the store.
+476.72: Customer 220 has checked out and left the store.
+477.12: Finished shopping customer 259
+477.84: Arrival Customer 8
+478.06: Customer 372 has checked out and left the store.
+479.59: Customer 264 has checked out and left the store.
+479.76: Customer 418 has checked out and left the store.
+480.32: Customer 259 has checked out and left the store.
+482.55: Arrival Customer 14
+482.59: Finished shopping customer 135
+483.57: Finished shopping customer 260
+485.45: Finished shopping customer 358
+485.49: Customer 135 has checked out and left the store.
+486.28: Arrival Customer 190
+486.37: Customer 260 has checked out and left the store.
+486.78: Arrival Customer 388
+490.03: Arrival Customer 257
+490.30: Customer 358 has checked out and left the store.
+496.19: Finished shopping customer 257
+496.9: Arrival Customer 422
+497.81: Arrival Customer 2
+498.24: Arrival Customer 176
+498.74: Customer 257 has checked out and left the store.
+498.84: Finished shopping customer 387
+500.33: Arrival Customer 58
+503.05: Finished shopping customer 148
+503.75: Arrival Customer 242
+503.84: Customer 387 has checked out and left the store.
+506.64: Finished shopping customer 8
+507.85: Customer 148 has checked out and left the store.
+508.59: Arrival Customer 120
+509.15: Finished shopping customer 14
+509.84: Customer 8 has checked out and left the store.
+511.3: Arrival Customer 22
+511.71: Finished shopping customer 120
+512.01: Arrival Customer 411
+512.21: Finished shopping customer 2
+512.90: Customer 14 has checked out and left the store.
+513.11: Arrival Customer 177
+513.31: Customer 120 has checked out and left the store.
+513.84: Finished shopping customer 22
+514.07: Arrival Customer 375
+514.1: Arrival Customer 26
+514.41: Arrival Customer 107
+514.81: Customer 2 has checked out and left the store.
+515.04: Customer 22 has checked out and left the store.
+516.48: Finished shopping customer 176
+518.7: Arrival Customer 119
+519.68: Customer 176 has checked out and left the store.
+519.89: Arrival Customer 149
+520.04: Finished shopping customer 58
+522.51: Finished shopping customer 107
+522.81: Arrival Customer 75
+523.39: Customer 58 has checked out and left the store.
+523.86: Arrival Customer 237
+525.26: Customer 107 has checked out and left the store.
+528.54: Arrival Customer 163
+530.34: Finished shopping customer 149
+531.5: Arrival Customer 255
+531.82: Arrival Customer 15
+531.83: Finished shopping customer 242
+532.48: Finished shopping customer 190
+532.85: Arrival Customer 51
+532.89: Customer 149 has checked out and left the store.
+533.25: Arrival Customer 267
+534.31: Arrival Customer 382
+534.61: Arrival Customer 430
+535.13: Customer 242 has checked out and left the store.
+536.13: Finished shopping customer 267
+536.52: Arrival Customer 424
+537.09: Finished shopping customer 430
+537.33: Customer 267 has checked out and left the store.
+537.36: Arrival Customer 273
+537.48: Customer 190 has checked out and left the store.
+537.49: Finished shopping customer 411
+538.49: Customer 430 has checked out and left the store.
+539.14: Arrival Customer 48
+539.21: Arrival Customer 145
+539.8: Arrival Customer 408
+540.14: Finished shopping customer 26
+540.75: Arrival Customer 327
+540.79: Customer 411 has checked out and left the store.
+541.48: Finished shopping customer 327
+541.53: Arrival Customer 347
+541.71: Finished shopping customer 382
+542.58: Customer 327 has checked out and left the store.
+543.20: Finished shopping customer 177
+543.21: Customer 382 has checked out and left the store.
+543.26: Finished shopping customer 203
+544.06: Finished shopping customer 408
+544.24: Customer 26 has checked out and left the store.
+544.50: Finished shopping customer 273
+544.93: Arrival Customer 275
+545.66: Customer 408 has checked out and left the store.
+546.20: Customer 273 has checked out and left the store.
+547.02: Finished shopping customer 424
+547.07: Finished shopping customer 375
+547.75: Customer 177 has checked out and left the store.
+547.81: Customer 203 has checked out and left the store.
+549.52: Customer 424 has checked out and left the store.
+549.91: Arrival Customer 192
+550.10: Finished shopping customer 422
+550.93: Arrival Customer 125
+551.35: Arrival Customer 209
+551.59: Finished shopping customer 275
+551.82: Customer 375 has checked out and left the store.
+552.46: Finished shopping customer 51
+552.57: Finished shopping customer 125
+553.01: Arrival Customer 367
+553.33: Arrival Customer 109
+553.49: Customer 275 has checked out and left the store.
+553.77: Customer 125 has checked out and left the store.
+553.8: Arrival Customer 383
+554.00: Customer 422 has checked out and left the store.
+554.93: Arrival Customer 392
+555.89: Finished shopping customer 145
+556.01: Finished shopping customer 192
+556.31: Customer 51 has checked out and left the store.
+557.51: Customer 192 has checked out and left the store.
+557.86: Finished shopping customer 48
+558.49: Customer 145 has checked out and left the store.
+558.52: Arrival Customer 376
+558.60: Finished shopping customer 388
+559.59: Finished shopping customer 119
+560.32: Finished shopping customer 376
+560.74: Arrival Customer 348
+561.06: Customer 48 has checked out and left the store.
+561.27: Arrival Customer 221
+561.52: Customer 376 has checked out and left the store.
+562.1: Arrival Customer 89
+563.04: Customer 119 has checked out and left the store.
+563.30: Customer 388 has checked out and left the store.
+563.63: Arrival Customer 164
+564.06: Arrival Customer 19
+564.08: Arrival Customer 13
+564.15: Finished shopping customer 347
+565.28: Finished shopping customer 164
+566.48: Arrival Customer 288
+566.58: Customer 164 has checked out and left the store.
+566.64: Finished shopping customer 348
+567.25: Arrival Customer 296
+567.96: Finished shopping customer 75
+568.10: Customer 347 has checked out and left the store.
+568.34: Arrival Customer 361
+569.14: Customer 348 has checked out and left the store.
+569.64: Arrival Customer 113
+571.06: Finished shopping customer 89
+571.46: Arrival Customer 241
+571.71: Customer 75 has checked out and left the store.
+573.76: Customer 89 has checked out and left the store.
+575.64: Arrival Customer 442
+575.70: Finished shopping customer 237
+576.45: Finished shopping customer 221
+576.61: Arrival Customer 246
+577.00: Finished shopping customer 255
+577.76: Finished shopping customer 241
+578.78: Arrival Customer 67
+579.22: Arrival Customer 144
+579.23: Arrival Customer 142
+579.26: Customer 241 has checked out and left the store.
+579.50: Customer 237 has checked out and left the store.
+579.60: Customer 221 has checked out and left the store.
+581.50: Customer 255 has checked out and left the store.
+582.04: Finished shopping customer 442
+582.87: Arrival Customer 71
+583.31: Arrival Customer 76
+583.39: Finished shopping customer 113
+583.46: Finished shopping customer 13
+583.61: Finished shopping customer 246
+583.76: Arrival Customer 172
+584.54: Customer 442 has checked out and left the store.
+585.11: Customer 246 has checked out and left the store.
+585.84: Arrival Customer 404
+585.94: Customer 113 has checked out and left the store.
+586.34: Finished shopping customer 67
+586.88: Finished shopping customer 142
+587.36: Customer 13 has checked out and left the store.
+587.37: Arrival Customer 70
+587.99: Finished shopping customer 163
+588.36: Finished shopping customer 361
+588.48: Arrival Customer 171
+588.55: Arrival Customer 226
+588.78: Customer 142 has checked out and left the store.
+589.04: Customer 67 has checked out and left the store.
+589.37: Arrival Customer 409
+589.58: Finished shopping customer 392
+590.10: Finished shopping customer 144
+590.32: Finished shopping customer 404
+591.06: Customer 361 has checked out and left the store.
+591.90: Customer 144 has checked out and left the store.
+592.04: Customer 163 has checked out and left the store.
+592.12: Customer 404 has checked out and left the store.
+593.23: Arrival Customer 244
+593.40: Finished shopping customer 71
+593.74: Finished shopping customer 288
+593.83: Customer 392 has checked out and left the store.
+594.49: Finished shopping customer 409
+594.51: Finished shopping customer 226
+595.0: Arrival Customer 412
+595.73: Arrival Customer 214
+595.76: Finished shopping customer 171
+595.85: Customer 71 has checked out and left the store.
+595.91: Customer 226 has checked out and left the store.
+595.91: Arrival Customer 79
+596.29: Customer 409 has checked out and left the store.
+597.19: Customer 288 has checked out and left the store.
+598.16: Customer 171 has checked out and left the store.
+598.6: Arrival Customer 196
+598.69: Arrival Customer 123
+599.16: Arrival Customer 179
+599.25: Arrival Customer 269
+599.26: Arrival Customer 385
+599.39: Finished shopping customer 244
+599.93: Arrival Customer 355
+600.46: Arrival Customer 228
+600.66: Arrival Customer 184
+601.36: Finished shopping customer 383
+601.79: Customer 244 has checked out and left the store.
+601.81: Finished shopping customer 109
+602.14: Finished shopping customer 179
+603.34: Customer 179 has checked out and left the store.
+603.9: Arrival Customer 86
+605.18: Finished shopping customer 15
+605.20: Finished shopping customer 19
+605.41: Customer 383 has checked out and left the store.
+605.41: Arrival Customer 441
+605.88: Arrival Customer 262
+606.21: Customer 109 has checked out and left the store.
+606.24: Arrival Customer 42
+606.26: Arrival Customer 252
+607.95: Finished shopping customer 367
+608.90: Customer 19 has checked out and left the store.
+609.24: Finished shopping customer 262
+609.98: Customer 15 has checked out and left the store.
+610.15: Finished shopping customer 76
+610.59: Finished shopping customer 42
+610.64: Customer 262 has checked out and left the store.
+611.76: Finished shopping customer 172
+612.00: Customer 367 has checked out and left the store.
+612.09: Customer 42 has checked out and left the store.
+613.25: Customer 76 has checked out and left the store.
+613.63: Finished shopping customer 355
+613.66: Arrival Customer 173
+613.8: Arrival Customer 337
+614.0: Arrival Customer 111
+614.76: Customer 172 has checked out and left the store.
+614.94: Arrival Customer 297
+615.90: Finished shopping customer 86
+616.13: Customer 355 has checked out and left the store.
+616.28: Finished shopping customer 196
+617.67: Arrival Customer 374
+618.49: Finished shopping customer 123
+618.63: Finished shopping customer 412
+618.70: Customer 86 has checked out and left the store.
+619.03: Arrival Customer 216
+619.58: Customer 196 has checked out and left the store.
+619.91: Finished shopping customer 79
+620.88: Arrival Customer 436
+621.15: Finished shopping customer 374
+621.39: Customer 123 has checked out and left the store.
+621.48: Customer 412 has checked out and left the store.
+621.53: Finished shopping customer 441
+621.75: Finished shopping customer 269
+621.80: Finished shopping customer 297
+622.0: Arrival Customer 378
+622.55: Customer 374 has checked out and left the store.
+622.93: Finished shopping customer 296
+623.39: Arrival Customer 311
+623.50: Customer 297 has checked out and left the store.
+623.7: Arrival Customer 59
+624.31: Customer 79 has checked out and left the store.
+624.83: Customer 441 has checked out and left the store.
+624.9: Arrival Customer 289
+625.25: Customer 269 has checked out and left the store.
+627.83: Customer 296 has checked out and left the store.
+628.94: Finished shopping customer 59
+630.34: Customer 59 has checked out and left the store.
+632.74: Finished shopping customer 173
+633.65: Finished shopping customer 111
+634.43: Finished shopping customer 311
+634.94: Arrival Customer 373
+636.23: Customer 311 has checked out and left the store.
+636.40: Customer 111 has checked out and left the store.
+636.54: Customer 173 has checked out and left the store.
+636.59: Arrival Customer 435
+637.43: Arrival Customer 223
+637.86: Finished shopping customer 289
+637.91: Finished shopping customer 373
+638.32: Finished shopping customer 378
+639.21: Customer 373 has checked out and left the store.
+640.46: Customer 289 has checked out and left the store.
+640.63: Finished shopping customer 216
+640.75: Finished shopping customer 209
+640.92: Customer 378 has checked out and left the store.
+641.24: Finished shopping customer 214
+641.97: Arrival Customer 32
+642.1: Arrival Customer 47
+642.30: Finished shopping customer 436
+643.83: Customer 216 has checked out and left the store.
+644.38: Finished shopping customer 47
+644.87: Arrival Customer 405
+644.9: Arrival Customer 159
+645.29: Arrival Customer 281
+645.29: Customer 214 has checked out and left the store.
+645.35: Customer 436 has checked out and left the store.
+645.58: Customer 47 has checked out and left the store.
+645.66: Arrival Customer 299
+645.75: Customer 209 has checked out and left the store.
+647.49: Finished shopping customer 32
+647.53: Arrival Customer 433
+648.96: Finished shopping customer 184
+649.29: Customer 32 has checked out and left the store.
+650.21: Finished shopping customer 223
+651.77: Arrival Customer 282
+652.66: Customer 223 has checked out and left the store.
+653.19: Finished shopping customer 281
+653.26: Customer 184 has checked out and left the store.
+654.97: Finished shopping customer 70
+655.13: Finished shopping customer 282
+655.46: Arrival Customer 279
+655.53: Arrival Customer 240
+655.69: Customer 281 has checked out and left the store.
+656.73: Customer 282 has checked out and left the store.
+656.92: Arrival Customer 63
+657.15: Arrival Customer 397
+658.16: Arrival Customer 338
+659.57: Customer 70 has checked out and left the store.
+660.52: Arrival Customer 342
+660.88: Arrival Customer 64
+660.96: Finished shopping customer 228
+660.96: Arrival Customer 332
+661.95: Arrival Customer 165
+663.42: Finished shopping customer 342
+664.20: Finished shopping customer 64
+664.92: Customer 342 has checked out and left the store.
+665.08: Finished shopping customer 63
+665.71: Customer 228 has checked out and left the store.
+665.95: Finished shopping customer 165
+666.40: Customer 64 has checked out and left the store.
+667.45: Customer 165 has checked out and left the store.
+667.68: Customer 63 has checked out and left the store.
+668.32: Arrival Customer 339
+669.21: Finished shopping customer 332
+670.15: Finished shopping customer 385
+670.44: Arrival Customer 43
+670.68: Arrival Customer 157
+671.76: Customer 332 has checked out and left the store.
+672.80: Finished shopping customer 337
+672.93: Finished shopping customer 252
+674.70: Customer 385 has checked out and left the store.
+674.77: Arrival Customer 141
+677.01: Finished shopping customer 43
+677.17: Finished shopping customer 433
+677.75: Arrival Customer 239
+677.75: Customer 337 has checked out and left the store.
+677.88: Customer 252 has checked out and left the store.
+678.91: Customer 43 has checked out and left the store.
+680.27: Arrival Customer 231
+680.31: Finished shopping customer 299
+680.37: Arrival Customer 437
+680.47: Customer 433 has checked out and left the store.
+681.35: Arrival Customer 24
+681.66: Finished shopping customer 240
+682.05: Arrival Customer 85
+684.56: Customer 299 has checked out and left the store.
+684.94: Arrival Customer 81
+684.98: Finished shopping customer 157
+685.61: Customer 240 has checked out and left the store.
+685.77: Finished shopping customer 85
+687.07: Customer 85 has checked out and left the store.
+687.48: Customer 157 has checked out and left the store.
+688.06: Finished shopping customer 81
+688.11: Finished shopping customer 435
+689.66: Customer 81 has checked out and left the store.
+690.22: Finished shopping customer 339
+690.96: Finished shopping customer 159
+691.82: Arrival Customer 194
+692.87: Finished shopping customer 405
+692.91: Customer 435 has checked out and left the store.
+693.52: Arrival Customer 158
+693.65: Finished shopping customer 24
+693.72: Customer 339 has checked out and left the store.
+695.06: Arrival Customer 449
+695.31: Customer 159 has checked out and left the store.
+695.62: Arrival Customer 188
+696.15: Customer 24 has checked out and left the store.
+696.67: Finished shopping customer 239
+697.27: Customer 405 has checked out and left the store.
+697.95: Arrival Customer 182
+699.58: Arrival Customer 308
+699.77: Customer 239 has checked out and left the store.
+700.21: Arrival Customer 399
+700.52: Finished shopping customer 194
+700.62: Arrival Customer 445
+701.54: Finished shopping customer 449
+703.02: Customer 194 has checked out and left the store.
+703.28: Arrival Customer 285
+703.34: Customer 449 has checked out and left the store.
+704.25: Arrival Customer 204
+704.46: Arrival Customer 186
+705.54: Finished shopping customer 182
+706.78: Finished shopping customer 308
+707.36: Finished shopping customer 338
+708.09: Customer 182 has checked out and left the store.
+708.58: Customer 308 has checked out and left the store.
+709.30: Finished shopping customer 188
+710.49: Finished shopping customer 204
+711.58: Arrival Customer 410
+712.20: Customer 188 has checked out and left the store.
+712.36: Customer 338 has checked out and left the store.
+712.77: Finished shopping customer 397
+713.09: Customer 204 has checked out and left the store.
+713.26: Finished shopping customer 410
+714.56: Customer 410 has checked out and left the store.
+716.09: Finished shopping customer 279
+717.47: Customer 397 has checked out and left the store.
+717.97: Finished shopping customer 141
+718.47: Arrival Customer 232
+719.25: Finished shopping customer 437
+720.24: Customer 279 has checked out and left the store.
+721.47: Customer 141 has checked out and left the store.
+723.05: Customer 437 has checked out and left the store.
+725.02: Finished shopping customer 158
+728.52: Customer 158 has checked out and left the store.
+730.59: Finished shopping customer 399
+731.82: Finished shopping customer 445
+734.14: Customer 399 has checked out and left the store.
+735.32: Customer 445 has checked out and left the store.
+736.07: Finished shopping customer 231
+737.31: Finished shopping customer 285
+741.07: Customer 231 has checked out and left the store.
+741.36: Customer 285 has checked out and left the store.
+752.07: Finished shopping customer 232
+755.67: Customer 232 has checked out and left the store.
+758.85: Finished shopping customer 186
+762.70: Customer 186 has checked out and left the store.

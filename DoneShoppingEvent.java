@@ -25,8 +25,10 @@ public class DoneShoppingEvent extends Event {
         }
     }
 
+
     public void execute() {
-        System.out.println(timeOfOccurence + ": Finished shopping customer " + thisCustomer.getCustomerNumber());
+        System.out.printf("%.2f", timeOfOccurence);
+        System.out.println(": Finished shopping customer " + thisCustomer.getCustomerNumber());
         checkoutLanes.addCustomerToALane(thisCustomer);
     }
 

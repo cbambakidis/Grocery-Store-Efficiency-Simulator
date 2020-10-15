@@ -14,6 +14,7 @@ public class Lane extends PriorityQueue<Customer> {
     double currentWaitTime = 0;
     double timeTilCheckedOut = 0;
     String type;
+    double timeToCheckoutCurrentCustomer;
 
     public Lane() {
         this.type = "Normal";

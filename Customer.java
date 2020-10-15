@@ -10,6 +10,7 @@ public class Customer implements Comparable {
     private double shoppingSpeed;
     private double timeBeforeCheckout;
     private boolean isElgibleForExpress = false;
+     boolean isCheckingOut;
 
     /*
      * Makes a new customer object, using the information from the text file, as well as giving the customer access
@@ -73,6 +74,9 @@ public class Customer implements Comparable {
         return myDoneShoppingEvent;
     }
 
+    public String toString(){
+        return myCustomerNumber + "";
+    }
     @Override
     public int compareTo(Object o) {
         // TODO Auto-generated method stub
