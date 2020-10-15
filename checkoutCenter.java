@@ -20,11 +20,11 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
     }
 
     public checkoutCenter(int numberOfNormalLanes, int numberOfExpressLanes) {
-        for(int a=0; a<numberOfExpressLanes; a++){
+        for (int a = 0; a < numberOfExpressLanes; a++) {
             NormalLane normalCheckoutLane = new NormalLane();
             this.add(normalCheckoutLane);
         }
-        for(int b=0; b<numberOfExpressLanes; b++){
+        for (int b = 0; b < numberOfExpressLanes; b++) {
             ExpressLane expressCheckoutLane = new ExpressLane();
             this.add(expressCheckoutLane);
         }
@@ -36,11 +36,12 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
             if (this.get(i).peek() != null) {
                 this.get(i).currentWaitTime = this.get(i).peek().getShoppingList() * this.get(i).checkoutRate
                         + this.get(i).paymentTime;
-                    System.out.println("Customer " + this.get(i).peek().getCustomerNumber() + " is ready to checkout. Added to lane " + i + ". Current wait time " + this.get(i).currentWaitTime);
-                        this.get(i).peek().scheduleCheckoutEvent(this.get(i).currentWaitTime);
-                        this.get(i).poll();
-                    }
-                    
+                System.out.println(
+                        "Customer " + this.get(i).peek().getCustomerNumber() + " is ready to checkout. Added to lane "
+                                + i + ". Current wait time " + this.get(i).currentWaitTime);
+                this.get(i).peek().scheduleCheckoutEvent(this.get(i).currentWaitTime + this.get(i).peek().getArrivalTime());
+                this.get(i).poll();
+            }
 
             else {
                 this.get(i).currentWaitTime = 0;
@@ -50,7 +51,7 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
     }
 
     public void addCustomerToALane(Customer C) {
-        //Print stats on which lane it's being added to, and wait time.
+        // Print stats on which lane it's being added to, and wait time.
         if (C.getExpressElgibility() == true) {
             this.get(0).addCustomerToCheckoutLine(C);
         } else {

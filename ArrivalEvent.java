@@ -3,6 +3,7 @@ public class ArrivalEvent extends Event{
     Customer AssociatedCustomer;
     public ArrivalEvent(Customer C){
         this.timeOfOccurence = C.getArrivalTime();
+        super.timeOfOccurence = C.getArrivalTime();
         AssociatedCustomer = C;
     }
     public void execute(){ 

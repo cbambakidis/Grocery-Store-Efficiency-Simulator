@@ -7,6 +7,7 @@ public class CheckedOutEvent extends Event {
         timeCheckoutOccurs = time;
         super.timeOfOccurence = timeCheckoutOccurs;
         super.C = thisCustomer;
+        this.timeOfOccurence = timeCheckoutOccurs;
     }
 
     public void execute() {

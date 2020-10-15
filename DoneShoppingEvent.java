@@ -11,6 +11,7 @@ public class DoneShoppingEvent extends Event {
     public DoneShoppingEvent(Customer C, checkoutCenter checkoutLanes) {
         doneShoppingTime = C.getTimeBeforeCheckout();
         this.timeOfOccurence = C.getTimeBeforeCheckout() + C.arrivalTime;
+        super.timeOfOccurence = C.getTimeBeforeCheckout() + C.arrivalTime;
         this.checkoutLanes = checkoutLanes;
         thisCustomer = C;
         super.C = thisCustomer;
@@ -20,6 +21,7 @@ public class DoneShoppingEvent extends Event {
     }
 
     public void execute() {
+        System.out.println(timeOfOccurence + ": Finished shopping customer " + thisCustomer.getCustomerNumber());
         checkoutLanes.addCustomerToALane(thisCustomer);
     }
 

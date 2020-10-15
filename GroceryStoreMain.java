@@ -10,12 +10,13 @@ public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
 
         checkoutCenter checkoutLanes = new checkoutCenter(4, 2);
-        PriorityQueue<Event> events = new PriorityQueue<Event>(10, new EventComparator());
-        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
+        PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
+        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
         Collections.sort(customers, new timeComparator());
-
+        double time = 0;
         while (events.peek() != null) {
-            double time = events.peek().timeOfOccurence;
+            time = events.peek().timeOfOccurence;
+            System.out.print("CURRENTTIME: " + time + " -->");
             Collections.sort(checkoutLanes, new LineComparator());
             events.peek().execute();
             events.poll();
@@ -23,9 +24,11 @@ public class GroceryStoreMain {
         }
 
     }
+
     /*
-        To fix: fix checkout area scheduling checkout events. The time is not being processed correctly.
-    */
+     * To fix: fix checkout area scheduling checkout events. The time is not being
+     * processed correctly.
+     */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {
         FileReader reader = new FileReader(fileName);
