@@ -17,6 +17,7 @@ public class GroceryStoreMain {
         ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
         System.out.println(customers);
         //Collections.sort(customers, new timeComparator());
+        //The time comparator didn't work for some reason...lol
         double time = 0;
         while (events.peek() != null) {
             time = events.peek().timeOfOccurence;
