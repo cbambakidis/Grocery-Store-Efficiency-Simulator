@@ -31,16 +31,16 @@ public class checkoutCenter extends ArrayList<NormalLane> implements Comparable<
     }
 
     public void update(double time) {
+        
+        double timeElapsed;
         Collections.sort(this, new LineComparator());
         for (int i = 0; i < this.size(); i++) {
             if (this.get(i).peek() != null) {
-                this.get(i).currentWaitTime = this.get(i).peek().getShoppingList() * this.get(i).checkoutRate
-                        + this.get(i).paymentTime;
-                System.out.println(
-                        "Customer " + this.get(i).peek().getCustomerNumber() + " is ready to checkout. Added to lane "
-                                + i + ". Current wait time " + this.get(i).currentWaitTime);
+                this.get(i).currentWaitTime = (this.get(i).peek().getShoppingList() * this.get(i).checkoutRate
+                        + this.get(i).paymentTime + time);
                 this.get(i).peek().scheduleCheckoutEvent(this.get(i).currentWaitTime + this.get(i).peek().getArrivalTime());
                 this.get(i).poll();
+            //Keep customers in their lines until timeelapsed meets time it takes for them to check out, then schedule checkout event for this time, then move on to next?
             }
 
             else {

@@ -16,7 +16,6 @@ public class GroceryStoreMain {
         double time = 0;
         while (events.peek() != null) {
             time = events.peek().timeOfOccurence;
-            System.out.print("CURRENTTIME: " + time + " -->");
             Collections.sort(checkoutLanes, new LineComparator());
             events.peek().execute();
             events.poll();
