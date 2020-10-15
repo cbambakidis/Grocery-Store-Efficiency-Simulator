@@ -1,8 +1,6 @@
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -30,7 +28,9 @@ public class GroceryStoreMain {
     }
 
     /*
-     * Current issue: the checkout events are not being made correctly/added to event list in the right order.
+     * To add: make output specified to Dr.Cheathams requirements. Add tracker for how long customers had to wait in line.
+     * Add output when customers are sorted into line - lane number, number of customers.
+     * 
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {
