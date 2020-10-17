@@ -20,11 +20,11 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
     public checkoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
         eventsQ = eventQ;
         for (int a = 0; a < numberOfExpressLanes; a++) {
-            Lane normalCheckoutLane = new Lane();
+            Lane normalCheckoutLane = new Lane(false, a);
             this.add(normalCheckoutLane);
         }
         for (int b = 0; b < numberOfExpressLanes; b++) {
-            Lane expressCheckoutLane = new Lane(true);
+            Lane expressCheckoutLane = new Lane(true, b);
             this.add(expressCheckoutLane);
         }
     }
@@ -53,7 +53,7 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 if(timeElapsed >= this.get(i).timeToCheckoutCurrentCustomer){
                     //If enough time has passed to where the customer is done checking out, schedule its
                     //Checked out event.
-                    eventsQ.offer(new CheckedOutEvent(this.get(i).peek(), time + this.get(i).timeToCheckoutCurrentCustomer));
+                    eventsQ.offer(new CheckedOutEvent(this.get(i).peek(), time + this.get(i).timeToCheckoutCurrentCustomer, this.get(i).getLaneNumber(), this.get(i).size(), this.get(i)));
                     this.get(i).poll(); //Remove the customer from the queue
                     this.get(i).timeToCheckoutCurrentCustomer = 0;
                 }
@@ -83,7 +83,6 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
             for (int i = 0; i < this.size(); i++) {
                 if (this.get(i).type == "Normal") {
                     this.get(i).addCustomerToCheckoutLine(C);
-
                     break;
                 }
             }

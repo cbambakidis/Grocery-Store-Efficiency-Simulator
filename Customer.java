@@ -7,6 +7,7 @@ public class Customer implements Comparable {
     Queue<Event> orderOfEvents;
     private int shoppingList;
     private int myCustomerNumber;
+    private double waitTime = 0;
     private double shoppingSpeed;
     private double timeBeforeCheckout;
     private boolean isElgibleForExpress = false;
@@ -65,10 +66,19 @@ public class Customer implements Comparable {
         return shoppingSpeed;
     }
 
-    public void scheduleCheckoutEvent(double x) {
-        CheckedOutEvent checkoutTime = new CheckedOutEvent(this, x);
-        orderOfEvents.add(checkoutTime);
+    public void updateWaitTime(double timeElapsed){
+        waitTime += timeElapsed;
     }
+
+    public double timeWaited(){
+        return waitTime;
+    }
+    
+
+    // public void scheduleCheckoutEvent(double x) {
+    //     CheckedOutEvent checkoutTime = new CheckedOutEvent(this, x);
+    //     orderOfEvents.add(checkoutTime);
+    // }
 
     public Event scheduleDoneShoppingEvent() {
         return myDoneShoppingEvent;

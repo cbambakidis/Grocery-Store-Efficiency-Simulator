@@ -14,9 +14,7 @@ public class GroceryStoreMain {
         
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
         checkoutCenter checkoutLanes = new checkoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
-        System.out.println(customers);
-        //Collections.sort(customers, new timeComparator());
+        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
         //The time comparator didn't work for some reason...lol
         double time = 0;
         while (events.peek() != null) {
@@ -31,7 +29,7 @@ public class GroceryStoreMain {
     /*
      * To add: make output specified to Dr.Cheathams requirements. Add tracker for how long customers had to wait in line.
      * Add output when customers are sorted into line - lane number, number of customers.
-     * 
+     * Basically, pass wait time and lane number to checked out event... find some way to track time waited for customers.
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {

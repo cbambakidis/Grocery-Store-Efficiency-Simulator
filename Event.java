@@ -1,5 +1,4 @@
-import java.io.FileWriter;
-import java.io.IOException;
+
 /*
      * The event class is pretty straightforward. It has a time of occurence and a field to do something when it
      * executes. 

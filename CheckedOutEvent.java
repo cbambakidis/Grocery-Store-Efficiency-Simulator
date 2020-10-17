@@ -3,21 +3,27 @@
  * they waited in line. 
 */
 public class CheckedOutEvent extends Event {
-    double timeCheckoutOccurs;
     Customer thisCustomer;
-    public CheckedOutEvent(Customer custy, double time) {
+    private double waitTime;
+    private int laneUsed;
+    int numOtherPeeps;
+    private Lane x;
+    public CheckedOutEvent(Customer custy, double time, int lane, int numOtherPeopleInLine, Lane N) {
         thisCustomer = custy;
-        timeCheckoutOccurs = time;
-        super.timeOfOccurence = timeCheckoutOccurs;
+        super.timeOfOccurence = time;
         super.C = thisCustomer;
-        this.timeOfOccurence = timeCheckoutOccurs;
+        this.timeOfOccurence = time;
+        laneUsed = lane;
+        x = N;
+        numOtherPeeps = numOtherPeopleInLine;
+        waitTime = this.timeOfOccurence - (x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime);
+       // this.waitTime = waitTime;
     }
     
 
     public void execute() {
         System.out.printf("%.2f", timeOfOccurence);
-        System.out.println(": Customer " + thisCustomer.getCustomerNumber()
-                + " has checked out and left the store.");
+        System.out.println(": Finished Checkout Customer " + thisCustomer.getCustomerNumber() + " on Lane " + laneUsed + "(" + thisCustomer.getExpressElgibility() + ") (" +  waitTime + " minute wait, " + (numOtherPeeps-1) +  "people in line -- finished shopping at " + thisCustomer.myDoneShoppingEvent.getTimeofOccurence() +  "front of the line at " + (this.getTimeofOccurence()-(x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime)));
     }
 
 }
