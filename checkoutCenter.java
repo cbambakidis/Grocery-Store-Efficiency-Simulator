@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.PriorityQueue;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /*
  * The checkout center represents all the checkout lanes in the store.
@@ -19,7 +21,7 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
     public checkoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
         eventsQ = eventQ;
-        for (int a = 0; a < numberOfExpressLanes; a++) {
+        for (int a = 0; a < numberOfNormalLanes; a++) {
             Lane normalCheckoutLane = new Lane(false, a);
             this.add(normalCheckoutLane);
         }
@@ -79,18 +81,41 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
     public void addCustomerToALane(Customer C) {
         // Adds customer to a lane based on if they're elgible for express or not.
-        // Checkout center automatically puts the shortest line at front of array, so we
-        // can add them to
-        // The first (and thus shortest) regular line if they're not elgible for
-        // express.
-        // Express customers go to teh shortest line regardless.
-        if (C.getExpressElgibility() == true) {
-            this.get(0).addCustomerToCheckoutLine(C);
-        } else {
-            for (int i = 0; i < this.size(); i++) {
-                if (this.get(i).type == "Normal") {
-                    this.get(i).addCustomerToCheckoutLine(C);
-                    break;
+        
+        //This first part checks to see whether or not all the lanes are of equal size..
+        int num = 0;
+        for(int f=0; f<this.size()-1; f++){
+            if(this.get(f).size() == this.get(f+1).size()){
+            num += num;
+            }
+            else {num = 1;}
+        }
+        //If they are all equal, add customer to random lane. Express customers can only use express lanes.
+        if (num == 0){
+            boolean hadBeenAdded = false;
+            while(!hadBeenAdded){
+            int f = ThreadLocalRandom.current().nextInt(0, this.size());
+            if(this.get(f).type == "Normal"){
+            this.get(f).addCustomerToCheckoutLine(C);
+            hadBeenAdded = true;
+            }
+            if(this.get(f).type == "Express" && C.getExpressElgibility()){
+                this.get(f).addCustomerToCheckoutLine(C);
+                hadBeenAdded = true;
+            }
+            }
+        }
+        //If they're of different lengths, add customer to shortest lane. The checkoutcenter is made automatically to
+        //Sort by shortest lane. Only express customers can use express lane.
+        else {
+            if (C.getExpressElgibility() == true) {
+                this.get(0).addCustomerToCheckoutLine(C);
+            } else {
+                for (int i = 0; i < this.size(); i++) {
+                    if (this.get(i).type == "Normal") {
+                        this.get(i).addCustomerToCheckoutLine(C);
+                        break;
+                    }
                 }
             }
         }
