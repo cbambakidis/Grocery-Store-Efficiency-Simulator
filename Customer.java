@@ -10,6 +10,7 @@ public class Customer implements Comparable {
     private double waitTime = 0;
     private double shoppingSpeed;
     private double timeBeforeCheckout;
+    private double totalTimeInStore;
     private boolean isElgibleForExpress = false;
      boolean isCheckingOut;
 
@@ -38,8 +39,12 @@ public class Customer implements Comparable {
         orderOfEvents.offer(scheduleDoneShoppingEvent());
     }
 
-    public void setTotalTimeInStore(int timeWaitingInLine) {
-        double totalTimeInStore = timeBeforeCheckout + timeWaitingInLine;
+    public void setWaitTime(double timeWaitingInLine) {
+        totalTimeInStore = timeWaitingInLine;
+    }
+
+    public double getWaitTime(){
+        return totalTimeInStore;
     }
 
     public double getArrivalTime() {

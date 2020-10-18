@@ -14,7 +14,7 @@ public class GroceryStoreMain {
         
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
         checkoutCenter checkoutLanes = new checkoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
+        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
         //The time comparator didn't work for some reason...lol
         double time = 0;
         while (events.peek() != null) {
@@ -23,6 +23,11 @@ public class GroceryStoreMain {
             events.poll().execute();
             checkoutLanes.update(time);
         }
+        double averageWaitTime = 0;
+        for(Customer N : customers){
+        averageWaitTime += N.getWaitTime();
+        }
+        System.out.println("Average Wait Time: " + Math.ceil(averageWaitTime/customers.size()));
 
     }
 

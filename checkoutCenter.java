@@ -35,29 +35,34 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
      */
 
     public void update(double time) {
-        if(time - localTime != 0){
+        if (time - localTime != 0) {
             timeElapsed = time - localTime + timeElapsed;
         }
         localTime = time;
         Collections.sort(this, new LineComparator());
         for (int i = 0; i < this.size(); i++) {
-            if (this.get(i).peek() != null) { //check if the checkout lane has someone in line.
+            if (this.get(i).peek() != null) { // check if the checkout lane has someone in line.
 
-                //If the current customer hasn't already had their checkout time calculated, calculate it.
-                if(this.get(i).timeToCheckoutCurrentCustomer == 0){
-                this.get(i).timeToCheckoutCurrentCustomer = this.get(i).peek().getShoppingList() * this.get(i).checkoutRate + this.get(i).paymentTime;
+                // If the current customer hasn't already had their checkout time calculated,
+                // calculate it.
+                if (this.get(i).timeToCheckoutCurrentCustomer == 0) {
+                    this.get(i).timeToCheckoutCurrentCustomer = this.get(i).peek().getShoppingList()
+                            * this.get(i).checkoutRate + this.get(i).paymentTime;
                 }
 
-                //Now check to see if the time that has elapsed since the last event 
-                //is long enough for the current customer to check out.
-                if(timeElapsed >= this.get(i).timeToCheckoutCurrentCustomer){
-                    //If enough time has passed to where the customer is done checking out, schedule its
-                    //Checked out event.
-                    eventsQ.offer(new CheckedOutEvent(this.get(i).peek(), time + this.get(i).timeToCheckoutCurrentCustomer, this.get(i).getLaneNumber(), this.get(i).size(), this.get(i)));
-                    this.get(i).poll(); //Remove the customer from the queue
+                // Now check to see if the time that has elapsed since the last event
+                // is long enough for the current customer to check out.
+                if (timeElapsed >= this.get(i).timeToCheckoutCurrentCustomer) {
+                    // If enough time has passed to where the customer is done checking out,
+                    // schedule its
+                    // Checked out event.
+                    eventsQ.offer(
+                            new CheckedOutEvent(this.get(i).peek(), time + this.get(i).timeToCheckoutCurrentCustomer,
+                                    this.get(i).getLaneNumber(), this.get(i).size(), this.get(i)));
+                    this.get(i).poll(); // Remove the customer from the queue
                     this.get(i).timeToCheckoutCurrentCustomer = 0;
                 }
-            
+
             }
 
             else {
@@ -73,10 +78,12 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
      */
 
     public void addCustomerToALane(Customer C) {
-        //Adds customer to a lane based on if they're elgible for express or not.
-        //Checkout center automatically puts the shortest line at front of array, so we can add them to
-        //The first (and thus shortest) regular line if they're not elgible for express.
-        //Express customers go to teh shortest line regardless.
+        // Adds customer to a lane based on if they're elgible for express or not.
+        // Checkout center automatically puts the shortest line at front of array, so we
+        // can add them to
+        // The first (and thus shortest) regular line if they're not elgible for
+        // express.
+        // Express customers go to teh shortest line regardless.
         if (C.getExpressElgibility() == true) {
             this.get(0).addCustomerToCheckoutLine(C);
         } else {

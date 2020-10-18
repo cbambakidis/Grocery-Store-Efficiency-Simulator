@@ -8,6 +8,7 @@ public class CheckedOutEvent extends Event {
     private int laneUsed;
     int numOtherPeeps;
     private Lane x;
+
     public CheckedOutEvent(Customer custy, double time, int lane, int numOtherPeopleInLine, Lane N) {
         thisCustomer = custy;
         super.timeOfOccurence = time;
@@ -16,19 +17,22 @@ public class CheckedOutEvent extends Event {
         laneUsed = lane;
         x = N;
         numOtherPeeps = numOtherPeopleInLine;
-        if(x.size()-1 == 0){
+        if (x.size() - 1 == 0) {
             waitTime = 0;
+        } else {
+            waitTime = this.timeOfOccurence - (x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime)
+                    - (thisCustomer.getTimeBeforeCheckout() + thisCustomer.getArrivalTime());
         }
-        else{
-        waitTime = this.timeOfOccurence - (x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime) - (thisCustomer.getTimeBeforeCheckout() + thisCustomer.getArrivalTime());
-        }
-        // this.waitTime = waitTime;
+        thisCustomer.setWaitTime(waitTime);
     }
-    
 
     public void execute() {
-        System.out.printf("%.2f", timeOfOccurence);
-        System.out.println(": Finished Checkout Customer " + thisCustomer.getCustomerNumber() + " on Lane " + laneUsed + " (" + thisCustomer.getExpressElgibility() + ") (" +  (waitTime) + " minute wait, " + (numOtherPeeps-1) +  " people in line -- finished shopping at " + thisCustomer.myDoneShoppingEvent.getTimeofOccurence() +  " front of the line at " + Math.ceil(this.getTimeofOccurence()-(x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime)));
+        System.out.printf("%.2f: Finished Checkout Customer %d on lane %d (" + thisCustomer.getExpressElgibility()
+                + ") (%.2f minute wait, %d other people in line -- finished shopping at %.2f front of the line at %.2f",
+                timeOfOccurence, thisCustomer.getCustomerNumber(), x.getLaneNumber(), waitTime, numOtherPeeps - 1,
+                thisCustomer.myDoneShoppingEvent.getTimeofOccurence(),
+                this.getTimeofOccurence() - (x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime));
+         System.out.println();
     }
 
 }
