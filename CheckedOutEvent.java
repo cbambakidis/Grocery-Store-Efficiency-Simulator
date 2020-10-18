@@ -17,7 +17,7 @@ public class CheckedOutEvent extends Event {
         laneUsed = lane;
         x = N;
         numOtherPeeps = numOtherPeopleInLine;
-        if (x.size() - 1 == 0) {
+        if (numOtherPeeps == 0) {
             waitTime = 0;
         } else {
             waitTime = this.timeOfOccurence - (x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime)

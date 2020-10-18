@@ -38,7 +38,7 @@ public class Lane extends PriorityQueue<Customer> {
         this.offer(c);
     }
 
-    public int getLaneNumber(){
+    public int getLaneNumber() {
         return laneNumber;
     }
 }

@@ -32,9 +32,7 @@ public class GroceryStoreMain {
     }
 
     /*
-     * To add: make output specified to Dr.Cheathams requirements. Add tracker for how long customers had to wait in line.
-     * Add output when customers are sorted into line - lane number, number of customers.
-     * Basically, pass wait time and lane number to checked out event... find some way to track time waited for customers.
+     * To fix: The waiting time is always 0...
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {

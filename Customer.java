@@ -12,16 +12,18 @@ public class Customer implements Comparable {
     private double timeBeforeCheckout;
     private double totalTimeInStore;
     private boolean isElgibleForExpress = false;
-     boolean isCheckingOut;
+    boolean isCheckingOut;
 
     /*
-     * Makes a new customer object, using the information from the text file, as well as giving the customer access
-     * to the event list and checkout center so that it can schedule itself to be done shopping.
-     * Upon construction, the customer object calculates how much time it will need to be done shopping, then makes an event for it.
-     * Offers both the arrival and done shopping events to the event list. Does not add Checked Out event,
-     * because that time of occurence depends on how long they wait in line.
-     * We have getters for each of the private variables.
-    */
+     * Makes a new customer object, using the information from the text file, as
+     * well as giving the customer access to the event list and checkout center so
+     * that it can schedule itself to be done shopping. Upon construction, the
+     * customer object calculates how much time it will need to be done shopping,
+     * then makes an event for it. Offers both the arrival and done shopping events
+     * to the event list. Does not add Checked Out event, because that time of
+     * occurence depends on how long they wait in line. We have getters for each of
+     * the private variables.
+     */
     public Customer(double arrivalTime, int shoppingListSize, double shoppingSpeed, int customerNumber,
             Queue<Event> eventList, checkoutCenter checkoutLanes) {
         this.arrivalTime = arrivalTime;
@@ -43,7 +45,7 @@ public class Customer implements Comparable {
         totalTimeInStore = timeWaitingInLine;
     }
 
-    public double getWaitTime(){
+    public double getWaitTime() {
         return totalTimeInStore;
     }
 
@@ -71,27 +73,27 @@ public class Customer implements Comparable {
         return shoppingSpeed;
     }
 
-    public void updateWaitTime(double timeElapsed){
+    public void updateWaitTime(double timeElapsed) {
         waitTime += timeElapsed;
     }
 
-    public double timeWaited(){
+    public double timeWaited() {
         return waitTime;
     }
-    
 
     // public void scheduleCheckoutEvent(double x) {
-    //     CheckedOutEvent checkoutTime = new CheckedOutEvent(this, x);
-    //     orderOfEvents.add(checkoutTime);
+    // CheckedOutEvent checkoutTime = new CheckedOutEvent(this, x);
+    // orderOfEvents.add(checkoutTime);
     // }
 
     public Event scheduleDoneShoppingEvent() {
         return myDoneShoppingEvent;
     }
 
-    public String toString(){
+    public String toString() {
         return myCustomerNumber + "";
     }
+
     @Override
     public int compareTo(Object o) {
         // TODO Auto-generated method stub
