@@ -4,6 +4,6 @@
 8.00: Finished shopping customer 2
 8.00: Finished shopping customer 1
 9.50: Finished shopping customer 0
-10.60: Finished Checkout Customer 1 on Lane 1(false) (8.0 minute wait, 0people in line -- finished shopping at 10.6, got to the front of the line at 8.0
-10.70: Finished Checkout Customer 2 on Lane 0(false) (7.999999999999999 minute wait, 0people in line -- finished shopping at 10.7, got to the front of the line at 7.999999999999999
-12.25: Finished Checkout Customer 0 on Lane 0(false) (9.5 minute wait, 0people in line -- finished shopping at 12.25, got to the front of the line at 9.5
+10.60: Finished Checkout Customer 1 on Lane 1 (false) (0.0 minute wait, 0 people in line -- finished shopping at 8.0 front of the line at 8.0
+10.70: Finished Checkout Customer 2 on Lane 0 (false) (0.0 minute wait, 0 people in line -- finished shopping at 8.0 front of the line at 8.0
+12.25: Finished Checkout Customer 0 on Lane 0 (false) (0.0 minute wait, 0 people in line -- finished shopping at 9.5 front of the line at 10.0

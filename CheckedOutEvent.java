@@ -16,14 +16,19 @@ public class CheckedOutEvent extends Event {
         laneUsed = lane;
         x = N;
         numOtherPeeps = numOtherPeopleInLine;
-        waitTime = this.timeOfOccurence - (x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime);
-       // this.waitTime = waitTime;
+        if(x.size()-1 == 0){
+            waitTime = 0;
+        }
+        else{
+        waitTime = this.timeOfOccurence - (x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime) - (thisCustomer.getTimeBeforeCheckout() + thisCustomer.getArrivalTime());
+        }
+        // this.waitTime = waitTime;
     }
     
 
     public void execute() {
         System.out.printf("%.2f", timeOfOccurence);
-        System.out.println(": Finished Checkout Customer " + thisCustomer.getCustomerNumber() + " on Lane " + laneUsed + "(" + thisCustomer.getExpressElgibility() + ") (" +  waitTime + " minute wait, " + (numOtherPeeps-1) +  "people in line -- finished shopping at " + thisCustomer.myDoneShoppingEvent.getTimeofOccurence() +  "front of the line at " + (this.getTimeofOccurence()-(x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime)));
+        System.out.println(": Finished Checkout Customer " + thisCustomer.getCustomerNumber() + " on Lane " + laneUsed + " (" + thisCustomer.getExpressElgibility() + ") (" +  (waitTime) + " minute wait, " + (numOtherPeeps-1) +  " people in line -- finished shopping at " + thisCustomer.myDoneShoppingEvent.getTimeofOccurence() +  " front of the line at " + Math.ceil(this.getTimeofOccurence()-(x.checkoutRate * thisCustomer.getShoppingList() + x.paymentTime)));
     }
 
 }
