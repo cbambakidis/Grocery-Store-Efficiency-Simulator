@@ -13,7 +13,7 @@ public class Customer implements Comparable {
     private double totalTimeInStore;
     private boolean isElgibleForExpress = false;
     boolean isCheckingOut;
-    int numberPeepsInFront = 0;
+    private int numberPeepsInFront = 0;
 
 
     /*
@@ -35,9 +35,8 @@ public class Customer implements Comparable {
         myCustomerNumber = customerNumber;
         myArrivalEvent = new ArrivalEvent(this);
         myDoneShoppingEvent = new DoneShoppingEvent(this, checkoutLanes);
-        double gotDoneShoppingAt = myDoneShoppingEvent.getTimeofOccurence();
         orderOfEvents = eventList;
-        if (shoppingListSize < 10) {
+        if (shoppingListSize <= 12) {
             isElgibleForExpress = true;
         }
         orderOfEvents.offer(myArrivalEvent);
@@ -46,6 +45,14 @@ public class Customer implements Comparable {
 
     public void setWaitTime(double timeWaitingInLine) {
         totalTimeInStore = timeWaitingInLine;
+    }
+
+    public int getPeopleInFront(){
+        return numberPeepsInFront;
+    }
+
+    public void setPeopleInFront(int x){
+        this.numberPeepsInFront = x;
     }
 
     public double getWaitTime() {

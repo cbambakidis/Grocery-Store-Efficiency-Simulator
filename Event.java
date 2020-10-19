@@ -14,7 +14,7 @@ public class Event{
     public void execute() {
     }
 
-    public double getTimeofOccurence() {
+    public double getTimeOfOccurence() {
         return timeOfOccurence;
     }
 

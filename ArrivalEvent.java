@@ -1,5 +1,5 @@
 public class ArrivalEvent extends Event {
-    double timeOfOccurence;
+    private double timeOfOccurence;
     Customer AssociatedCustomer;
         /*
          * The arrival event has a time of occurence of when the customer arrives in the store, from the text file.
@@ -7,7 +7,7 @@ public class ArrivalEvent extends Event {
         */
     public ArrivalEvent(Customer C) {
         this.timeOfOccurence = C.getArrivalTime();
-        super.timeOfOccurence = C.getArrivalTime();
+        super.timeOfOccurence = this.timeOfOccurence;
         AssociatedCustomer = C;
     }
 

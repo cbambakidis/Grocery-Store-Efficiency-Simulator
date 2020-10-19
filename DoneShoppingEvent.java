@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 /*
  * The DoneShopping event is what is created when the customer finishes shopping.
@@ -6,23 +5,16 @@ import java.util.ArrayList;
  * Customer can use the express lane.
 */
 public class DoneShoppingEvent extends Event {
-    private double doneShoppingTime;
-    double timeOfOccurence;
-    Customer thisCustomer;
-    boolean isElgibleForExpress;
-    ArrayList<Lane> options;
-    checkoutCenter checkoutLanes;
+    private double timeOfOccurence;
+    private Customer thisCustomer;
+    private checkoutCenter checkoutLanes;
 
     public DoneShoppingEvent(Customer C, checkoutCenter checkoutLanes) {
-        doneShoppingTime = C.getTimeBeforeCheckout();
         this.timeOfOccurence = C.getTimeBeforeCheckout() + C.arrivalTime;
-        super.timeOfOccurence = C.getTimeBeforeCheckout() + C.arrivalTime;
+        super.timeOfOccurence = this.timeOfOccurence;
         this.checkoutLanes = checkoutLanes;
         thisCustomer = C;
         super.C = thisCustomer;
-        if (C.getShoppingList() < 10) {
-            isElgibleForExpress = true;
-        }
     }
 
 

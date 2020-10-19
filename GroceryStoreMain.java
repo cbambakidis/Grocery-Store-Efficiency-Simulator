@@ -11,11 +11,11 @@ public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
         PrintStream fileOut = new PrintStream("./out.txt"); //This idea via Jerry Zhou on dev2qa
         System.setOut(fileOut);
-        
+
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
         checkoutCenter checkoutLanes = new checkoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
-
+        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
+        //driver loop
         double time = 0;
         while (events.peek() != null) {
             time = events.peek().timeOfOccurence;
@@ -23,9 +23,11 @@ public class GroceryStoreMain {
             Collections.sort(checkoutLanes, new LineComparator());
             events.poll().execute();
         }
+
+        //Calculate avg wait time.
         double averageWaitTime = 0;
         for(Customer N : customers){
-        if(N.getWaitTime() != 0){
+        if(N.getWaitTime() != 0){ //For debugging
             System.out.println("Customer " + N + " waited " + N.getWaitTime());
         }
         averageWaitTime += N.getWaitTime();
@@ -35,7 +37,9 @@ public class GroceryStoreMain {
     }
 
     /*
-     * //
+     * The wait time is always zero. The line size never exceeds 1 in any lane. Some timesofoccurence are screwed up.
+     * Cast each checkout line to an arraylist then manually calculate wait time for each customer 
+     * based on customers in front?
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {

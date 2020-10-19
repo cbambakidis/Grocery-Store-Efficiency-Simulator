@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.PriorityQueue;
 /*
  * The lane object represents a line of people waiting to check out.
@@ -13,6 +12,7 @@ public class Lane extends PriorityQueue<Customer> {
     private int laneNumber;
     double checkoutRate;
     int paymentTime;
+    boolean isExpress;
     double currentWaitTime = 0;
     double timeTilCheckedOut = 0;
     String type;
@@ -22,11 +22,13 @@ public class Lane extends PriorityQueue<Customer> {
     }
 
     public Lane(boolean isExpress, int laneNumber) {
-        if (isExpress == true) {
+        if (isExpress) {
+            this.isExpress = true;
             this.type = "Express";
             this.checkoutRate = .1;
             this.paymentTime = 1;
         } else {
+            this.isExpress = false;
             this.type = "Normal";
             this.checkoutRate = .05;
             this.paymentTime = 2;
@@ -35,7 +37,18 @@ public class Lane extends PriorityQueue<Customer> {
     }
 
     public void addCustomerToCheckoutLine(Customer c) {
+        c.setWaitTime(calculateWaitTime(this));
+        c.setPeopleInFront(this.size());
         this.offer(c);
+    }
+    
+    public double calculateWaitTime(Lane x){
+        double totalWaitTime = 0;
+                    for(Customer N : x){
+                    totalWaitTime += (N.getShoppingList()
+                    * x.checkoutRate + x.paymentTime);
+                    }
+                    return totalWaitTime;
     }
 
     public int getLaneNumber() {
