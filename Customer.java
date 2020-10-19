@@ -25,7 +25,7 @@ public class Customer implements Comparable<Double> {
      * the private variables.
      */
     public Customer(double arrivalTime, int shoppingListSize, double shoppingSpeed, int customerNumber,
-            Queue<Event> eventList, checkoutCenter checkoutLanes) {
+            Queue<Event> eventList, CheckoutCenter checkoutLanes) {
         this.arrivalTime = arrivalTime;
         this.shoppingList = shoppingListSize;
         this.shoppingSpeed = shoppingSpeed;

@@ -6,15 +6,14 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Collections;
-
 public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
         PrintStream fileOut = new PrintStream("./out.txt");
         System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        checkoutCenter checkoutLanes = new checkoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
+        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2, events);
+        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
         // driver loop
         double time = 0;
         while (events.peek() != null) {
@@ -43,7 +42,7 @@ public class GroceryStoreMain {
      * manually calculate wait time for each customer based on customers in front?
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
-            checkoutCenter checkoutLanes) throws IOException {
+            CheckoutCenter checkoutLanes) throws IOException {
         FileReader reader = new FileReader(fileName);
         Scanner fileScanner = new Scanner(reader);
         ArrayList<Customer> CustomerList = new ArrayList<>();

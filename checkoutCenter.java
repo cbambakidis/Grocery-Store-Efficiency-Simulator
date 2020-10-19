@@ -9,16 +9,16 @@ import java.util.concurrent.ThreadLocalRandom;
  * This class creates the desired amount of regular and express lanes, and updates them given a time from 
  * the main method.
 */
-public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> {
+public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> {
     private static final long serialVersionUID = 1L;
     private double localTime = 0;
     PriorityQueue<Event> eventsQ;
     double timeElapsed;
 
-    public checkoutCenter() {
+    public CheckoutCenter() {
     }
 
-    public checkoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
+    public CheckoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
         eventsQ = eventQ;
         for (int a = 0; a < numberOfNormalLanes; a++) {
             Lane normalCheckoutLane = new Lane(false, a);

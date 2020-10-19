@@ -7,9 +7,9 @@
 public class DoneShoppingEvent extends Event {
     private double timeOfOccurence;
     private Customer thisCustomer;
-    private checkoutCenter checkoutLanes;
+    private CheckoutCenter checkoutLanes;
 
-    public DoneShoppingEvent(Customer C, checkoutCenter checkoutLanes) {
+    public DoneShoppingEvent(Customer C, CheckoutCenter checkoutLanes) {
         this.timeOfOccurence = C.getTimeBeforeCheckout() + C.getArrivalTime();
         super.timeOfOccurence = this.timeOfOccurence;
         this.checkoutLanes = checkoutLanes;
