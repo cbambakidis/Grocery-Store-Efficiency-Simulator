@@ -2,12 +2,12 @@
 2.0: Arrival Customer 0
 2.0: Arrival Customer 1
 8.00: Finished shopping customer 2
-More than 12, chose lane 2
+More than 12, chose lane 0
 8.00: Finished shopping customer 1
-Less than 12, chose lane 1
+Less than 12, chose lane 0
 9.50: Finished shopping customer 0
-More than 12, chose lane 3
-10.20: Finished Checkout Customer 1 on lane 1 (true) (0.00 minute wait, 0 other people in line -- finished shopping at 8.00 front of the line at 8.00
-10.70: Finished Checkout Customer 2 on lane 2 (false) (0.00 minute wait, 0 other people in line -- finished shopping at 8.00 front of the line at 8.00
-12.25: Finished Checkout Customer 0 on lane 3 (false) (0.00 minute wait, 0 other people in line -- finished shopping at 9.50 front of the line at 9.50
+More than 12, chose lane 1
+10.20: Finished Checkout Customer 1 on lane 0 (true) (0.00 minute wait, 0 other people in line -- finished shopping at 8.00 front of the line at 8.00
+10.70: Finished Checkout Customer 2 on lane 0 (false) (0.00 minute wait, 0 other people in line -- finished shopping at 8.00 front of the line at 8.00
+12.25: Finished Checkout Customer 0 on lane 1 (false) (0.00 minute wait, 0 other people in line -- finished shopping at 9.50 front of the line at 9.50
 Average Wait Time: 0.0

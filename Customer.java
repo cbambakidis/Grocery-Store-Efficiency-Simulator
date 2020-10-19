@@ -1,10 +1,10 @@
 import java.util.Queue;
 
 public class Customer implements Comparable {
-    double arrivalTime;
-    ArrivalEvent myArrivalEvent;
-    DoneShoppingEvent myDoneShoppingEvent;
-    Queue<Event> orderOfEvents;
+    private double arrivalTime;
+    private ArrivalEvent myArrivalEvent;
+    private DoneShoppingEvent myDoneShoppingEvent;
+    private Queue<Event> orderOfEvents;
     private int shoppingList;
     private int myCustomerNumber;
     private double waitTime = 0;
@@ -12,7 +12,6 @@ public class Customer implements Comparable {
     private double timeBeforeCheckout;
     private double totalTimeInStore;
     private boolean isElgibleForExpress = false;
-    boolean isCheckingOut;
     private int numberPeepsInFront = 0;
 
 
@@ -45,6 +44,10 @@ public class Customer implements Comparable {
 
     public void setWaitTime(double timeWaitingInLine) {
         totalTimeInStore = timeWaitingInLine;
+    }
+
+    public double getDoneShoppingTime(){
+        return myDoneShoppingEvent.getTimeOfOccurence();
     }
 
     public int getPeopleInFront(){
@@ -83,19 +86,10 @@ public class Customer implements Comparable {
         return shoppingSpeed;
     }
 
-    public void updateWaitTime(double timeElapsed) {
-        waitTime += timeElapsed;
-    }
-
     public double timeWaited() {
         return waitTime;
     }
-
-    // public void scheduleCheckoutEvent(double x) {
-    // CheckedOutEvent checkoutTime = new CheckedOutEvent(this, x);
-    // orderOfEvents.add(checkoutTime);
-    // }
-
+    
     public Event scheduleDoneShoppingEvent() {
         return myDoneShoppingEvent;
     }

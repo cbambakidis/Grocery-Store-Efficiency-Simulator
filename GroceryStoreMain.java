@@ -27,11 +27,12 @@ public class GroceryStoreMain {
         //Calculate avg wait time.
         double averageWaitTime = 0;
         for(Customer N : customers){
-        if(N.getWaitTime() != 0){ //For debugging
+        if(N.getWaitTime() != 0){ 
             System.out.println("Customer " + N + " waited " + N.getWaitTime());
         }
         averageWaitTime += N.getWaitTime();
         }
+
         System.out.println("Average Wait Time: " + averageWaitTime/customers.size());
 
     }
