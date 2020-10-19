@@ -9,12 +9,12 @@ import java.util.Collections;
 
 public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
-        PrintStream fileOut = new PrintStream("./out.txt"); // This idea via Jerry Zhou on dev2qa
+        PrintStream fileOut = new PrintStream("./out.txt");
         System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
         checkoutCenter checkoutLanes = new checkoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
+        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
         // driver loop
         double time = 0;
         while (events.peek() != null) {

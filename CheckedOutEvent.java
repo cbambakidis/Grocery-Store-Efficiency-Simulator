@@ -11,7 +11,7 @@ public class CheckedOutEvent extends Event {
     public CheckedOutEvent(Customer custy, Lane N) {
         thisCustomer = custy;
         super.C = thisCustomer;
-        this.timeOfOccurence = N.peek().getDoneShoppingTime() + N.peek().getWaitTime()
+        this.timeOfOccurence = custy.getDoneShoppingTime() + custy.getWaitTime()
                 + N.timeToCheckoutCurrentCustomer;
         super.timeOfOccurence = this.timeOfOccurence;
         x = N;

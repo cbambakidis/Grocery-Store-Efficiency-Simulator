@@ -1,6 +1,6 @@
 import java.util.Queue;
 
-public class Customer implements Comparable {
+public class Customer implements Comparable<Double> {
     private double arrivalTime;
     private ArrivalEvent myArrivalEvent;
     private DoneShoppingEvent myDoneShoppingEvent;
@@ -45,18 +45,12 @@ public class Customer implements Comparable {
         totalTimeInStore = timeWaitingInLine;
     }
 
-    public double getDoneShoppingTime() {
-        return myDoneShoppingEvent.getTimeOfOccurence();
-    }
-
-    public int getPeopleInFront() {
-        return numberPeepsInFront;
-    }
-
+    
     public void setPeopleInFront(int x) {
         this.numberPeepsInFront = x;
     }
 
+    
     public double getWaitTime() {
         return totalTimeInStore;
     }
@@ -93,13 +87,20 @@ public class Customer implements Comparable {
         return myDoneShoppingEvent;
     }
 
+    public double getDoneShoppingTime() {
+        return myDoneShoppingEvent.getTimeOfOccurence();
+    }
+
+    public int getPeopleInFront() {
+        return numberPeepsInFront;
+    }
+
     public String toString() {
         return myCustomerNumber + "";
     }
 
     @Override
-    public int compareTo(Object o) {
-        // TODO Auto-generated method stub
+    public int compareTo(Double o) {
         return 0;
     }
 

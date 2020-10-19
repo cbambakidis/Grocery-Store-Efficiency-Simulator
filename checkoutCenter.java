@@ -48,7 +48,7 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 if (N.size() > 1) {
                     System.out.println("More than 2 people in a lane \n \n \n"); // For debugging
                 }
-                
+
                 //Calculate time it will take to check out customer at front of line.
                 //Check if enough time has passed to where the customer is checked out.
                 //If it is, schedule checkout event.
@@ -71,6 +71,7 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
      * whether or not they get to use an express lane. Wait time is calculated within lane class.
      */
     public void addCustomerToALane(Customer C) {
+        
         // This first part checks to see whether or not all the lanes are of equal
         // size..
         int laneEquality = 0;
@@ -78,7 +79,7 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
             if (this.get(f).size() == this.get(f + 1).size()) {
                 laneEquality += laneEquality;
             } else {
-                laneEquality = 1;
+                laneEquality += 1;
             }
         }
         // If they are all equal, add customer to random lane. Express customers can
@@ -121,6 +122,7 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
             }
 
         }
+
 
     }
 
