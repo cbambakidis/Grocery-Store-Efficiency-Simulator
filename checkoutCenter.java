@@ -37,36 +37,28 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
     public void update(double time) {
         if (time - localTime != 0) {
-            timeElapsed = time - localTime + timeElapsed; 
+            timeElapsed = time - localTime + timeElapsed;
         }
-        localTime = time; //Calulates time elapased between events.
+        localTime = time; // Calulates time elapased between events.
 
         Collections.sort(this, new LineComparator());
         for (Lane N : this) {
             if (N.peek() != null) { // check if the checkout lane has someone in line.
-                    if(N.size() > 1){
-                        System.out.println("More than 2 people in a lane \n \n \n"); //For debugging
-                    }
 
-                // If the current lane hasn't already had their checkout time calculated,
-                // calculate it.
-                    N.timeToCheckoutCurrentCustomer = N.peek().getShoppingList()
-                            * N.checkoutRate + N.paymentTime;
-               
-
-                // Now check to see if the time that has elapsed since the last event
-                // is long enough for the current customer to check out.
+                if (N.size() > 1) {
+                    System.out.println("More than 2 people in a lane \n \n \n"); // For debugging
+                }
+                
+                //Calculate time it will take to check out customer at front of line.
+                //Check if enough time has passed to where the customer is checked out.
+                //If it is, schedule checkout event.
+                N.timeToCheckoutCurrentCustomer = N.peek().getShoppingList() * N.checkoutRate + N.paymentTime;
                 if (timeElapsed >= N.timeToCheckoutCurrentCustomer) {
-                    // If enough time has passed to where the customer is done checking out,
-                    // schedule its checked out event.
-                    eventsQ.offer( 
-                        new CheckedOutEvent(N.peek(), N));
-                    N.poll(); // Remove the customer from the queue, reset the time to checkout the current customer.
+                    eventsQ.offer(new CheckedOutEvent(N.peek(), N));
+                    N.poll(); 
                     N.timeToCheckoutCurrentCustomer = 0;
                 }
-
             }
-
             else {
                 N.currentWaitTime = 0;
             }
@@ -76,7 +68,7 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
     /*
      * This method automatically sorts the customer into the best lane depending on
-     * whether or not they get to use an express lane.
+     * whether or not they get to use an express lane. Wait time is calculated within lane class.
      */
     public void addCustomerToALane(Customer C) {
         // This first part checks to see whether or not all the lanes are of equal
@@ -97,10 +89,9 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 int randomLaneNumber = ThreadLocalRandom.current().nextInt(0, this.size());
                 if (!this.get(randomLaneNumber).isExpress && !C.getExpressElgibility()) {
                     this.get(randomLaneNumber).addCustomerToCheckoutLine(C);
-                    if(C.getExpressElgibility()){
-                    System.out.println("Less than 12, chose lane " + this.get(randomLaneNumber).getLaneNumber());
-                    }
-                    else{
+                    if (C.getExpressElgibility()) {
+                        System.out.println("Less than 12, chose lane " + this.get(randomLaneNumber).getLaneNumber());
+                    } else {
                         System.out.println("More than 12, chose lane " + this.get(randomLaneNumber).getLaneNumber());
                     }
                     hadBeenAdded = true;
@@ -120,19 +111,18 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 this.get(0).addCustomerToCheckoutLine(C);
                 System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber());
             } else {
-                for(Lane x : this){
-                    if(x.isExpress){
-                    x.addCustomerToCheckoutLine(C);
-                    System.out.println("More than 12, chose lane " + x.getLaneNumber());
-                    break;
+                for (Lane x : this) {
+                    if (x.isExpress) {
+                        x.addCustomerToCheckoutLine(C);
+                        System.out.println("More than 12, chose lane " + x.getLaneNumber());
+                        break;
                     }
                 }
             }
-            
+
         }
 
     }
-
 
     @Override
     public int compareTo(Lane o) {

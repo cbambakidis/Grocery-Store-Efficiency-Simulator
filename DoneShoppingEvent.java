@@ -17,7 +17,6 @@ public class DoneShoppingEvent extends Event {
         super.C = thisCustomer;
     }
 
-
     public void execute() {
         System.out.printf("%.2f", timeOfOccurence);
         System.out.println(": Finished shopping customer " + thisCustomer.getCustomerNumber());
