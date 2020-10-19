@@ -15,24 +15,27 @@ public class GroceryStoreMain {
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
         checkoutCenter checkoutLanes = new checkoutCenter(4, 2, events);
         ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
-        //The time comparator didn't work for some reason...lol
+
         double time = 0;
         while (events.peek() != null) {
             time = events.peek().timeOfOccurence;
+            checkoutLanes.update(time);
             Collections.sort(checkoutLanes, new LineComparator());
             events.poll().execute();
-            checkoutLanes.update(time);
         }
         double averageWaitTime = 0;
         for(Customer N : customers){
+        if(N.getWaitTime() != 0){
+            System.out.println("Customer " + N + " waited " + N.getWaitTime());
+        }
         averageWaitTime += N.getWaitTime();
         }
-        System.out.println("Average Wait Time: " + Math.ceil(averageWaitTime/customers.size()));
+        System.out.println("Average Wait Time: " + averageWaitTime/customers.size());
 
     }
 
     /*
-     * To fix: The waiting time is always 0...
+     * //
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             checkoutCenter checkoutLanes) throws IOException {

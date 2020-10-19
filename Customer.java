@@ -13,6 +13,8 @@ public class Customer implements Comparable {
     private double totalTimeInStore;
     private boolean isElgibleForExpress = false;
     boolean isCheckingOut;
+    int numberPeepsInFront = 0;
+
 
     /*
      * Makes a new customer object, using the information from the text file, as
@@ -33,6 +35,7 @@ public class Customer implements Comparable {
         myCustomerNumber = customerNumber;
         myArrivalEvent = new ArrivalEvent(this);
         myDoneShoppingEvent = new DoneShoppingEvent(this, checkoutLanes);
+        double gotDoneShoppingAt = myDoneShoppingEvent.getTimeofOccurence();
         orderOfEvents = eventList;
         if (shoppingListSize < 10) {
             isElgibleForExpress = true;

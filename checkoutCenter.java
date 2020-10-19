@@ -44,7 +44,9 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         Collections.sort(this, new LineComparator());
         for (int i = 0; i < this.size(); i++) {
             if (this.get(i).peek() != null) { // check if the checkout lane has someone in line.
-
+                    if(this.get(i).size() > 1){
+                        System.out.println("AEFADAEDEFFAEDAEFAFAFAFAEFEAF--------------------------");
+                    }
                 // If the current customer hasn't already had their checkout time calculated,
                 // calculate it.
                 if (this.get(i).timeToCheckoutCurrentCustomer == 0) {
@@ -58,9 +60,9 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                     // If enough time has passed to where the customer is done checking out,
                     // schedule its
                     // Checked out event.
-                    eventsQ.offer(
+                    eventsQ.offer( 
                             new CheckedOutEvent(this.get(i).peek(), time + this.get(i).timeToCheckoutCurrentCustomer,
-                                    this.get(i).getLaneNumber(), this.get(i).size(), this.get(i)));
+                                    this.get(i).getLaneNumber(), this.get(i).peek().numberPeepsInFront, this.get(i)));
                     this.get(i).poll(); // Remove the customer from the queue
                     this.get(i).timeToCheckoutCurrentCustomer = 0;
                 }
@@ -99,11 +101,20 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
             while (!hadBeenAdded) {
                 int f = ThreadLocalRandom.current().nextInt(0, this.size());
                 if (this.get(f).type == "Normal") {
+                    C.numberPeepsInFront = this.get(f).size();
                     this.get(f).addCustomerToCheckoutLine(C);
+                    if(C.getExpressElgibility()){
+                    System.out.println("Less than 12, chose lane " + this.get(f).getLaneNumber());
+                    }
+                    else{
+                        System.out.println("More than 12, chose lane " + this.get(f).getLaneNumber());
+                    }
                     hadBeenAdded = true;
                 }
                 if (this.get(f).type == "Express" && C.getExpressElgibility()) {
+                    C.numberPeepsInFront = this.get(f).size();
                     this.get(f).addCustomerToCheckoutLine(C);
+                    System.out.println("Less than 12, chose lane " + this.get(f).getLaneNumber());
                     hadBeenAdded = true;
                 }
             }
@@ -113,11 +124,15 @@ public class checkoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         // Sort by shortest lane. Only express customers can use express lane.
         else {
             if (C.getExpressElgibility() == true) {
+                C.numberPeepsInFront = this.get(0).size();
                 this.get(0).addCustomerToCheckoutLine(C);
+                System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber());
             } else {
                 for (int i = 0; i < this.size(); i++) {
                     if (this.get(i).type == "Normal") {
+                        C.numberPeepsInFront = this.get(i).size();
                         this.get(i).addCustomerToCheckoutLine(C);
+                        System.out.println("More than 12, chose lane " + this.get(i).getLaneNumber());
                         break;
                     }
                 }
