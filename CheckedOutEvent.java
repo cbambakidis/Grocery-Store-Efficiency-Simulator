@@ -8,10 +8,10 @@ public class CheckedOutEvent extends Event {
     private Lane x;
 
     public CheckedOutEvent(Customer custy, Lane N) {
+        N.poll();
         super.setCustomer(custy);
-        this.setTimeOfOccurence(custy.getDoneShoppingTime() + custy.getWaitTime()
-                + N.timeToCheckoutCurrentCustomer);
-        super.setTimeOfOccurence(this.getTimeOfOccurence());
+        super.setTimeOfOccurence(custy.getDoneShoppingTime() + custy.getWaitTime()
+        + N.timeToCheckoutCurrentCustomer);
         x = N;
         numOtherPeeps = custy.getPeopleInFront();
         if (numOtherPeeps == 0) {
@@ -24,7 +24,7 @@ public class CheckedOutEvent extends Event {
     }
 
     public void execute() {
-        x.poll();
+     
         System.out.printf("%.2f: Finished Checkout Customer %d on lane %d (" + this.getCustomer().getExpressElgibility()
                 + ") (%.2f minute wait, %d other people in line -- finished shopping at %.2f front of the line at %.2f",
                 this.getTimeOfOccurence(), this.getCustomer().getCustomerNumber(), x.getLaneNumber(), waitTime, numOtherPeeps,

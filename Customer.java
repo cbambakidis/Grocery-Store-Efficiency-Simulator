@@ -14,6 +14,7 @@ public class Customer implements Comparable {
     private boolean isElgibleForExpress = false;
     private int numberPeepsInFront = 0;
 
+    boolean c = false;
     /*
      * Makes a new customer object, using the information from the text file, as
      * well as giving the customer access to the event list and checkout center so

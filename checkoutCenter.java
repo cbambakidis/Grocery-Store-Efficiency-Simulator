@@ -43,17 +43,24 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
         Collections.sort(this, new LineComparator());
         for (Lane N : this) {
-            System.out.println(N.size());
             if (N.peek() != null) { // check if the checkout lane has someone in line.
 
                 //PROBLEM: CUSTOMER IS BEING REMOVED FROM LANE BEFORE THEYVE EVEN FINISHED CHECKING OUT.
+                //Creating checkout events until customer is removed. PROBLEM
+                /*
+                 * Customers are being removed from the lane, before their checkout time of occurence.
+                 * They are being removed only after the time it takes for them to check out,
+                 * And they are out of the line in however long it takes them to
+                 * Maybe remove and add customers b
+                */
                 
+
                 //Calculate time it will take to check out customer at front of line.
                 //Check if enough time has passed to where the customer is checked out.
                 //If it is, schedule checkout event.
                 N.timeToCheckoutCurrentCustomer = N.peek().getShoppingList() * N.checkoutRate + N.paymentTime;
                 if (timeElapsed >= N.timeToCheckoutCurrentCustomer) {
-                    eventsQ.offer(new CheckedOutEvent(N.peek(), N));
+                    eventsQ.offer(new CheckedOutEvent(N.peek(), N));                
                     N.timeToCheckoutCurrentCustomer = 0;
                 }
             }
@@ -92,11 +99,8 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
         // If they are all equal, add customer to random lane. Express customers can
         // only use express lanes.
+
         if (areAllEqual) {
-            System.out.println(allAreEqual);
-            for(Lane N : this){
-                System.out.print(this.size() + " ");
-            }
             boolean hadBeenAdded = false;
             while (!hadBeenAdded) {
                 int randomLaneNumber = ThreadLocalRandom.current().nextInt(0, this.size());
