@@ -5,22 +5,18 @@
  * Customer can use the express lane.
 */
 public class DoneShoppingEvent extends Event {
-    private double timeOfOccurence;
-    private Customer thisCustomer;
     private CheckoutCenter checkoutLanes;
 
     public DoneShoppingEvent(Customer C, CheckoutCenter checkoutLanes) {
-        this.timeOfOccurence = C.getTimeBeforeCheckout() + C.getArrivalTime();
-        super.timeOfOccurence = this.timeOfOccurence;
+        super.setTimeOfOccurence(C.getTimeBeforeCheckout() + C.getArrivalTime());
         this.checkoutLanes = checkoutLanes;
-        thisCustomer = C;
-        super.C = thisCustomer;
+        super.setCustomer(C);
     }
 
     public void execute() {
-        System.out.printf("%.2f", timeOfOccurence);
-        System.out.println(": Finished shopping customer " + thisCustomer.getCustomerNumber());
-        checkoutLanes.addCustomerToALane(thisCustomer);
+        System.out.printf("%.2f", this.getTimeOfOccurence());
+        System.out.println(": Finished shopping customer " + this.getCustomer().getCustomerNumber());
+        checkoutLanes.addCustomerToALane(this.getCustomer());
     }
 
 }

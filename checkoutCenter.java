@@ -43,19 +43,17 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
         Collections.sort(this, new LineComparator());
         for (Lane N : this) {
+            System.out.println(N.size());
             if (N.peek() != null) { // check if the checkout lane has someone in line.
 
-                if (N.size() > 1) {
-                    System.out.println("More than 2 people in a lane \n \n \n"); // For debugging
-                }
-
+                //PROBLEM: CUSTOMER IS BEING REMOVED FROM LANE BEFORE THEYVE EVEN FINISHED CHECKING OUT.
+                
                 //Calculate time it will take to check out customer at front of line.
                 //Check if enough time has passed to where the customer is checked out.
                 //If it is, schedule checkout event.
                 N.timeToCheckoutCurrentCustomer = N.peek().getShoppingList() * N.checkoutRate + N.paymentTime;
                 if (timeElapsed >= N.timeToCheckoutCurrentCustomer) {
                     eventsQ.offer(new CheckedOutEvent(N.peek(), N));
-                    N.poll(); 
                     N.timeToCheckoutCurrentCustomer = 0;
                 }
             }
@@ -71,20 +69,34 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
      * whether or not they get to use an express lane. Wait time is calculated within lane class.
      */
     public void addCustomerToALane(Customer C) {
+
+        //Bad way to do it. Find different way to check if different size
+        //Find lane with smallest size, then see if other lanes have a different size.
         
-        // This first part checks to see whether or not all the lanes are of equal
-        // size..
-        int laneEquality = 0;
-        for (int f = 0; f < this.size() - 1; f++) {
-            if (this.get(f).size() == this.get(f + 1).size()) {
-                laneEquality += laneEquality;
-            } else {
-                laneEquality += 1;
+        boolean areAllEqual = false;
+        int size = this.get(0).size();
+        for(Lane N : this){
+            if(N.size() < size){
+                size = N.size();
             }
         }
+        for(Lane N : this){
+            if (N.size() == size){
+                areAllEqual = true;
+            }
+            else {
+                areAllEqual = false;
+                break;
+            }
+        }
+
         // If they are all equal, add customer to random lane. Express customers can
         // only use express lanes.
-        if (laneEquality == 0) {
+        if (areAllEqual) {
+            System.out.println(allAreEqual);
+            for(Lane N : this){
+                System.out.print(this.size() + " ");
+            }
             boolean hadBeenAdded = false;
             while (!hadBeenAdded) {
                 int randomLaneNumber = ThreadLocalRandom.current().nextInt(0, this.size());

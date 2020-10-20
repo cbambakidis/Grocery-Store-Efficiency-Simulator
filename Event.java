@@ -4,11 +4,22 @@
      * executes. 
     */
 public class Event{
-    double timeOfOccurence;
-    String type;
-    Customer C;
+    private double timeOfOccurence;
+    private Customer C;
 
     public Event() {
+    }
+
+    public void setTimeOfOccurence(double d){
+        this.timeOfOccurence = d;
+    }
+
+    public void setCustomer(Customer c){
+        C = c;
+    }
+
+    public Customer getCustomer(){
+        return C;
     }
 
     public void execute() {

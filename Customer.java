@@ -1,6 +1,6 @@
 import java.util.Queue;
 
-public class Customer implements Comparable<Double> {
+public class Customer implements Comparable {
     private double arrivalTime;
     private ArrivalEvent myArrivalEvent;
     private DoneShoppingEvent myDoneShoppingEvent;
@@ -100,8 +100,11 @@ public class Customer implements Comparable<Double> {
     }
 
     @Override
-    public int compareTo(Double o) {
+    public int compareTo(Object o) {
+        // TODO Auto-generated method stub
         return 0;
     }
+
+
 
 }

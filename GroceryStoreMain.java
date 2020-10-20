@@ -13,11 +13,11 @@ public class GroceryStoreMain {
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
         CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalSimple.txt", events, checkoutLanes);
+        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
         // driver loop
         double time = 0;
         while (events.peek() != null) {
-            time = events.peek().timeOfOccurence;
+            time = events.peek().getTimeOfOccurence();
             checkoutLanes.update(time);
             Collections.sort(checkoutLanes, new LineComparator());
             events.poll().execute();
