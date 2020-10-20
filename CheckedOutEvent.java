@@ -8,7 +8,7 @@ public class CheckedOutEvent extends Event {
     private Lane x;
 
     public CheckedOutEvent(Customer custy, Lane N) {
-        N.poll();
+        N.poll(); ///////
         super.setCustomer(custy);
         super.setTimeOfOccurence(custy.getDoneShoppingTime() + custy.getWaitTime()
         + N.timeToCheckoutCurrentCustomer);

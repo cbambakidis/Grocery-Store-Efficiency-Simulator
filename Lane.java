@@ -37,9 +37,10 @@ public class Lane extends PriorityQueue<Customer> {
     }
 
     public void addCustomerToCheckoutLine(Customer c) {
-        c.setWaitTime(calculateWaitTime(this));
+        c.setWaitTime(calculateWaitTime(this)); //Here,since we have the wait time, we can proceed to calculate checkout time.
         c.setPeopleInFront(this.size());
         this.offer(c);
+        c.addCheckedOutEvent(this);
     }
     
     public double calculateWaitTime(Lane x){

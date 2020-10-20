@@ -100,6 +100,10 @@ public class Customer implements Comparable {
         return myCustomerNumber + "";
     }
 
+    public void addCheckedOutEvent(Lane N){
+        orderOfEvents.add(new CheckedOutEvent(this, N));
+    }
+
     @Override
     public int compareTo(Object o) {
         // TODO Auto-generated method stub
