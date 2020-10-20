@@ -8,7 +8,6 @@ import java.util.PriorityQueue;
 public class Lane extends PriorityQueue<Customer> {
 
     private static final long serialVersionUID = 1L;
-    int capacity;
     private int laneNumber;
     double checkoutRate;
     int paymentTime;
@@ -40,7 +39,9 @@ public class Lane extends PriorityQueue<Customer> {
         c.setWaitTime(calculateWaitTime(this)); //Here,since we have the wait time, we can proceed to calculate checkout time.
         c.setPeopleInFront(this.size());
         this.offer(c);
+
         c.addCheckedOutEvent(this);
+
     }
     
     public double calculateWaitTime(Lane x){

@@ -42,6 +42,7 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         localTime = time; // Calulates time elapased between events.
 
         Collections.sort(this, new LineComparator());
+    }
     //     for (Lane N : this) {
     //         if (N.peek() != null) { // check if the checkout lane has someone in line.
 
@@ -106,6 +107,7 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 int randomLaneNumber = ThreadLocalRandom.current().nextInt(0, this.size());
                 if (!this.get(randomLaneNumber).isExpress && !C.getExpressElgibility()) {
                     this.get(randomLaneNumber).addCustomerToCheckoutLine(C);
+                    System.out.println(C.getCustomerNumber() + " " + C.getExpressElgibility() + "A");
                     if (C.getExpressElgibility()) {
                         System.out.println("Less than 12, chose lane " + this.get(randomLaneNumber).getLaneNumber());
                     } else {
@@ -115,6 +117,7 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 }
                 if (this.get(randomLaneNumber).isExpress && C.getExpressElgibility()) {
                     this.get(randomLaneNumber).addCustomerToCheckoutLine(C);
+                    System.out.println(C.getCustomerNumber() + " " + C.getExpressElgibility() + "B");
                     System.out.println("Less than 12, chose lane " + this.get(randomLaneNumber).getLaneNumber());
                     hadBeenAdded = true;
                 }
@@ -126,11 +129,13 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         else {
             if (C.getExpressElgibility()) {
                 this.get(0).addCustomerToCheckoutLine(C);
+                System.out.println(C.getCustomerNumber() + " " + C.getExpressElgibility() + "C");
                 System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber());
             } else {
                 for (Lane x : this) {
-                    if (x.isExpress) {
+                    if (!x.isExpress) {
                         x.addCustomerToCheckoutLine(C);
+                        System.out.println(C.getCustomerNumber() + " " + C.getExpressElgibility() + "D");
                         System.out.println("More than 12, chose lane " + x.getLaneNumber());
                         break;
                     }
