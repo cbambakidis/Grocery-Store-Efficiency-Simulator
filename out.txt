@@ -32,7 +32,7 @@ More than 12, chose lane 1 (0)
 28.33: Arrival Customer 17
 29.05: Arrival Customer 94
 30.22: Finished shopping customer 150
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 31.01: Finished Checkout Customer 381 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 27.71 front of the line at 27.71
 31.73: Finished shopping customer 200
 More than 12, chose lane 3 (0)
@@ -41,31 +41,31 @@ More than 12, chose lane 3 (0)
 33.09: Finished shopping customer 391
 More than 12, chose lane 0 (0)
 33.85: Finished shopping customer 94
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 34.10: Finished shopping customer 54
 More than 12, chose lane 1 (0)
 34.35: Arrival Customer 217
 34.63: Finished Checkout Customer 200 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 31.73 front of the line at 31.73
 34.96: Finished shopping customer 212
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 35.17: Arrival Customer 357
 35.25: Finished Checkout Customer 94 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 33.85 front of the line at 33.85
 35.89: Arrival Customer 290
 35.94: Arrival Customer 315
 36.14: Finished Checkout Customer 391 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 33.09 front of the line at 33.09
 36.20: Finished shopping customer 16
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 36.26: Finished Checkout Customer 212 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 34.96 front of the line at 34.96
 36.31: Finished shopping customer 251
 More than 12, chose lane 3 (0)
 36.75: Finished shopping customer 60
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 37.82: Arrival Customer 180
 37.90: Finished Checkout Customer 54 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 34.10 front of the line at 34.10
 38.75: Finished Checkout Customer 16 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 36.20 front of the line at 36.20
 38.85: Finished Checkout Customer 60 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 36.75 front of the line at 36.75
 38.87: Finished shopping customer 290
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 39.61: Finished Checkout Customer 251 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 36.31 front of the line at 36.31
 40.32: Arrival Customer 236
 40.52: Arrival Customer 181
@@ -80,7 +80,7 @@ More than 12, chose lane 2 (0)
 More than 12, chose lane 3 (0)
 44.62: Arrival Customer 439
 45.47: Finished shopping customer 181
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 46.03: Finished Checkout Customer 407 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 42.13 front of the line at 42.13
 46.29: Finished Checkout Customer 17 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 43.59 front of the line at 43.59
 46.57: Finished Checkout Customer 349 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 43.07 front of the line at 43.07
@@ -104,42 +104,42 @@ More than 12, chose lane 0 (0)
 56.82: Finished shopping customer 224
 Less than 12, chose lane 0 (0)
 58.50: Finished shopping customer 73
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 58.72: Finished Checkout Customer 224 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 56.82 front of the line at 56.82
 60.01: Arrival Customer 335
 60.02: Arrival Customer 146
 60.10: Finished shopping customer 439
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 60.60: Finished Checkout Customer 73 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 58.50 front of the line at 58.50
 60.81: Finished shopping customer 217
 More than 12, chose lane 2 (0)
 61.36: Arrival Customer 87
 61.42: Finished shopping customer 136
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 62.4: Arrival Customer 152
 62.70: Finished Checkout Customer 439 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 60.10 front of the line at 60.10
 63.22: Finished Checkout Customer 136 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 61.42 front of the line at 61.42
 63.35: Arrival Customer 325
 63.84: Finished shopping customer 207
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 64.24: Arrival Customer 233
 65.26: Finished Checkout Customer 217 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 60.81 front of the line at 60.81
 65.36: Finished shopping customer 118
 More than 12, chose lane 1 (0)
 66.06: Finished shopping customer 335
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 66.11: Arrival Customer 174
 66.39: Finished Checkout Customer 207 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 63.84 front of the line at 63.84
 67.56: Finished Checkout Customer 335 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 66.06 front of the line at 66.06
 67.58: Finished shopping customer 146
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 68.07: Arrival Customer 154
 68.21: Finished shopping customer 357
 More than 12, chose lane 2 (0)
 68.36: Finished Checkout Customer 118 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 65.36 front of the line at 65.36
 68.75: Arrival Customer 248
 69.46: Finished shopping customer 87
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 69.53: Arrival Customer 98
 69.55: Arrival Customer 30
 69.93: Finished Checkout Customer 146 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 67.58 front of the line at 67.58
@@ -155,11 +155,11 @@ Less than 12, chose lane 0 (0)
 76.58: Arrival Customer 227
 77.32: Arrival Customer 205
 77.60: Finished shopping customer 227
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 77.68: Arrival Customer 253
 78.03: Finished Checkout Customer 248 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 76.43 front of the line at 76.43
 78.15: Finished shopping customer 345
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 78.72: Finished shopping customer 450
 More than 12, chose lane 2 (0)
 79.2: Arrival Customer 266
@@ -168,15 +168,15 @@ More than 12, chose lane 0 (0)
 79.61: Arrival Customer 170
 79.70: Finished Checkout Customer 227 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 77.60 front of the line at 77.60
 79.86: Finished shopping customer 154
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 80.19: Finished shopping customer 384
 More than 12, chose lane 1 (0)
 80.40: Finished Checkout Customer 345 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 78.15 front of the line at 78.15
 80.78: Arrival Customer 211
 81.54: Finished shopping customer 266
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 81.64: Finished shopping customer 205
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 81.72: Finished shopping customer 152
 More than 12, chose lane 3 (1)
 81.76: Finished Checkout Customer 154 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 79.86 front of the line at 79.86
@@ -197,19 +197,19 @@ More than 12, chose lane 0 (0)
 86.62: Finished Checkout Customer 152 on lane 3 (0) (2.20 minute wait, 1 other people in line -- finished shopping at 81.72 front of the line at 83.92
 87.12: Arrival Customer 213
 89.05: Finished shopping customer 178
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 89.58: Arrival Customer 1
 90.75: Finished Checkout Customer 178 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 89.05 front of the line at 89.05
 90.86: Arrival Customer 317
 91.36: Finished shopping customer 272
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 91.84: Finished Checkout Customer 147 on lane 1 (0) (4.95 minute wait, 1 other people in line -- finished shopping at 82.19 front of the line at 87.14
 92.37: Finished shopping customer 233
 More than 12, chose lane 0 (0)
 92.98: Finished shopping customer 1
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 93.38: Finished shopping customer 211
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 93.56: Finished Checkout Customer 272 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 91.36 front of the line at 91.36
 93.89: Arrival Customer 238
 94.48: Finished Checkout Customer 1 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 92.98 front of the line at 92.98
@@ -232,7 +232,7 @@ More than 12, chose lane 1 (0)
 102.16: Finished shopping customer 334
 More than 12, chose lane 2 (0)
 103.46: Finished shopping customer 317
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 103.59: Arrival Customer 280
 103.78: Finished shopping customer 98
 More than 12, chose lane 2 (1)
@@ -243,13 +243,13 @@ More than 12, chose lane 2 (1)
 105.31: Finished shopping customer 143
 More than 12, chose lane 3 (0)
 105.42: Finished shopping customer 377
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 105.46: Finished Checkout Customer 317 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 103.46 front of the line at 103.46
 106.32: Finished Checkout Customer 83 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 101.97 front of the line at 101.97
 106.51: Finished Checkout Customer 334 on lane 2 (1) (0.00 minute wait, 0 other people in line -- finished shopping at 102.16 front of the line at 102.16
 106.52: Finished Checkout Customer 377 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 105.42 front of the line at 105.42
 107.99: Finished shopping customer 238
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 109.46: Finished Checkout Customer 143 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 105.31 front of the line at 105.31
 109.81: Finished shopping customer 258
 More than 12, chose lane 1 (0)
@@ -260,17 +260,17 @@ More than 12, chose lane 1 (0)
 111.07: Arrival Customer 166
 111.38: Finished Checkout Customer 98 on lane 2 (0) (4.35 minute wait, 1 other people in line -- finished shopping at 103.78 front of the line at 108.13
 111.92: Finished shopping customer 185
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 112.23: Arrival Customer 354
 112.76: Finished Checkout Customer 258 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 109.81 front of the line at 109.81
 113.02: Finished Checkout Customer 185 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 111.92 front of the line at 111.92
 114.28: Finished shopping customer 426
 Less than 12, chose lane 0 (0)
 114.40: Finished shopping customer 166
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 114.49: Arrival Customer 114
 115.33: Finished shopping customer 354
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 115.68: Finished Checkout Customer 426 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 114.28 front of the line at 114.28
 115.82: Finished shopping customer 180
 More than 12, chose lane 2 (0)
@@ -286,10 +286,10 @@ More than 12, chose lane 3 (0)
 120.38: Arrival Customer 263
 120.82: Finished Checkout Customer 180 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 115.82 front of the line at 115.82
 120.96: Finished shopping customer 263
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 120.99: Finished Checkout Customer 198 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 117.04 front of the line at 117.04
 121.96: Finished shopping customer 114
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 122.06: Finished Checkout Customer 263 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 120.96 front of the line at 120.96
 122.59: Arrival Customer 235
 123.86: Finished Checkout Customer 114 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 121.96 front of the line at 121.96
@@ -306,7 +306,7 @@ More than 12, chose lane 1 (0)
 127.35: Finished shopping customer 280
 More than 12, chose lane 1 (1)
 127.42: Finished shopping customer 402
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 127.44: Arrival Customer 390
 127.49: Finished Checkout Customer 99 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 123.89 front of the line at 123.89
 128.92: Finished shopping customer 7
@@ -319,7 +319,7 @@ More than 12, chose lane 0 (0)
 130.52: Finished Checkout Customer 213 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 125.52 front of the line at 125.52
 131.03: Arrival Customer 3
 131.99: Finished shopping customer 193
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 132.12: Arrival Customer 91
 132.46: Arrival Customer 78
 132.62: Arrival Customer 393
@@ -334,7 +334,7 @@ More than 12, chose lane 2 (0)
 More than 12, chose lane 3 (0)
 137.44: Arrival Customer 250
 138.24: Finished shopping customer 390
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 138.81: Finished Checkout Customer 301 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 135.86 front of the line at 135.86
 139.36: Finished Checkout Customer 170 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 134.61 front of the line at 134.61
 139.47: Arrival Customer 283
@@ -345,7 +345,7 @@ Less than 12, chose lane 0 (0)
 143.10: Finished shopping customer 393
 Less than 12, chose lane 1 (0)
 143.79: Finished shopping customer 283
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 144.29: Arrival Customer 106
 144.43: Arrival Customer 56
 144.90: Finished Checkout Customer 393 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 143.10 front of the line at 143.10
@@ -358,7 +358,7 @@ More than 12, chose lane 3 (0)
 146.86: Arrival Customer 74
 147.03: Arrival Customer 130
 147.06: Finished shopping customer 156
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 148.31: Arrival Customer 132
 148.37: Finished Checkout Customer 310 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 145.42 front of the line at 145.42
 148.38: Arrival Customer 110
@@ -373,13 +373,13 @@ More than 12, chose lane 1 (0)
 153.31: Arrival Customer 189
 154.43: Arrival Customer 309
 154.79: Finished shopping customer 132
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 154.87: Finished shopping customer 130
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 154.92: Arrival Customer 45
 154.93: Arrival Customer 115
 155.23: Finished shopping customer 56
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 155.34: Finished shopping customer 448
 More than 12, chose lane 3 (0)
 156.39: Finished Checkout Customer 132 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 154.79 front of the line at 154.79
@@ -392,10 +392,10 @@ More than 12, chose lane 2 (0)
 157.73: Finished Checkout Customer 56 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 155.23 front of the line at 155.23
 158.2: Arrival Customer 369
 159.28: Finished shopping customer 270
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 159.79: Finished Checkout Customer 448 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 155.34 front of the line at 155.34
 161.15: Finished shopping customer 309
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 161.28: Finished Checkout Customer 270 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 159.28 front of the line at 159.28
 161.39: Arrival Customer 230
 161.55: Finished Checkout Customer 78 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 157.40 front of the line at 157.40
@@ -413,7 +413,7 @@ More than 12, chose lane 0 (0)
 More than 12, chose lane 3 (0)
 167.69: Arrival Customer 440
 167.97: Finished shopping customer 45
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 168.46: Finished shopping customer 91
 More than 12, chose lane 2 (0)
 169.87: Finished Checkout Customer 45 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 167.97 front of the line at 167.97
@@ -422,7 +422,7 @@ More than 12, chose lane 2 (0)
 171.11: Arrival Customer 292
 171.26: Arrival Customer 415
 171.89: Finished shopping customer 440
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 172.24: Finished shopping customer 250
 More than 12, chose lane 0 (0)
 172.76: Finished Checkout Customer 91 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 168.46 front of the line at 168.46
@@ -436,9 +436,9 @@ More than 12, chose lane 2 (0)
 175.33: Finished shopping customer 122
 More than 12, chose lane 1 (0)
 176.50: Finished shopping customer 36
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 176.55: Finished shopping customer 356
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 177.24: Finished Checkout Customer 250 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 172.24 front of the line at 172.24
 177.60: Finished Checkout Customer 36 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 176.50 front of the line at 176.50
 177.68: Arrival Customer 403
@@ -462,7 +462,7 @@ More than 12, chose lane 1 (0)
 184.29: Finished Checkout Customer 344 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 181.19 front of the line at 181.19
 185.14: Arrival Customer 400
 185.24: Finished shopping customer 151
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 185.7: Arrival Customer 444
 186.04: Finished shopping customer 369
 More than 12, chose lane 0 (0)
@@ -473,7 +473,7 @@ More than 12, chose lane 0 (0)
 188.24: Finished Checkout Customer 225 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 183.94 front of the line at 183.94
 188.41: Arrival Customer 322
 188.50: Finished shopping customer 400
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 189.24: Finished Checkout Customer 369 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 186.04 front of the line at 186.04
 189.44: Finished shopping customer 414
 More than 12, chose lane 3 (0)
@@ -484,7 +484,7 @@ More than 12, chose lane 1 (0)
 190.10: Finished Checkout Customer 400 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 188.50 front of the line at 188.50
 190.31: Arrival Customer 208
 191.23: Finished shopping customer 133
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 191.47: Arrival Customer 6
 191.99: Finished shopping customer 230
 More than 12, chose lane 2 (0)
@@ -494,7 +494,7 @@ More than 12, chose lane 0 (0)
 193.03: Finished Checkout Customer 133 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 191.23 front of the line at 191.23
 193.60: Finished Checkout Customer 321 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 190.05 front of the line at 190.05
 194.65: Finished shopping customer 208
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 195.49: Finished Checkout Customer 230 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 191.99 front of the line at 191.99
 195.61: Arrival Customer 447
 195.9: Arrival Customer 243
@@ -508,7 +508,7 @@ More than 12, chose lane 3 (0)
 197.95: Arrival Customer 57
 198.36: Arrival Customer 364
 199.69: Finished shopping customer 447
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 199.82: Arrival Customer 346
 200.62: Finished Checkout Customer 415 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 196.22 front of the line at 196.22
 201.09: Finished Checkout Customer 447 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 199.69 front of the line at 199.69
@@ -547,7 +547,7 @@ More than 12, chose lane 1 (0)
 More than 12, chose lane 1 (1)
 211.4: Arrival Customer 195
 211.44: Finished shopping customer 406
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 211.83: Finished shopping customer 53
 More than 12, chose lane 2 (1)
 213.34: Finished Checkout Customer 406 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 211.44 front of the line at 211.44
@@ -561,7 +561,7 @@ More than 12, chose lane 2 (1)
 215.55: Finished shopping customer 322
 More than 12, chose lane 3 (0)
 215.83: Finished shopping customer 295
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 215.84: Finished Checkout Customer 292 on lane 0 (0) (3.85 minute wait, 1 other people in line -- finished shopping at 207.59 front of the line at 211.44
 215.92: Arrival Customer 34
 216.8: Arrival Customer 37
@@ -570,7 +570,7 @@ Less than 12, chose lane 1 (0)
 218.56: Finished shopping customer 6
 More than 12, chose lane 0 (0)
 218.61: Finished shopping customer 195
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 218.70: Finished Checkout Customer 322 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 215.55 front of the line at 215.55
 218.93: Finished Checkout Customer 403 on lane 1 (0) (4.15 minute wait, 1 other people in line -- finished shopping at 211.28 front of the line at 215.43
 218.97: Arrival Customer 38
@@ -586,7 +586,7 @@ More than 12, chose lane 1 (0)
 More than 12, chose lane 2 (0)
 221.61: Finished Checkout Customer 6 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 218.56 front of the line at 218.56
 221.73: Finished shopping customer 140
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 221.75: Arrival Customer 20
 222.96: Arrival Customer 326
 223.20: Finished Checkout Customer 432 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 219.30 front of the line at 219.30
@@ -604,22 +604,22 @@ More than 12, chose lane 0 (0)
 231.02: Arrival Customer 103
 231.47: Arrival Customer 261
 231.65: Finished shopping customer 20
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 231.69: Arrival Customer 429
 232.59: Finished shopping customer 326
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 233.01: Arrival Customer 254
 233.75: Finished Checkout Customer 20 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 231.65 front of the line at 231.65
 233.90: Finished Checkout Customer 46 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 229.35 front of the line at 229.35
 234.18: Finished shopping customer 37
 More than 12, chose lane 3 (0)
 234.99: Finished shopping customer 294
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 235.04: Finished Checkout Customer 326 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 232.59 front of the line at 232.59
 235.88: Finished shopping customer 287
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 235.89: Finished shopping customer 256
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 236.10: Finished shopping customer 4
 More than 12, chose lane 0 (0)
 236.32: Arrival Customer 423
@@ -641,7 +641,7 @@ More than 12, chose lane 0 (0)
 242.07: Arrival Customer 121
 242.29: Arrival Customer 319
 242.87: Finished shopping customer 261
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 243.48: Arrival Customer 222
 244.52: Arrival Customer 153
 244.53: Finished Checkout Customer 245 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 239.63 front of the line at 239.63
@@ -668,7 +668,7 @@ More than 12, chose lane 0 (1)
 247.97: Arrival Customer 370
 248.12: Finished Checkout Customer 359 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 244.57 front of the line at 244.57
 248.24: Finished shopping customer 222
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 248.63: Arrival Customer 127
 248.66: Finished shopping customer 346
 More than 12, chose lane 3 (0)
@@ -678,16 +678,16 @@ More than 12, chose lane 1 (0)
 249.20: Finished Checkout Customer 88 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 245.90 front of the line at 245.90
 249.67: Arrival Customer 126
 249.67: Finished shopping customer 153
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 249.94: Finished Checkout Customer 222 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 248.24 front of the line at 248.24
 250.03: Finished shopping customer 127
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 250.67: Finished shopping customer 328
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 250.76: Finished Checkout Customer 160 on lane 0 (1) (0.00 minute wait, 0 other people in line -- finished shopping at 246.31 front of the line at 246.31
 251.17: Finished Checkout Customer 153 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 249.67 front of the line at 249.67
 251.96: Finished shopping customer 318
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 252.01: Arrival Customer 41
 252.13: Finished Checkout Customer 127 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 250.03 front of the line at 250.03
 252.31: Finished Checkout Customer 346 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 248.66 front of the line at 248.66
@@ -708,13 +708,13 @@ More than 12, chose lane 2 (0)
 256.74: Finished shopping customer 352
 More than 12, chose lane 3 (0)
 256.97: Finished shopping customer 82
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 257.1: Arrival Customer 129
 257.44: Finished shopping customer 121
 More than 12, chose lane 1 (0)
 259.07: Finished Checkout Customer 82 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 256.97 front of the line at 256.97
 259.12: Finished shopping customer 41
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 260.72: Finished shopping customer 103
 More than 12, chose lane 0 (1)
 260.89: Finished Checkout Customer 121 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 257.44 front of the line at 257.44
@@ -728,10 +728,10 @@ More than 12, chose lane 1 (0)
 264.06: Finished shopping customer 364
 More than 12, chose lane 2 (0)
 264.68: Finished shopping customer 31
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 265.69: Arrival Customer 331
 266.33: Finished shopping customer 331
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 266.41: Finished Checkout Customer 229 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 261.51 front of the line at 261.51
 266.45: Finished shopping customer 129
 More than 12, chose lane 3 (0)
@@ -742,7 +742,7 @@ More than 12, chose lane 1 (0)
 267.43: Finished Checkout Customer 331 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 266.33 front of the line at 266.33
 267.87: Finished Checkout Customer 103 on lane 0 (0) (2.45 minute wait, 1 other people in line -- finished shopping at 260.72 front of the line at 263.17
 268.17: Finished shopping customer 29
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 268.31: Finished Checkout Customer 364 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 264.06 front of the line at 264.06
 268.41: Arrival Customer 431
 268.43: Finished shopping customer 333
@@ -751,7 +751,7 @@ More than 12, chose lane 0 (0)
 269.86: Arrival Customer 419
 270.03: Finished Checkout Customer 319 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 266.73 front of the line at 266.73
 270.10: Finished shopping customer 40
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 270.17: Finished Checkout Customer 29 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 268.17 front of the line at 268.17
 271.28: Finished Checkout Customer 333 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 268.43 front of the line at 268.43
 271.90: Finished Checkout Customer 40 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 270.10 front of the line at 270.10
@@ -766,7 +766,7 @@ More than 12, chose lane 1 (0)
 277.42: Finished Checkout Customer 117 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 274.27 front of the line at 274.27
 277.48: Arrival Customer 95
 277.56: Finished shopping customer 395
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 277.72: Finished shopping customer 423
 More than 12, chose lane 0 (0)
 278.21: Finished shopping customer 370
@@ -776,7 +776,7 @@ More than 12, chose lane 3 (0)
 279.27: Arrival Customer 300
 279.27: Finished Checkout Customer 27 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 274.57 front of the line at 274.57
 280.89: Finished shopping customer 431
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 281.03: Arrival Customer 28
 281.97: Finished Checkout Customer 423 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 277.72 front of the line at 277.72
 282.01: Finished Checkout Customer 370 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 278.21 front of the line at 278.21
@@ -792,11 +792,11 @@ More than 12, chose lane 0 (0)
 284.4: Arrival Customer 169
 285.5: Arrival Customer 210
 285.57: Finished shopping customer 300
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 286.38: Finished Checkout Customer 137 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 282.03 front of the line at 282.03
 286.5: Arrival Customer 324
 286.55: Finished shopping customer 39
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 287.09: Finished Checkout Customer 429 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 282.09 front of the line at 282.09
 287.47: Finished Checkout Customer 300 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 285.57 front of the line at 285.57
 287.47: Arrival Customer 52
@@ -816,7 +816,7 @@ More than 12, chose lane 0 (0)
 295.46: Finished shopping customer 197
 Less than 12, chose lane 1 (0)
 295.72: Finished shopping customer 55
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 296.01: Arrival Customer 162
 296.16: Finished shopping customer 169
 More than 12, chose lane 3 (0)
@@ -827,7 +827,7 @@ More than 12, chose lane 0 (0)
 More than 12, chose lane 2 (0)
 297.16: Finished Checkout Customer 197 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 295.46 front of the line at 295.46
 297.33: Finished shopping customer 162
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 297.42: Finished Checkout Customer 55 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 295.72 front of the line at 295.72
 298.18: Finished shopping customer 419
 More than 12, chose lane 1 (1)
@@ -844,7 +844,7 @@ More than 12, chose lane 0 (0)
 More than 12, chose lane 2 (0)
 302.59: Arrival Customer 84
 303.74: Finished shopping customer 84
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 303.90: Finished shopping customer 428
 More than 12, chose lane 2 (1)
 304.31: Finished Checkout Customer 274 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 299.91 front of the line at 299.91
@@ -860,13 +860,13 @@ More than 12, chose lane 2 (1)
 312.29: Finished shopping customer 134
 Less than 12, chose lane 0 (0)
 312.52: Finished shopping customer 68
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 313.49: Finished Checkout Customer 134 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 312.29 front of the line at 312.29
 314.92: Finished Checkout Customer 68 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 312.52 front of the line at 312.52
 315.88: Finished shopping customer 61
 More than 12, chose lane 1 (0)
 317.42: Finished shopping customer 306
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 317.65: Finished shopping customer 234
 More than 12, chose lane 0 (0)
 318.44: Finished shopping customer 28
@@ -881,7 +881,7 @@ More than 12, chose lane 2 (0)
 More than 12, chose lane 3 (0)
 325.52: Arrival Customer 124
 326.35: Finished shopping customer 35
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 327.31: Arrival Customer 360
 327.75: Finished Checkout Customer 35 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 326.35 front of the line at 326.35
 328.20: Finished Checkout Customer 95 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 323.30 front of the line at 323.30
@@ -890,17 +890,17 @@ Less than 12, chose lane 0 (0)
 331.14: Finished shopping customer 324
 More than 12, chose lane 1 (0)
 331.52: Finished shopping customer 124
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 332.06: Arrival Customer 443
 332.08: Arrival Customer 72
 333.02: Finished Checkout Customer 124 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 331.52 front of the line at 331.52
 333.07: Finished shopping customer 360
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 333.15: Arrival Customer 219
 333.94: Arrival Customer 425
 334.94: Finished Checkout Customer 324 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 331.14 front of the line at 331.14
 335.19: Finished shopping customer 219
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 335.27: Finished Checkout Customer 360 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 333.07 front of the line at 333.07
 337.29: Finished Checkout Customer 219 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 335.19 front of the line at 335.19
 337.43: Finished shopping customer 168
@@ -918,7 +918,7 @@ Less than 12, chose lane 0 (0)
 347.08: Finished shopping customer 72
 More than 12, chose lane 0 (0)
 347.08: Finished shopping customer 80
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 347.55: Arrival Customer 371
 348.68: Finished Checkout Customer 80 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 347.08 front of the line at 347.08
 348.81: Arrival Customer 12
@@ -936,13 +936,13 @@ More than 12, chose lane 3 (0)
 355.75: Arrival Customer 446
 356.25: Finished Checkout Customer 52 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 351.60 front of the line at 351.60
 358.18: Finished shopping customer 100
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 358.86: Finished Checkout Customer 284 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 354.86 front of the line at 354.86
 360.53: Finished Checkout Customer 100 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 358.18 front of the line at 358.18
 361.13: Finished shopping customer 12
 More than 12, chose lane 0 (0)
 362.05: Finished shopping customer 446
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 363.19: Arrival Customer 303
 363.83: Finished Checkout Customer 12 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 361.13 front of the line at 361.13
 363.93: Finished shopping customer 371
@@ -955,12 +955,12 @@ More than 12, chose lane 3 (0)
 366.62: Arrival Customer 398
 366.9: Arrival Customer 175
 367.82: Finished shopping customer 398
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 368.07: Arrival Customer 265
 369.02: Finished Checkout Customer 398 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 367.82 front of the line at 367.82
 369.59: Arrival Customer 427
 369.75: Finished shopping customer 265
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 370.07: Finished Checkout Customer 44 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 365.52 front of the line at 365.52
 371.26: Finished shopping customer 443
 More than 12, chose lane 0 (0)
@@ -978,11 +978,11 @@ More than 12, chose lane 2 (0)
 More than 12, chose lane 3 (0)
 377.61: Arrival Customer 33
 378.38: Finished shopping customer 379
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 379.06: Finished shopping customer 425
 More than 12, chose lane 1 (0)
 379.13: Finished shopping customer 199
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 379.18: Arrival Customer 21
 379.29: Arrival Customer 434
 379.88: Finished Checkout Customer 379 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 378.38 front of the line at 378.38
@@ -1002,13 +1002,13 @@ More than 12, chose lane 3 (1)
 384.12: Arrival Customer 276
 384.30: Finished Checkout Customer 303 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 381.25 front of the line at 381.25
 385.01: Finished shopping customer 21
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 385.96: Finished Checkout Customer 286 on lane 3 (1) (0.00 minute wait, 0 other people in line -- finished shopping at 381.31 front of the line at 381.31
 387.11: Finished Checkout Customer 21 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 385.01 front of the line at 385.01
 387.77: Arrival Customer 277
 387.97: Arrival Customer 202
 388.31: Finished shopping customer 11
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 388.46: Arrival Customer 350
 389.45: Arrival Customer 187
 389.91: Finished Checkout Customer 11 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 388.31 front of the line at 388.31
@@ -1028,7 +1028,7 @@ More than 12, chose lane 0 (0)
 399.00: Finished shopping customer 33
 More than 12, chose lane 3 (0)
 399.19: Finished shopping customer 330
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 399.72: Finished shopping customer 416
 More than 12, chose lane 3 (1)
 399.95: Finished Checkout Customer 363 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 395.00 front of the line at 395.00
@@ -1040,7 +1040,7 @@ More than 12, chose lane 3 (1)
 402.03: Arrival Customer 341
 402.15: Finished Checkout Customer 33 on lane 3 (1) (0.00 minute wait, 0 other people in line -- finished shopping at 399.00 front of the line at 399.00
 403.36: Finished shopping customer 413
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 403.45: Finished shopping customer 187
 More than 12, chose lane 2 (0)
 404.05: Finished shopping customer 362
@@ -1051,7 +1051,7 @@ More than 12, chose lane 1 (0)
 405.12: Finished shopping customer 368
 More than 12, chose lane 0 (0)
 405.61: Finished shopping customer 202
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 406.15: Finished Checkout Customer 187 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 403.45 front of the line at 403.45
 407.32: Finished Checkout Customer 416 on lane 3 (0) (3.15 minute wait, 1 other people in line -- finished shopping at 399.72 front of the line at 402.87
 407.81: Finished Checkout Customer 202 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 405.61 front of the line at 405.61
@@ -1064,7 +1064,7 @@ More than 12, chose lane 3 (0)
 409.27: Finished Checkout Customer 368 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 405.12 front of the line at 405.12
 409.34: Arrival Customer 138
 409.83: Finished shopping customer 341
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 410.23: Finished shopping customer 139
 More than 12, chose lane 1 (0)
 410.77: Arrival Customer 201
@@ -1100,7 +1100,7 @@ Less than 12, chose lane 0 (0)
 423.23: Finished shopping customer 183
 Less than 12, chose lane 1 (0)
 423.32: Finished shopping customer 249
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 423.71: Finished shopping customer 314
 More than 12, chose lane 1 (0)
 424.06: Arrival Customer 155
@@ -1113,7 +1113,7 @@ More than 12, chose lane 1 (0)
 427.27: Finished shopping customer 201
 More than 12, chose lane 2 (0)
 430.69: Finished shopping customer 112
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 430.92: Finished Checkout Customer 201 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 427.27 front of the line at 427.27
 431.16: Finished shopping customer 276
 More than 12, chose lane 0 (0)
@@ -1123,17 +1123,17 @@ More than 12, chose lane 1 (0)
 More than 12, chose lane 2 (0)
 432.52: Arrival Customer 418
 432.83: Finished shopping customer 401
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 433.19: Finished Checkout Customer 112 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 430.69 front of the line at 430.69
 433.35: Arrival Customer 0
 433.50: Finished shopping customer 105
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 433.54: Finished shopping customer 389
 More than 12, chose lane 3 (0)
 433.78: Finished shopping customer 9
 More than 12, chose lane 3 (1)
 434.06: Finished shopping customer 155
-Less than 12, chose lane 1 (1)
+Less than 12, chose lane 1 (2)
 434.23: Finished Checkout Customer 138 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 431.18 front of the line at 431.18
 434.43: Finished Checkout Customer 401 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 432.83 front of the line at 432.83
 435.10: Finished Checkout Customer 105 on lane 1 (1) (0.00 minute wait, 0 other people in line -- finished shopping at 433.50 front of the line at 433.50
@@ -1146,7 +1146,7 @@ Less than 12, chose lane 1 (1)
 437.46: Finished Checkout Customer 155 on lane 1 (0) (1.60 minute wait, 1 other people in line -- finished shopping at 434.06 front of the line at 435.66
 438.35: Arrival Customer 90
 438.71: Finished shopping customer 0
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 439.1: Arrival Customer 304
 439.27: Arrival Customer 380
 440.33: Finished Checkout Customer 9 on lane 3 (0) (3.10 minute wait, 1 other people in line -- finished shopping at 433.78 front of the line at 436.88
@@ -1163,11 +1163,11 @@ More than 12, chose lane 3 (0)
 446.42: Finished shopping customer 277
 More than 12, chose lane 1 (0)
 446.87: Finished shopping customer 90
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 447.61: Arrival Customer 268
 448.47: Finished Checkout Customer 90 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 446.87 front of the line at 446.87
 448.62: Finished shopping customer 304
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 449.12: Finished Checkout Customer 336 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 444.57 front of the line at 444.57
 449.31: Finished shopping customer 49
 More than 12, chose lane 2 (0)
@@ -1187,9 +1187,9 @@ More than 12, chose lane 1 (0)
 454.65: Finished shopping customer 320
 More than 12, chose lane 2 (0)
 454.81: Finished shopping customer 268
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 454.85: Finished shopping customer 316
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 455.13: Finished Checkout Customer 365 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 451.88 front of the line at 451.88
 455.14: Finished Checkout Customer 131 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 450.39 front of the line at 450.39
 456.40: Finished shopping customer 215
@@ -1205,7 +1205,7 @@ More than 12, chose lane 3 (0)
 462.79: Finished shopping customer 206
 More than 12, chose lane 0 (0)
 462.93: Finished shopping customer 298
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 464.93: Finished Checkout Customer 298 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 462.93 front of the line at 462.93
 465.65: Arrival Customer 260
 466.54: Finished Checkout Customer 206 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 462.79 front of the line at 462.79
@@ -1216,10 +1216,10 @@ More than 12, chose lane 1 (0)
 473.16: Finished shopping customer 372
 More than 12, chose lane 2 (0)
 473.36: Finished shopping customer 128
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 473.9: Arrival Customer 203
 475.32: Finished shopping customer 220
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 475.34: Finished shopping customer 264
 More than 12, chose lane 0 (0)
 475.46: Finished Checkout Customer 128 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 473.36 front of the line at 473.36
@@ -1268,15 +1268,15 @@ More than 12, chose lane 0 (0)
 509.84: Finished Checkout Customer 8 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 506.64 front of the line at 506.64
 511.3: Arrival Customer 22
 511.71: Finished shopping customer 120
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 512.01: Arrival Customer 411
 512.21: Finished shopping customer 2
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 512.90: Finished Checkout Customer 14 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 509.15 front of the line at 509.15
 513.11: Arrival Customer 177
 513.31: Finished Checkout Customer 120 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 511.71 front of the line at 511.71
 513.84: Finished shopping customer 22
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 514.07: Arrival Customer 375
 514.1: Arrival Customer 26
 514.41: Arrival Customer 107
@@ -1311,10 +1311,10 @@ More than 12, chose lane 3 (0)
 534.61: Arrival Customer 430
 535.13: Finished Checkout Customer 242 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 531.83 front of the line at 531.83
 536.13: Finished shopping customer 267
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 536.52: Arrival Customer 424
 537.09: Finished shopping customer 430
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 537.33: Finished Checkout Customer 267 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 536.13 front of the line at 536.13
 537.36: Arrival Customer 273
 537.48: Finished Checkout Customer 190 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 532.48 front of the line at 532.48
@@ -1329,10 +1329,10 @@ More than 12, chose lane 1 (0)
 540.75: Arrival Customer 327
 540.79: Finished Checkout Customer 411 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 537.49 front of the line at 537.49
 541.48: Finished shopping customer 327
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 541.53: Arrival Customer 347
 541.71: Finished shopping customer 382
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 542.58: Finished Checkout Customer 327 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 541.48 front of the line at 541.48
 543.20: Finished shopping customer 177
 More than 12, chose lane 3 (0)
@@ -1340,15 +1340,15 @@ More than 12, chose lane 3 (0)
 543.26: Finished shopping customer 203
 More than 12, chose lane 2 (0)
 544.06: Finished shopping customer 408
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 544.24: Finished Checkout Customer 26 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 540.14 front of the line at 540.14
 544.50: Finished shopping customer 273
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 544.93: Arrival Customer 275
 546.20: Finished Checkout Customer 273 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 544.50 front of the line at 544.50
 546.36: Finished Checkout Customer 408 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 544.06 front of the line at 544.06
 547.02: Finished shopping customer 424
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 547.07: Finished shopping customer 375
 More than 12, chose lane 1 (0)
 547.75: Finished Checkout Customer 177 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 543.20 front of the line at 543.20
@@ -1360,12 +1360,12 @@ More than 12, chose lane 0 (0)
 550.93: Arrival Customer 125
 551.35: Arrival Customer 209
 551.59: Finished shopping customer 275
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 551.82: Finished Checkout Customer 375 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 547.07 front of the line at 547.07
 552.46: Finished shopping customer 51
 More than 12, chose lane 3 (0)
 552.57: Finished shopping customer 125
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 553.01: Arrival Customer 367
 553.33: Arrival Customer 109
 553.49: Finished Checkout Customer 275 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 551.59 front of the line at 551.59
@@ -1374,9 +1374,9 @@ Less than 12, chose lane 2 (0)
 554.67: Finished Checkout Customer 125 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 552.57 front of the line at 552.57
 554.93: Arrival Customer 392
 555.89: Finished shopping customer 145
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 556.01: Finished shopping customer 192
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 556.31: Finished Checkout Customer 51 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 552.46 front of the line at 552.46
 557.86: Finished shopping customer 48
 More than 12, chose lane 0 (0)
@@ -1388,7 +1388,7 @@ More than 12, chose lane 2 (0)
 559.59: Finished shopping customer 119
 More than 12, chose lane 3 (0)
 560.32: Finished shopping customer 376
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 560.74: Arrival Customer 348
 561.06: Finished Checkout Customer 48 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 557.86 front of the line at 557.86
 561.27: Arrival Customer 221
@@ -1402,11 +1402,11 @@ Less than 12, chose lane 0 (0)
 564.15: Finished shopping customer 347
 More than 12, chose lane 1 (0)
 565.28: Finished shopping customer 164
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 566.48: Arrival Customer 288
 566.58: Finished Checkout Customer 164 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 565.28 front of the line at 565.28
 566.64: Finished shopping customer 348
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 567.25: Arrival Customer 296
 567.96: Finished shopping customer 75
 More than 12, chose lane 3 (0)
@@ -1428,7 +1428,7 @@ More than 12, chose lane 0 (0)
 577.00: Finished shopping customer 255
 More than 12, chose lane 3 (0)
 577.76: Finished shopping customer 241
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 578.78: Arrival Customer 67
 579.22: Arrival Customer 144
 579.23: Arrival Customer 142
@@ -1441,11 +1441,11 @@ Less than 12, chose lane 1 (0)
 582.87: Arrival Customer 71
 583.31: Arrival Customer 76
 583.39: Finished shopping customer 113
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 583.46: Finished shopping customer 13
 More than 12, chose lane 1 (0)
 583.61: Finished shopping customer 246
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 583.76: Arrival Customer 172
 584.04: Finished Checkout Customer 442 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 582.04 front of the line at 582.04
 585.11: Finished Checkout Customer 246 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 583.61 front of the line at 583.61
@@ -1454,7 +1454,7 @@ Less than 12, chose lane 0 (0)
 586.34: Finished shopping customer 67
 More than 12, chose lane 0 (0)
 586.88: Finished shopping customer 142
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 587.36: Finished Checkout Customer 13 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 583.46 front of the line at 583.46
 587.37: Arrival Customer 70
 587.99: Finished shopping customer 163
@@ -1469,27 +1469,27 @@ More than 12, chose lane 1 (0)
 589.58: Finished shopping customer 392
 More than 12, chose lane 0 (0)
 590.10: Finished shopping customer 144
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 590.32: Finished shopping customer 404
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 591.06: Finished Checkout Customer 361 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 588.36 front of the line at 588.36
 591.90: Finished Checkout Customer 144 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 590.10 front of the line at 590.10
 592.04: Finished Checkout Customer 163 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 587.99 front of the line at 587.99
 592.12: Finished Checkout Customer 404 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 590.32 front of the line at 590.32
 593.23: Arrival Customer 244
 593.40: Finished shopping customer 71
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 593.74: Finished shopping customer 288
 More than 12, chose lane 1 (0)
 593.83: Finished Checkout Customer 392 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 589.58 front of the line at 589.58
 594.49: Finished shopping customer 409
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 594.51: Finished shopping customer 226
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 595.0: Arrival Customer 412
 595.73: Arrival Customer 214
 595.76: Finished shopping customer 171
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 595.85: Finished Checkout Customer 71 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 593.40 front of the line at 593.40
 595.91: Arrival Customer 79
 596.29: Finished Checkout Customer 409 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 594.49 front of the line at 594.49
@@ -1512,7 +1512,7 @@ More than 12, chose lane 0 (0)
 601.81: Finished shopping customer 109
 More than 12, chose lane 3 (0)
 602.14: Finished shopping customer 179
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 603.9: Arrival Customer 86
 604.24: Finished Checkout Customer 179 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 602.14 front of the line at 602.14
 605.18: Finished shopping customer 15
@@ -1529,12 +1529,12 @@ More than 12, chose lane 2 (0)
 More than 12, chose lane 0 (0)
 608.90: Finished Checkout Customer 19 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 605.20 front of the line at 605.20
 609.24: Finished shopping customer 262
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 609.98: Finished Checkout Customer 15 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 605.18 front of the line at 605.18
 610.15: Finished shopping customer 76
 More than 12, chose lane 3 (0)
 610.59: Finished shopping customer 42
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 610.64: Finished Checkout Customer 262 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 609.24 front of the line at 609.24
 611.76: Finished shopping customer 172
 More than 12, chose lane 2 (0)
@@ -1542,7 +1542,7 @@ More than 12, chose lane 2 (0)
 612.09: Finished Checkout Customer 42 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 610.59 front of the line at 610.59
 613.25: Finished Checkout Customer 76 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 610.15 front of the line at 610.15
 613.63: Finished shopping customer 355
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 613.66: Arrival Customer 173
 613.8: Arrival Customer 337
 614.0: Arrival Customer 111
@@ -1565,7 +1565,7 @@ More than 12, chose lane 1 (0)
 More than 12, chose lane 0 (0)
 620.88: Arrival Customer 436
 621.15: Finished shopping customer 374
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 621.39: Finished Checkout Customer 123 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 618.49 front of the line at 618.49
 621.48: Finished Checkout Customer 412 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 618.63 front of the line at 618.63
 621.53: Finished shopping customer 441
@@ -1573,7 +1573,7 @@ More than 12, chose lane 3 (0)
 621.75: Finished shopping customer 269
 More than 12, chose lane 2 (0)
 621.80: Finished shopping customer 297
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 622.0: Arrival Customer 378
 622.55: Finished Checkout Customer 374 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 621.15 front of the line at 621.15
 622.93: Finished shopping customer 296
@@ -1594,7 +1594,7 @@ More than 12, chose lane 0 (0)
 633.65: Finished shopping customer 111
 More than 12, chose lane 3 (0)
 634.43: Finished shopping customer 311
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 634.94: Arrival Customer 373
 636.23: Finished Checkout Customer 311 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 634.43 front of the line at 634.43
 636.40: Finished Checkout Customer 111 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 633.65 front of the line at 633.65
@@ -1604,9 +1604,9 @@ Less than 12, chose lane 1 (0)
 637.86: Finished shopping customer 289
 Less than 12, chose lane 0 (0)
 637.91: Finished shopping customer 373
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 638.32: Finished shopping customer 378
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 640.06: Finished Checkout Customer 289 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 637.86 front of the line at 637.86
 640.06: Finished Checkout Customer 373 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 637.91 front of the line at 637.91
 640.63: Finished shopping customer 216
@@ -1622,7 +1622,7 @@ More than 12, chose lane 2 (0)
 More than 12, chose lane 1 (0)
 643.83: Finished Checkout Customer 216 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 640.63 front of the line at 640.63
 644.38: Finished shopping customer 47
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 644.87: Arrival Customer 405
 644.9: Arrival Customer 159
 645.29: Arrival Customer 281
@@ -1638,16 +1638,16 @@ Less than 12, chose lane 0 (0)
 More than 12, chose lane 3 (0)
 649.29: Finished Checkout Customer 32 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 647.49 front of the line at 647.49
 650.21: Finished shopping customer 223
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 651.77: Arrival Customer 282
 652.66: Finished Checkout Customer 223 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 650.21 front of the line at 650.21
 653.19: Finished shopping customer 281
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 653.26: Finished Checkout Customer 184 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 648.96 front of the line at 648.96
 654.97: Finished shopping customer 70
 More than 12, chose lane 0 (0)
 655.13: Finished shopping customer 282
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 655.46: Arrival Customer 279
 655.53: Arrival Customer 240
 655.69: Finished Checkout Customer 281 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 653.19 front of the line at 653.19
@@ -1663,15 +1663,15 @@ Less than 12, chose lane 1 (0)
 More than 12, chose lane 2 (0)
 661.95: Arrival Customer 165
 663.42: Finished shopping customer 342
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 664.20: Finished shopping customer 64
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 664.92: Finished Checkout Customer 342 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 663.42 front of the line at 663.42
 665.08: Finished shopping customer 63
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 665.71: Finished Checkout Customer 228 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 660.96 front of the line at 660.96
 665.95: Finished shopping customer 165
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 666.40: Finished Checkout Customer 64 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 664.20 front of the line at 664.20
 667.45: Finished Checkout Customer 165 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 665.95 front of the line at 665.95
 667.68: Finished Checkout Customer 63 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 665.08 front of the line at 665.08
@@ -1690,7 +1690,7 @@ More than 12, chose lane 3 (0)
 674.70: Finished Checkout Customer 385 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 670.15 front of the line at 670.15
 674.77: Arrival Customer 141
 677.01: Finished shopping customer 43
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 677.17: Finished shopping customer 433
 More than 12, chose lane 1 (0)
 677.75: Arrival Customer 239
@@ -1709,10 +1709,10 @@ More than 12, chose lane 2 (0)
 684.56: Finished Checkout Customer 299 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 680.31 front of the line at 680.31
 684.94: Arrival Customer 81
 684.98: Finished shopping customer 157
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 685.61: Finished Checkout Customer 240 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 681.66 front of the line at 681.66
 685.77: Finished shopping customer 85
-Less than 12, chose lane 3 (0)
+Less than 12, chose lane 3 (1)
 686.98: Finished Checkout Customer 157 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 684.98 front of the line at 684.98
 687.92: Finished Checkout Customer 85 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 685.77 front of the line at 685.77
 688.06: Finished shopping customer 81
@@ -1730,7 +1730,7 @@ More than 12, chose lane 3 (0)
 692.91: Finished Checkout Customer 435 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 688.11 front of the line at 688.11
 693.52: Arrival Customer 158
 693.65: Finished shopping customer 24
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 693.72: Finished Checkout Customer 339 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 690.22 front of the line at 690.22
 695.06: Arrival Customer 449
 695.31: Finished Checkout Customer 159 on lane 2 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 690.96 front of the line at 690.96
@@ -1747,7 +1747,7 @@ More than 12, chose lane 1 (0)
 Less than 12, chose lane 1 (0)
 700.62: Arrival Customer 445
 701.54: Finished shopping customer 449
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 702.52: Finished Checkout Customer 194 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 700.52 front of the line at 700.52
 703.28: Arrival Customer 285
 703.94: Finished Checkout Customer 449 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 701.54 front of the line at 701.54
@@ -1756,7 +1756,7 @@ Less than 12, chose lane 0 (0)
 705.54: Finished shopping customer 182
 Less than 12, chose lane 0 (0)
 706.78: Finished shopping customer 308
-Less than 12, chose lane 2 (0)
+Less than 12, chose lane 2 (1)
 707.36: Finished shopping customer 338
 More than 12, chose lane 3 (0)
 707.64: Finished Checkout Customer 182 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 705.54 front of the line at 705.54
@@ -1764,7 +1764,7 @@ More than 12, chose lane 3 (0)
 709.30: Finished shopping customer 188
 More than 12, chose lane 1 (0)
 710.49: Finished shopping customer 204
-Less than 12, chose lane 1 (0)
+Less than 12, chose lane 1 (1)
 711.58: Arrival Customer 410
 712.20: Finished Checkout Customer 188 on lane 1 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 709.30 front of the line at 709.30
 712.36: Finished Checkout Customer 338 on lane 3 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 707.36 front of the line at 707.36
@@ -1772,7 +1772,7 @@ Less than 12, chose lane 1 (0)
 712.77: Finished shopping customer 397
 More than 12, chose lane 0 (0)
 713.26: Finished shopping customer 410
-Less than 12, chose lane 0 (0)
+Less than 12, chose lane 0 (1)
 714.56: Finished Checkout Customer 410 on lane 0 (0) (0.00 minute wait, 0 other people in line -- finished shopping at 713.26 front of the line at 713.26
 716.09: Finished shopping customer 279
 More than 12, chose lane 2 (0)
@@ -1825,3 +1825,5 @@ Customer 416 waited 3.15
 Customer 419 waited 2.10
 Customer 428 waited 3.90
 Average Wait Time: 0.069
+0.23256704980842913
+0.008376963350785341

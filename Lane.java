@@ -13,6 +13,9 @@ public class Lane extends PriorityQueue<Customer> {
     private double paymentTime;
     private boolean isExpress;
 
+    public Lane(){
+        
+    }
     public Lane(boolean isExpress, int laneNumber) {
         if (isExpress) {
             this.isExpress = true;

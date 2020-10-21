@@ -33,9 +33,23 @@ public class GroceryStoreMain {
             }
             averageWaitTime += N.getWaitTime();
         }
-
+        double averageWaitTimeP = 0;
+        double avgForNormal = 0;
+        int numNormal = 0;
+        int numP = 0;
+        for (Customer N : customers) {
+            if(N.getExpressElgibility()){
+                numP++;
+            averageWaitTimeP += N.getWaitTime();}
+            else{
+                numNormal++;
+                avgForNormal += N.getWaitTime();
+            }
+        }
         System.out.printf("Average Wait Time: %.3f", (averageWaitTime / customers.size()/2));
-
+        System.out.println();
+        System.out.println(avgForNormal/numNormal);
+        System.out.println(averageWaitTimeP / numP);
     }
 
     /*

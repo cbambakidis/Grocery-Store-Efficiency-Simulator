@@ -66,8 +66,8 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         }
         // Elgible for express, unequal length lines. Shortest line regardless.
         if (C.getExpressElgibility() && !areAllEqual) {
-            System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber() + " (" + this.get(0).size() + ")");
-            this.get(0).addCustomerToCheckoutLine(C);
+           this.get(0).addCustomerToCheckoutLine(C);
+           System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber() + " (" + this.get(0).size() + ")");
             return;
         }
 
