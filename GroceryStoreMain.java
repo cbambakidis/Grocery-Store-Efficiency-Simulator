@@ -12,7 +12,7 @@ public class GroceryStoreMain {
         System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        CheckoutCenter checkoutLanes = new CheckoutCenter(10, 2, events);
+        CheckoutCenter checkoutLanes = new CheckoutCenter(11, 1, events);
         ArrayList<Customer> customers = readCustomerList("arrivalBig.txt", events, checkoutLanes);
         // driver loop
         double time = 0;
