@@ -23,12 +23,12 @@ public class Lane extends PriorityQueue<Customer> {
     public Lane(boolean isExpress, int laneNumber) {
         if (isExpress) {
             this.isExpress = true;
-            this.type = "Express";
+            this.type = "E";
             this.checkoutRate = .1;
             this.paymentTime = 1;
         } else {
             this.isExpress = false;
-            this.type = "Normal";
+            this.type = "N";
             this.checkoutRate = .05;
             this.paymentTime = 2;
         }
@@ -36,7 +36,7 @@ public class Lane extends PriorityQueue<Customer> {
     }
 
     public void addCustomerToCheckoutLine(Customer c) {
-        c.setWaitTime(calculateWaitTime(this)); //Here,since we have the wait time, we can proceed to calculate checkout time.
+        c.setWaitTime(calculateWaitTime()); //Here,since we have the wait time, we can proceed to calculate checkout time.
         c.setPeopleInFront(this.size());
         this.offer(c);
 
@@ -44,11 +44,11 @@ public class Lane extends PriorityQueue<Customer> {
 
     }
     
-    public double calculateWaitTime(Lane x){
+    public double calculateWaitTime(){
         double totalWaitTime = 0;
-                    for(Customer N : x){
+                    for(Customer N : this){
                     totalWaitTime += (N.getShoppingList()
-                    * x.checkoutRate + x.paymentTime);
+                    * this.checkoutRate + this.paymentTime);
                     }
                     return totalWaitTime;
     }

@@ -8,22 +8,12 @@ public class CheckedOutEvent extends Event {
     private Lane x;
 
     public CheckedOutEvent(Customer custy, Lane N) {
-        ///////
         super.setCustomer(custy);
-        System.out.println(custy.getDoneShoppingTime() + " " + custy.getWaitTime() + " "
-                + custy.getShoppingList() + " " + N.checkoutRate + " " + N.paymentTime + " " + N.type + " " + custy.getExpressElgibility());
         super.setTimeOfOccurence(custy.getDoneShoppingTime() + custy.getWaitTime()
                 + ((custy.getShoppingList() * N.checkoutRate) + N.paymentTime));
-        x = N; // if this doesn't work go back to timeotcheckoutcurrentcutomer method in update
-               // method.
+        x = N; 
         numOtherPeeps = custy.getPeopleInFront();
-        if (numOtherPeeps == 0) {
-            this.waitTime = 0;
-        } else { // Else, wait time is the time you checked out minus however long it took you to
-                 // arrive and shop.
-            this.waitTime = this.getTimeOfOccurence() - custy.getDoneShoppingTime();
-        }
-        custy.setWaitTime(this.waitTime);
+        waitTime = custy.getWaitTime();
     }
 
     public void execute() {

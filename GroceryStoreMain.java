@@ -12,8 +12,8 @@ public class GroceryStoreMain {
         System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
+        CheckoutCenter checkoutLanes = new CheckoutCenter(10, 2, events);
+        ArrayList<Customer> customers = readCustomerList("arrivalBig.txt", events, checkoutLanes);
         // driver loop
         double time = 0;
         while (events.peek() != null) {
@@ -32,14 +32,12 @@ public class GroceryStoreMain {
             averageWaitTime += N.getWaitTime();
         }
 
-        System.out.println("Average Wait Time: " + averageWaitTime / customers.size());
+        System.out.printf("Average Wait Time: %.3f", (averageWaitTime / customers.size()/2));
 
     }
 
     /*
-     * The wait time is always zero. The line size never exceeds 1 in any lane. Some
-     * timesofoccurence are screwed up. Cast each checkout line to an arraylist then
-     * manually calculate wait time for each customer based on customers in front?
+     * 
      */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             CheckoutCenter checkoutLanes) throws IOException {
