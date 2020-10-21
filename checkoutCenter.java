@@ -29,10 +29,6 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
     public void update(double time) {
         Collections.sort(this, new LineComparator());
-        // for(Lane N : this){
-            
-        //     System.out.print(N.type + "-" + N.size() + ", ");
-        // }
     }
 
     /*
@@ -44,13 +40,13 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
         boolean areAllEqual = false;
         int size = this.get(0).size();
-        for (Lane N : this) {
-            if (N.size() < size) {
-                size = N.size();
+        for (Lane L : this) {
+            if (L.size() < size) {
+                size = L.size();
             }
         }
-        for (Lane N : this) {
-            if (N.size() == size) {
+        for (Lane L : this) {
+            if (L.size() == size) {
                 areAllEqual = true;
             } else {
                 areAllEqual = false;
@@ -62,7 +58,7 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         if (!C.getExpressElgibility() && !areAllEqual) {
             for (Lane N : this) {
                 if (!N.isExpress()) {
-                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + N.size());
+                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + " (" + N.size() + ")");
                     N.addCustomerToCheckoutLine(C);
                     return;
                 }
@@ -70,7 +66,7 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         }
         // Elgible for express, unequal length lines. Shortest line regardless.
         if (C.getExpressElgibility() && !areAllEqual) {
-            System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber() + this.get(0).size());
+            System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber() + " (" + this.get(0).size() + ")");
             this.get(0).addCustomerToCheckoutLine(C);
             return;
         }
@@ -79,7 +75,7 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         if (!C.getExpressElgibility() && areAllEqual) {
             for (Lane N : this) {
                 if (!N.isExpress()) {
-                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + N.size());
+                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + " (" + N.size() + ")");
                     N.addCustomerToCheckoutLine(C);
                     return;
                 }
@@ -89,7 +85,7 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         if (C.getExpressElgibility() && areAllEqual) {
             for (Lane N : this) {
                 if (N.isExpress()) {
-                    System.out.println("Less than 12, chose lane " + N.getLaneNumber() + N.size());
+                    System.out.println("Less than 12, chose lane " + N.getLaneNumber() + " (" + N.size() + ")");
                     N.addCustomerToCheckoutLine(C);
                     return;
                 }

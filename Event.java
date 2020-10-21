@@ -7,9 +7,6 @@ public class Event{
     private double timeOfOccurence;
     private Customer C;
 
-    public Event() {
-    }
-
     public void setTimeOfOccurence(double d){
         this.timeOfOccurence = d;
     }

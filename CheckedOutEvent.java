@@ -13,12 +13,14 @@ public class CheckedOutEvent extends Event {
                 + ((custy.getShoppingList() * N.getCheckoutRate()) + N.getPaymentTime()));
         x = N; 
         numOtherPeeps = custy.getPeopleInFront();
+        //waitTime = custy.getWaitTime(); // wait time until customer in front has checked out
         waitTime = custy.getWaitTime();
+        
     }
 
     public void execute() {
         x.poll();
-        System.out.printf("%.2f: Finished Checkout Customer %d on lane %d (" + this.getCustomer().getExpressElgibility()
+        System.out.printf("%.2f: Finished Checkout Customer %d on lane %d (" + x.size()
                 + ") (%.2f minute wait, %d other people in line -- finished shopping at %.2f front of the line at %.2f",
                 this.getTimeOfOccurence(), this.getCustomer().getCustomerNumber(), x.getLaneNumber(), waitTime,
                 numOtherPeeps, this.getCustomer().getDoneShoppingTime(),

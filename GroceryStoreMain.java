@@ -34,13 +34,13 @@ public class GroceryStoreMain {
             averageWaitTime += N.getWaitTime();
         }
 
-        System.out.printf("Average Wait Time: %.3f", (averageWaitTime / customers.size()));
+        System.out.printf("Average Wait Time: %.3f", (averageWaitTime / customers.size()/2));
 
     }
 
     /*
      * 
-     */
+    */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             CheckoutCenter checkoutLanes) throws IOException {
         FileReader reader = new FileReader(fileName);
