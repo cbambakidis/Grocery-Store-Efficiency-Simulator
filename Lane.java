@@ -9,26 +9,17 @@ public class Lane extends PriorityQueue<Customer> {
 
     private static final long serialVersionUID = 1L;
     private int laneNumber;
-    double checkoutRate;
-    int paymentTime;
-    boolean isExpress;
-    double currentWaitTime = 0;
-    double timeTilCheckedOut = 0;
-    String type;
-    double timeToCheckoutCurrentCustomer;
-
-    public Lane() {
-    }
+    private double checkoutRate;
+    private double paymentTime;
+    private boolean isExpress;
 
     public Lane(boolean isExpress, int laneNumber) {
         if (isExpress) {
             this.isExpress = true;
-            this.type = "E";
             this.checkoutRate = .1;
             this.paymentTime = 1;
         } else {
             this.isExpress = false;
-            this.type = "N";
             this.checkoutRate = .05;
             this.paymentTime = 2;
         }
@@ -36,12 +27,10 @@ public class Lane extends PriorityQueue<Customer> {
     }
 
     public void addCustomerToCheckoutLine(Customer c) {
-        c.setWaitTime(calculateWaitTime()); //Here,since we have the wait time, we can proceed to calculate checkout time.
+        c.setWaitTime(calculateWaitTime()); 
         c.setPeopleInFront(this.size());
         this.offer(c);
-
         c.addCheckedOutEvent(this);
-
     }
     
     public double calculateWaitTime(){
@@ -55,5 +44,17 @@ public class Lane extends PriorityQueue<Customer> {
 
     public int getLaneNumber() {
         return laneNumber;
+    }
+
+    public boolean isExpress(){
+        return isExpress;
+    }
+
+    public double getCheckoutRate(){
+        return checkoutRate;
+    }
+
+    public double getPaymentTime(){
+        return paymentTime;
     }
 }

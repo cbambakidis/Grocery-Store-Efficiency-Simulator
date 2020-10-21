@@ -10,11 +10,7 @@ import java.util.PriorityQueue;
 */
 public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> {
     private static final long serialVersionUID = 1L;
-    double timeElapsed;
-
-    public CheckoutCenter() {
-    }
-
+    
     public CheckoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
         for (int a = 0; a < numberOfNormalLanes; a++) {
             Lane normalCheckoutLane = new Lane(false, a);
@@ -33,6 +29,10 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
 
     public void update(double time) {
         Collections.sort(this, new LineComparator());
+        // for(Lane N : this){
+            
+        //     System.out.print(N.type + "-" + N.size() + ", ");
+        // }
     }
 
     /*
@@ -49,7 +49,6 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 size = N.size();
             }
         }
-
         for (Lane N : this) {
             if (N.size() == size) {
                 areAllEqual = true;
@@ -62,26 +61,26 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         // Inelgible for express, unequal length lines. First normal line.
         if (!C.getExpressElgibility() && !areAllEqual) {
             for (Lane N : this) {
-                if (!N.isExpress) {
+                if (!N.isExpress()) {
+                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + N.size());
                     N.addCustomerToCheckoutLine(C);
-                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + N.type);
                     return;
                 }
             }
         }
         // Elgible for express, unequal length lines. Shortest line regardless.
         if (C.getExpressElgibility() && !areAllEqual) {
+            System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber() + this.get(0).size());
             this.get(0).addCustomerToCheckoutLine(C);
-            System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber() + this.get(0).type);
             return;
         }
 
         // Inelgible for express, equal length lines. Shortest normal line.
         if (!C.getExpressElgibility() && areAllEqual) {
             for (Lane N : this) {
-                if (!N.isExpress) {
+                if (!N.isExpress()) {
+                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + N.size());
                     N.addCustomerToCheckoutLine(C);
-                    System.out.println("More than 12, chose lane " + N.getLaneNumber() + N.type);
                     return;
                 }
             }
@@ -89,9 +88,9 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         // Elgible for express, equal length lines. First express line.
         if (C.getExpressElgibility() && areAllEqual) {
             for (Lane N : this) {
-                if (N.isExpress) {
+                if (N.isExpress()) {
+                    System.out.println("Less than 12, chose lane " + N.getLaneNumber() + N.size());
                     N.addCustomerToCheckoutLine(C);
-                    System.out.println("Less than 12, chose lane " + N.getLaneNumber() + N.type);
                     return;
                 }
             }

@@ -6,14 +6,15 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Collections;
+
 public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
         PrintStream fileOut = new PrintStream("./out.txt");
         System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        CheckoutCenter checkoutLanes = new CheckoutCenter(11, 1, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalBig.txt", events, checkoutLanes);
+        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2, events);
+        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
         // driver loop
         double time = 0;
         while (events.peek() != null) {
@@ -27,12 +28,13 @@ public class GroceryStoreMain {
         double averageWaitTime = 0;
         for (Customer N : customers) {
             if (N.getWaitTime() != 0) {
-                System.out.println("Customer " + N + " waited " + N.getWaitTime());
+                System.out.printf("Customer " + N + " waited %.2f", N.getWaitTime());
+                System.out.println("");
             }
             averageWaitTime += N.getWaitTime();
         }
 
-        System.out.printf("Average Wait Time: %.3f", (averageWaitTime / customers.size()/2));
+        System.out.printf("Average Wait Time: %.3f", (averageWaitTime / customers.size()));
 
     }
 

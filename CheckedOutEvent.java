@@ -10,7 +10,7 @@ public class CheckedOutEvent extends Event {
     public CheckedOutEvent(Customer custy, Lane N) {
         super.setCustomer(custy);
         super.setTimeOfOccurence(custy.getDoneShoppingTime() + custy.getWaitTime()
-                + ((custy.getShoppingList() * N.checkoutRate) + N.paymentTime));
+                + ((custy.getShoppingList() * N.getCheckoutRate()) + N.getPaymentTime()));
         x = N; 
         numOtherPeeps = custy.getPeopleInFront();
         waitTime = custy.getWaitTime();
@@ -22,7 +22,7 @@ public class CheckedOutEvent extends Event {
                 + ") (%.2f minute wait, %d other people in line -- finished shopping at %.2f front of the line at %.2f",
                 this.getTimeOfOccurence(), this.getCustomer().getCustomerNumber(), x.getLaneNumber(), waitTime,
                 numOtherPeeps, this.getCustomer().getDoneShoppingTime(),
-                this.getTimeOfOccurence() - (x.checkoutRate * this.getCustomer().getShoppingList() + x.paymentTime));
+                this.getTimeOfOccurence() - (x.getCheckoutRate() * this.getCustomer().getShoppingList() + x.getPaymentTime()));
         System.out.println();
     }
 

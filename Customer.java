@@ -7,12 +7,12 @@ public class Customer implements Comparable {
     private Queue<Event> orderOfEvents;
     private int shoppingList;
     private int myCustomerNumber;
-    private double waitTime = 0;
     private double shoppingSpeed;
     private double timeBeforeCheckout;
     private double totalTimeInStore;
     private boolean isElgibleForExpress = false;
     private int numberPeepsInFront = 0;
+
     /*
      * Makes a new customer object, using the information from the text file, as
      * well as giving the customer access to the event list and checkout center so
@@ -29,6 +29,7 @@ public class Customer implements Comparable {
         this.shoppingList = shoppingListSize;
         this.shoppingSpeed = shoppingSpeed;
         myCustomerNumber = customerNumber;
+        timeBeforeCheckout = (this.shoppingSpeed * this.shoppingList);
         myArrivalEvent = new ArrivalEvent(this);
         myDoneShoppingEvent = new DoneShoppingEvent(this, checkoutLanes);
         orderOfEvents = eventList;
@@ -36,19 +37,17 @@ public class Customer implements Comparable {
             isElgibleForExpress = true;
         }
         orderOfEvents.offer(myArrivalEvent);
-        orderOfEvents.offer(scheduleDoneShoppingEvent());
+        orderOfEvents.offer(myDoneShoppingEvent);
     }
 
     public void setWaitTime(double timeWaitingInLine) {
         totalTimeInStore = timeWaitingInLine;
     }
 
-    
     public void setPeopleInFront(int x) {
         this.numberPeepsInFront = x;
     }
 
-    
     public double getWaitTime() {
         return totalTimeInStore;
     }
@@ -73,18 +72,6 @@ public class Customer implements Comparable {
         return shoppingList;
     }
 
-    public double getShoppingSpeed() {
-        return shoppingSpeed;
-    }
-
-    public double timeWaited() {
-        return waitTime;
-    }
-
-    public Event scheduleDoneShoppingEvent() {
-        return myDoneShoppingEvent;
-    }
-
     public double getDoneShoppingTime() {
         return myDoneShoppingEvent.getTimeOfOccurence();
     }
@@ -97,7 +84,7 @@ public class Customer implements Comparable {
         return myCustomerNumber + "";
     }
 
-    public void addCheckedOutEvent(Lane N){
+    public void addCheckedOutEvent(Lane N) {
         orderOfEvents.add(new CheckedOutEvent(this, N));
     }
 
@@ -106,7 +93,5 @@ public class Customer implements Comparable {
         // TODO Auto-generated method stub
         return 0;
     }
-
-
 
 }
