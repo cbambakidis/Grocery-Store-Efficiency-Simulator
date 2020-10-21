@@ -10,7 +10,8 @@ import java.util.PriorityQueue;
 */
 public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> {
     private static final long serialVersionUID = 1L;
-    
+    private ArrayList<Double> avgSizes = new ArrayList<>();
+    private int longestLineSize = 0;
     public CheckoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
         for (int a = 0; a < numberOfNormalLanes; a++) {
             Lane normalCheckoutLane = new Lane(false, a);
@@ -28,9 +29,30 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
      */
 
     public void update(double time) {
+   
         Collections.sort(this, new LineComparator());
-    }
+        
+        //Get average lane size stats.
+        double avgLaneSize = 0;
+        for(Lane X : this){
+            avgLaneSize += X.size();
+            
+        }
+        avgLaneSize = avgLaneSize/this.size();
+        System.out.println(avgLaneSize);
+        avgSizes.add(avgLaneSize);
 
+        //Get longest line size
+        for(Lane X : this){
+            if(X.size() >= longestLineSize){
+                longestLineSize = X.size();
+            }
+        }
+
+    }
+    public int getLongestLineSize(){
+        return longestLineSize;
+    }
     /*
      * This method automatically sorts the customer into the best lane depending on
      * whether or not they get to use an express lane. Wait time is calculated
@@ -92,6 +114,9 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
             }
         }
 
+    }
+    public ArrayList<Double> getAvgLength(){
+        return avgSizes;
     }
 
     @Override

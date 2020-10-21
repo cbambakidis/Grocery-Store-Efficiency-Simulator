@@ -13,7 +13,6 @@ public class CheckedOutEvent extends Event {
                 + ((custy.getShoppingList() * N.getCheckoutRate()) + N.getPaymentTime()));
         x = N; 
         numOtherPeeps = custy.getPeopleInFront();
-        //waitTime = custy.getWaitTime(); // wait time until customer in front has checked out
         waitTime = custy.getWaitTime();
         
     }
