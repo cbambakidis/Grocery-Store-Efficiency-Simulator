@@ -39,7 +39,10 @@ public class Customer implements Comparable {
             isElgibleForExpress = true;
         }
         orderOfEvents.offer(myArrivalEvent);
-        orderOfEvents.offer(myDoneShoppingEvent);
+    }
+     
+    public void scheduleCheckout(){
+    orderOfEvents.offer(myDoneShoppingEvent);
     }
 
     public void setWaitTime(double timeWaitingInLine) {

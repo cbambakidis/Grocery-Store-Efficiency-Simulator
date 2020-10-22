@@ -14,6 +14,7 @@ public class CheckedOutEvent extends Event {
         x = N; 
         numOtherPeeps = custy.getPeopleInFront();
         waitTime = custy.getWaitTime();
+
         
     }
 

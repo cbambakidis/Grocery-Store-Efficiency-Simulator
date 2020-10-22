@@ -11,6 +11,7 @@ public class ArrivalEvent extends Event {
 
     public void execute() {
         System.out.println(this.getTimeOfOccurence() + ": Arrival Customer " + this.getCustomer().getCustomerNumber());
+        super.getCustomer().scheduleCheckout();
     }
 
 }
