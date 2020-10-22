@@ -36,15 +36,17 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
         //If there's already someone checking out, they have to wait
         //For them to check out. If there's multiple people in line, it will be 
         //Their checkout times plus however far along guy in the lead is.
-
         if(this.peek() == null){
             c.setWaitTime(0);
         }
         else if(this.size() == 1) {
+        this.timeToCheckout = -(c.getDoneShoppingTime() - this.peek().getDoneShoppingTime() - (this.peek().getShoppingList() * this.checkoutRate + this.paymentTime));
+        System.out.println(this.peek().getDoneShoppingTime() + "::" + c.getDoneShoppingTime());
         c.setWaitTime(this.timeToCheckout);   
         }
         
         else if(this.size() > 1){
+            this.timeToCheckout = (this.peek().getShoppingList() * this.checkoutRate + this.paymentTime) - c.getDoneShoppingTime() - this.peek().getDoneShoppingTime();
             c.setWaitTime(this.timeToCheckout + calculateWaitTime());        
         }
         numberCustomersTotal++;
@@ -54,11 +56,11 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
         
     }
 
-    public void update(double timeElapsed){
-        if(this.peek() != null){
-        this.timeToCheckout = this.peek().getShoppingList() * this.checkoutRate + this.paymentTime - timeElapsed;
-    }
-}
+//     public void update(double timeElapsed){
+//         if(this.peek() != null){
+//         this.timeToCheckout = this.peek().getShoppingList() * this.checkoutRate + this.paymentTime - timeElapsed;
+//     }
+// }
 
     public Customer currentCustomer(){
         return this.customerCurrentlyCheckingOut;

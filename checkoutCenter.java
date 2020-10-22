@@ -39,9 +39,9 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         Collections.sort(this, new LineComparator());
         timeElapsed = time-currentTime;
         currentTime = time;
-    for(Lane N : this){
-        N.update(timeElapsed);
-    } //Problem : pipe in time from main method to be used to calculate wait time 
+    // for(Lane N : this){
+    //     N.update(timeElapsed);
+    // } //Problem : pipe in time from main method to be used to calculate wait time 
     //Every time a customer is added to line, not during update time.
 
         //Get average lane size stats.
