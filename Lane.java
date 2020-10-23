@@ -13,11 +13,14 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
     private double checkoutRate;
     private double paymentTime;
     private boolean isExpress;
+    private double avgWaitTime;
     private int numberCustomersTotal = 0;
-     Customer customerCurrentlyCheckingOut;
-    public Lane(){
+    Customer customerCurrentlyCheckingOut;
+
+    public Lane() {
 
     }
+
     public Lane(boolean isExpress, int laneNumber) {
         if (isExpress) {
             this.isExpress = true;
@@ -30,53 +33,55 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
         }
         this.laneNumber = laneNumber;
     }
-    //PIPE TIME ELAPSED STRAIGHT THROUGH ONCE A CUSTOMER IS BEING ADDED TO CHECKOUT.
+    // PIPE TIME ELAPSED STRAIGHT THROUGH ONCE A CUSTOMER IS BEING ADDED TO
+    // CHECKOUT.
 
     public void addCustomerToCheckoutLine(Customer c) {
-        //If there's already someone checking out, they have to wait
-        //For them to check out. If there's multiple people in line, it will be 
-        //Their checkout times plus however far along guy in the lead is.
-        if(this.peek() == null){
+        // If there's already someone checking out, they have to wait
+        // For them to check out. If there's multiple people in line, it will be
+        // Their checkout times plus however far along guy in the lead is.
+        if (this.peek() == null) {
             c.setWaitTime(0);
+        } else if (this.size() == 1) {
+            timeToCheckout = ((this.peek().getShoppingList() * this.checkoutRate + this.paymentTime) - (c.getDoneShoppingTime() - this.peek().getDoneShoppingTime()));
+            //System.out.println((this.peek().getShoppingList() * this.checkoutRate + this.paymentTime) + " " + c.getDoneShoppingTime() + " " + this.peek().getDoneShoppingTime());
+            c.setWaitTime(this.timeToCheckout);
+            if(timeToCheckout <= 0){
+                c.setWaitTime(0);
+            }
         }
-        else if(this.size() == 1) {
-        this.timeToCheckout = -(c.getDoneShoppingTime() - this.peek().getDoneShoppingTime() - (this.peek().getShoppingList() * this.checkoutRate + this.paymentTime));
-        System.out.println(this.peek().getDoneShoppingTime() + "::" + c.getDoneShoppingTime());
-        c.setWaitTime(this.timeToCheckout);   
+        // Make it into absolute value, and fix the other one below.
+        else if (this.size() > 1) {
+            this.timeToCheckout = (c.getDoneShoppingTime() - this.peek().getDoneShoppingTime()
+                    - (this.peek().getShoppingList() * this.checkoutRate + this.paymentTime));
+            c.setWaitTime(this.timeToCheckout + calculateWaitTime());
+            if(timeToCheckout <= 0){
+                c.setWaitTime(0);
+            }
         }
-        
-        else if(this.size() > 1){
-            this.timeToCheckout = (this.peek().getShoppingList() * this.checkoutRate + this.paymentTime) - c.getDoneShoppingTime() - this.peek().getDoneShoppingTime();
-            c.setWaitTime(this.timeToCheckout + calculateWaitTime());        
-        }
+        avgWaitTime += Math.abs(this.timeToCheckout);
         numberCustomersTotal++;
         c.setPeopleInFront(this.size());
         this.offer(c);
         c.addCheckedOutEvent(this);
-        
+
     }
 
-//     public void update(double timeElapsed){
-//         if(this.peek() != null){
-//         this.timeToCheckout = this.peek().getShoppingList() * this.checkoutRate + this.paymentTime - timeElapsed;
-//     }
-// }
-
-    public Customer currentCustomer(){
+    public Customer currentCustomer() {
         return this.customerCurrentlyCheckingOut;
     }
-    
-    public double calculateWaitTime(){
+
+    public double calculateWaitTime() {
         double totalWaitTime = 0;
-                    for(Customer N : this){
-                        if(N != this.peek()){
-                    totalWaitTime += (N.getShoppingList()
-                    * this.checkoutRate + this.paymentTime);
-                    }
-                }
-                    return totalWaitTime;
+        for (Customer N : this) {
+            if (N != this.peek()) {
+                totalWaitTime += (N.getShoppingList() * this.checkoutRate + this.paymentTime);
+            }
+        }
+        return totalWaitTime;
     }
-    public int getTotalCustomers(){
+
+    public int getTotalCustomers() {
         return numberCustomersTotal;
     }
 
@@ -84,26 +89,30 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
         return laneNumber;
     }
 
-    public boolean isExpress(){
+    public boolean isExpress() {
         return isExpress;
     }
 
-    public double getCheckoutRate(){
+    public double getCheckoutRate() {
         return checkoutRate;
     }
 
-    public double getPaymentTime(){
+    public double getPaymentTime() {
         return paymentTime;
+    }
+
+    public double getAvgWaitTime() {
+        return this.avgWaitTime / this.numberCustomersTotal;
     }
 
     @Override
     public int compareTo(Lane o) {
-        if(this.getLaneNumber() > o.laneNumber){
+        if (this.getLaneNumber() > o.laneNumber) {
             return 1;
         }
-        if(o.getLaneNumber() > this.laneNumber){
+        if (o.getLaneNumber() > this.laneNumber) {
             return -1;
-        }
-        else return 0;
+        } else
+            return 0;
     }
 }

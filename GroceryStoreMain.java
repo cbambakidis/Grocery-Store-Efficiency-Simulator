@@ -13,8 +13,8 @@ public class GroceryStoreMain {
         System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
+        CheckoutCenter checkoutLanes = new CheckoutCenter(8, 4, events);
+        ArrayList<Customer> customers = readCustomerList("arrivalBig.txt", events, checkoutLanes);
         // driver loop
         double time = 0;
         double timeElapsed = 0;
@@ -68,11 +68,11 @@ public class GroceryStoreMain {
         System.out.printf("Average express checkout lane wait time: %.3f minutes", averageWaitTimeP / numP);
         System.out.println();
         System.out.println("Number of customers passed through each line: ");
-        System.out.println("Lane Number\tIs Express\t# customers");
+        System.out.println("\tLane Number\t\tIs Express\t\t# customers\t\tAverage wait time");
         Collections.sort(checkoutLanes);
         for(Lane N : checkoutLanes){
-            System.out.println(N.getLaneNumber() + "\t\t\t" + N.isExpress() + "\t\t\t" + N.getTotalCustomers());
-            
+            System.out.printf("\t\t" + N.getLaneNumber() + "\t\t\t\t" + N.isExpress() + "\t\t\t" + N.getTotalCustomers() + "\t\t\t\t %.2f", N.getAvgWaitTime());
+            System.out.println();
         }
     }
 

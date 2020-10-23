@@ -7,13 +7,14 @@ import java.util.PriorityQueue;
  * Making this class lets me update the status of each lane easier from the main method.
  * This class creates the desired amount of regular and express lanes, and updates them given a time from 
  * the main method.
-*/        
+*/
 
 public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> {
     private static final long serialVersionUID = 1L;
     private ArrayList<Double> avgSizes = new ArrayList<>();
     private int longestLineSize = 0;
     double currentTime = 0;
+
     public CheckoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
         int lastNum = 0;
         for (int a = 0; a < numberOfNormalLanes; a++) {
@@ -24,53 +25,47 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         for (int b = 0; b < numberOfExpressLanes; b++) {
             Lane expressCheckoutLane = new Lane(true, b + lastNum);
             this.add(expressCheckoutLane);
-        }        double currentTime = 0;
+        }
+    }
 
-    }  
-
-    //Problem: account for customer being halfway through checkout when new customer is added to line.
+    // Problem: account for customer being halfway through checkout when new
+    // customer is added to line.
     /*
      * This lane takes the current event time and uses it to update all the lines.
      * It (hopefully) checks people out and schedules CheckedOutEvents
      */
 
     public void update(double time) {
-        double timeElapsed;
         Collections.sort(this, new LineComparator());
-        timeElapsed = time-currentTime;
-        currentTime = time;
-    // for(Lane N : this){
-    //     N.update(timeElapsed);
-    // } //Problem : pipe in time from main method to be used to calculate wait time 
-    //Every time a customer is added to line, not during update time.
-
-        //Get average lane size stats.
+        // Get average lane size stats.
         double avgLaneSize = 0;
-        for(Lane X : this){
+        for (Lane X : this) {
             avgLaneSize += X.size();
-            
+
         }
-        avgLaneSize = avgLaneSize/this.size();
+        avgLaneSize = avgLaneSize / this.size();
         avgSizes.add(avgLaneSize);
 
-        //Get longest line size
-        for(Lane X : this){
-            if(X.size() >= longestLineSize){
+        // Get longest line size
+        for (Lane X : this) {
+            if (X.size() >= longestLineSize) {
                 longestLineSize = X.size();
             }
         }
 
     }
-    public int getLongestLineSize(){
+
+    public int getLongestLineSize() {
         return longestLineSize;
     }
+
     /*
      * This method automatically sorts the customer into the best lane depending on
      * whether or not they get to use an express lane. Wait time is calculated
      * within lane class.
      */
     public void addCustomerToALane(Customer C) {
-        //Check lane equality
+        // Check lane equality
         boolean areAllEqual = false;
         int size = this.get(0).size();
         for (Lane L : this) {
@@ -99,8 +94,9 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         }
         // Elgible for express, unequal length lines. Shortest line regardless.
         if (C.getExpressElgibility() && !areAllEqual) {
-            System.out.println("Less than 12, chose lane " + this.get(0).getLaneNumber() + " (" + this.get(0).size() + ")");
-           this.get(0).addCustomerToCheckoutLine(C);
+            System.out.println(
+                    "Less than 12, chose lane " + this.get(0).getLaneNumber() + " (" + this.get(0).size() + ")");
+            this.get(0).addCustomerToCheckoutLine(C);
             return;
         }
 
@@ -126,7 +122,8 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
         }
 
     }
-    public ArrayList<Double> getAvgLength(){
+
+    public ArrayList<Double> getAvgLength() {
         return avgSizes;
     }
 

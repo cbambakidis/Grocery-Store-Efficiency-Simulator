@@ -14,6 +14,7 @@ public class Customer implements Comparable {
     private double totalTimeInStore;
     private boolean isElgibleForExpress = false;
     private int numberPeepsInFront = 0;
+    private double checkoutTime;
 
     /*
      * Makes a new customer object, using the information from the text file, as
@@ -90,7 +91,13 @@ public class Customer implements Comparable {
     }
 
     public void addCheckedOutEvent(Lane N) {
-        orderOfEvents.add(new CheckedOutEvent(this, N));
+        CheckedOutEvent d = new CheckedOutEvent(this, N);
+        orderOfEvents.add(d);
+        checkoutTime = d.getTimeOfOccurence(); 
+    }
+
+    public double getCheckoutTime(){
+        return checkoutTime;
     }
 
     @Override
