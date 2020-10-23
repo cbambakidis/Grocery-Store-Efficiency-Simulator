@@ -13,18 +13,20 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
     private static final long serialVersionUID = 1L;
     private ArrayList<Double> avgSizes = new ArrayList<>();
     private int longestLineSize = 0;
-    double currentTime = 0;
-
+    private int numNormalLanes;
+    private int numExpressLanes;
     public CheckoutCenter(int numberOfNormalLanes, int numberOfExpressLanes, PriorityQueue<Event> eventQ) {
         int lastNum = 0;
         for (int a = 0; a < numberOfNormalLanes; a++) {
             Lane normalCheckoutLane = new Lane(false, a);
             this.add(normalCheckoutLane);
             lastNum++;
+            numNormalLanes++;
         }
         for (int b = 0; b < numberOfExpressLanes; b++) {
             Lane expressCheckoutLane = new Lane(true, b + lastNum);
             this.add(expressCheckoutLane);
+            numExpressLanes++;
         }
     }
 
@@ -52,6 +54,8 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
                 longestLineSize = X.size();
             }
         }
+        
+
 
     }
 
@@ -121,6 +125,14 @@ public class CheckoutCenter extends ArrayList<Lane> implements Comparable<Lane> 
             }
         }
 
+    }
+
+    public int getNumNormalLanes(){
+        return numNormalLanes;
+    }
+
+    public int getNumExpressLanes(){
+        return numExpressLanes;
     }
 
     public ArrayList<Double> getAvgLength() {

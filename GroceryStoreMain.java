@@ -13,8 +13,9 @@ public class GroceryStoreMain {
         System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        CheckoutCenter checkoutLanes = new CheckoutCenter(8, 4, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalBig.txt", events, checkoutLanes);
+        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2, events);
+        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
+
         // driver loop
         double time = 0;
         double timeElapsed = 0;
@@ -22,7 +23,7 @@ public class GroceryStoreMain {
         while (events.peek() != null) {
             time = events.peek().getTimeOfOccurence();
             events.poll().execute();
-            timeElapsed = time-currentTime;
+            timeElapsed = time - currentTime;
             currentTime = time;
             Collections.sort(checkoutLanes, new LineComparator());
             checkoutLanes.update(timeElapsed);
@@ -37,11 +38,32 @@ public class GroceryStoreMain {
             }
             averageWaitTime += N.getWaitTime();
         }
+        double expressWaitTime = 0;
+        int counter = 0;
+        for(Lane X : checkoutLanes){
+            if(X.isExpress()){
+                expressWaitTime+= X.getAvgWaitTime();
+                counter++;
+            }
+        }
+        expressWaitTime = expressWaitTime/counter;
+
+        double normalWaitTime = 0;
+        counter = 0;
+        for(Lane X : checkoutLanes){
+            if(!X.isExpress()){
+                normalWaitTime+= X.getAvgWaitTime();
+                counter++;
+            }
+        }
+        normalWaitTime = normalWaitTime/counter;
+
+        expressWaitTime = expressWaitTime/counter;
         double averageWaitTimeP = 0;
         double avgForNormal = 0;
         int numNormal = 0;
         int numP = 0;
-        //Average wait times for normal and express lanes.
+        // Average wait times for normal and express lanes.
         for (Customer N : customers) {
             if (N.getExpressElgibility()) {
                 numP++;
@@ -52,28 +74,36 @@ public class GroceryStoreMain {
             }
         }
 
-        //Average line length.
+        // Average line length.
         double x = 0;
         for (double d : checkoutLanes.getAvgLength()) {
             x += d;
         }
-
-        System.out.printf("Average Wait Time Per Customer: %.3f minutes", (averageWaitTime / customers.size()));
+        System.out.println("---------------------------------------------------------------------------------");
+        System.out.println("SIMULATION WITH (" + checkoutLanes.getNumNormalLanes() + ") NORMAL LANES AND (" + checkoutLanes.getNumExpressLanes() + ") EXPRESS LANES COMPLETE. STATS:");
+        System.out.println("TOTAL CUSTOMERS PROCESSED: " + customers.size() + " (" + numP + " with under 12 items, " + numNormal + " with over 12 items).");
+        System.out.printf("AVERAGE WAIT TIME PER CUSTOMER: %.3f minutes", (averageWaitTime / customers.size()));
         System.out.println();
-        System.out.printf("Average Line Length: %.2f", (x / checkoutLanes.getAvgLength().size()));
+        System.out.printf("WAIT TIME FOR CUSTOMERS WITH OVER 12 ITEMS: %.3f minutes", avgForNormal / numNormal);
         System.out.println();
-        System.out.println("Longest Line Length: " + checkoutLanes.getLongestLineSize());
-        System.out.printf("Average normal checkout lane wait time: %.3f minutes", avgForNormal / numNormal);
+        System.out.printf("WAIT TIME FOR CUSTOMERS WITH 12 OR LESS ITEMS: %.3f minutes", averageWaitTimeP / numP);
         System.out.println();
-        System.out.printf("Average express checkout lane wait time: %.3f minutes", averageWaitTimeP / numP);
+        System.out.printf("AVERAGE WAIT TIME FOR NORMAL LANES: %.3f minutes", normalWaitTime);
         System.out.println();
-        System.out.println("Number of customers passed through each line: ");
+        System.out.printf("AVERAGE WAIT TIME FOR EXPRESS LANES: %.3f minutes", expressWaitTime);
+        System.out.println();
+        System.out.printf("AVERAGE LINE LENGTH: %.3f customers", (x / checkoutLanes.getAvgLength().size()));
+        System.out.println();
+        System.out.println("LONGEST LINE LENGTH: " + checkoutLanes.getLongestLineSize());
+        System.out.println("STATS BY LANE: ");
         System.out.println("\tLane Number\t\tIs Express\t\t# customers\t\tAverage wait time");
         Collections.sort(checkoutLanes);
-        for(Lane N : checkoutLanes){
-            System.out.printf("\t\t" + N.getLaneNumber() + "\t\t\t\t" + N.isExpress() + "\t\t\t" + N.getTotalCustomers() + "\t\t\t\t %.2f", N.getAvgWaitTime());
+        for (Lane N : checkoutLanes) {
+            System.out.printf("\t\t" + N.getLaneNumber() + "\t\t\t\t" + N.isExpress() + "\t\t\t" + N.getTotalCustomers()
+                    + "\t\t\t\t %.2f", N.getAvgWaitTime());
             System.out.println();
         }
+        System.out.println("-------------------------------PROGRAM TERMINATED---------------------------------");
     }
 
     /*
