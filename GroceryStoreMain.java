@@ -1,3 +1,11 @@
+
+/*
+ * @author cbambakidis
+ * CS1181, Fall 2020, D.C.E (During Coronavirus Era)
+ * Project 3
+*/
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -6,27 +14,60 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Collections;
+/*
+ * This project is intended to simulate the daily actions of customers in a grocery store,
+ * and in a way, model their behavior when it comes to checkout lines. The purpose is to 
+ * gain an understanding of how wait time is affected by the amount of regular and express lanes
+ * open at a time.
+*/
+import java.util.InputMismatchException;
 
 public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
-        PrintStream fileOut = new PrintStream("./out.txt");
-        System.setOut(fileOut);
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2, events);
-        ArrayList<Customer> customers = readCustomerList("arrivalMedium.txt", events, checkoutLanes);
-
+        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2);
+        Scanner keyScan = new Scanner(System.in);
+        /*
+         * Output is printed to the out.txt file, not the console!
+         */
+        boolean hasScanned = false;
+        int choice = 0;
+        String textFileChoice = new String();
+        System.out.print("Enter (1) for arrival simple, (2) for arrival medium, and (3) for arrival big: ");
+        try {
+            while (!hasScanned) {
+                choice = keyScan.nextInt();
+                if (choice == 1 || choice == 2 || choice == 3) {
+                    hasScanned = true;
+                } else {
+                    System.out.println("Please enter 1, 2, or 3.");
+                }
+            }
+        } catch (InputMismatchException x) {
+            System.out.println("Input Mismatch.");
+            System.exit(0);
+        }
+        keyScan.close();
+        switch (choice) {
+            case 1:
+                textFileChoice = "arrivalSimple.txt";
+                break;
+            case 2:
+                textFileChoice = "arrivalMedium.txt";
+                break;
+            case 3:
+                textFileChoice = "arrivalBig.txt";
+                break;
+        }
+        PrintStream fileOut = new PrintStream("./out.txt");
+        System.setOut(fileOut);
+        ArrayList<Customer> customers = readCustomerList(textFileChoice, events, checkoutLanes);
         // driver loop
-        double time = 0;
-        double timeElapsed = 0;
-        double currentTime = 0;
         while (events.peek() != null) {
-            time = events.peek().getTimeOfOccurence();
             events.poll().execute();
-            timeElapsed = time - currentTime;
-            currentTime = time;
             Collections.sort(checkoutLanes, new LineComparator());
-            checkoutLanes.update(timeElapsed);
+            checkoutLanes.update();
         }
 
         // Calculate avg wait times.
@@ -38,39 +79,38 @@ public class GroceryStoreMain {
             }
             averageWaitTime += N.getWaitTime();
         }
-        double expressWaitTime = 0;
+        double expressLaneWaitTime = 0;
         int counter = 0;
-        for(Lane X : checkoutLanes){
-            if(X.isExpress()){
-                expressWaitTime+= X.getAvgWaitTime();
+        for (Lane X : checkoutLanes) {
+            if (X.isExpress()) {
+                expressLaneWaitTime += X.getAvgWaitTime();
                 counter++;
             }
         }
-        expressWaitTime = expressWaitTime/counter;
+        expressLaneWaitTime = expressLaneWaitTime / counter;
 
-        double normalWaitTime = 0;
+        double normalLaneWaitTime = 0;
         counter = 0;
-        for(Lane X : checkoutLanes){
-            if(!X.isExpress()){
-                normalWaitTime+= X.getAvgWaitTime();
+        for (Lane X : checkoutLanes) {
+            if (!X.isExpress()) {
+                normalLaneWaitTime += X.getAvgWaitTime();
                 counter++;
             }
         }
-        normalWaitTime = normalWaitTime/counter;
+        normalLaneWaitTime = normalLaneWaitTime / counter;
 
-        expressWaitTime = expressWaitTime/counter;
-        double averageWaitTimeP = 0;
-        double avgForNormal = 0;
-        int numNormal = 0;
-        int numP = 0;
+        double averageWaitTimePriorityCustomers = 0;
+        double averageWaitTimeForNormalCustomers = 0;
+        int numNormalCustomers = 0;
+        int numPriorityCustomers = 0;
         // Average wait times for normal and express lanes.
         for (Customer N : customers) {
             if (N.getExpressElgibility()) {
-                numP++;
-                averageWaitTimeP += N.getWaitTime();
+                numPriorityCustomers++;
+                averageWaitTimePriorityCustomers += N.getWaitTime();
             } else {
-                numNormal++;
-                avgForNormal += N.getWaitTime();
+                numNormalCustomers++;
+                averageWaitTimeForNormalCustomers += N.getWaitTime();
             }
         }
 
@@ -79,18 +119,23 @@ public class GroceryStoreMain {
         for (double d : checkoutLanes.getAvgLength()) {
             x += d;
         }
+
         System.out.println("---------------------------------------------------------------------------------");
-        System.out.println("SIMULATION WITH (" + checkoutLanes.getNumNormalLanes() + ") NORMAL LANES AND (" + checkoutLanes.getNumExpressLanes() + ") EXPRESS LANES COMPLETE. STATS:");
-        System.out.println("TOTAL CUSTOMERS PROCESSED: " + customers.size() + " (" + numP + " with under 12 items, " + numNormal + " with over 12 items).");
+        System.out.println("SIMULATION WITH (" + checkoutLanes.getNumNormalLanes() + ") NORMAL LANES AND ("
+                + checkoutLanes.getNumExpressLanes() + ") EXPRESS LANES - STATS:");
+        System.out.println("TOTAL CUSTOMERS PROCESSED: " + customers.size() + " (" + numPriorityCustomers
+                + " with under 12 items, " + numNormalCustomers + " with over 12 items).");
         System.out.printf("AVERAGE WAIT TIME PER CUSTOMER: %.3f minutes", (averageWaitTime / customers.size()));
         System.out.println();
-        System.out.printf("WAIT TIME FOR CUSTOMERS WITH OVER 12 ITEMS: %.3f minutes", avgForNormal / numNormal);
+        System.out.printf("WAIT TIME FOR CUSTOMERS WITH OVER 12 ITEMS: %.3f minutes",
+                averageWaitTimeForNormalCustomers / numNormalCustomers);
         System.out.println();
-        System.out.printf("WAIT TIME FOR CUSTOMERS WITH 12 OR LESS ITEMS: %.3f minutes", averageWaitTimeP / numP);
+        System.out.printf("WAIT TIME FOR CUSTOMERS WITH 12 OR LESS ITEMS: %.3f minutes",
+                averageWaitTimePriorityCustomers / numPriorityCustomers);
         System.out.println();
-        System.out.printf("AVERAGE WAIT TIME FOR NORMAL LANES: %.3f minutes", normalWaitTime);
+        System.out.printf("AVERAGE WAIT TIME FOR NORMAL LANES: %.3f minutes", normalLaneWaitTime);
         System.out.println();
-        System.out.printf("AVERAGE WAIT TIME FOR EXPRESS LANES: %.3f minutes", expressWaitTime);
+        System.out.printf("AVERAGE WAIT TIME FOR EXPRESS LANES: %.3f minutes", expressLaneWaitTime);
         System.out.println();
         System.out.printf("AVERAGE LINE LENGTH: %.3f customers", (x / checkoutLanes.getAvgLength().size()));
         System.out.println();
@@ -103,12 +148,26 @@ public class GroceryStoreMain {
                     + "\t\t\t\t %.2f", N.getAvgWaitTime());
             System.out.println();
         }
-        System.out.println("-------------------------------PROGRAM TERMINATED---------------------------------");
+        System.out.println("------------------------------SIMULATION COMPLETE--------------------------------");
+        System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+        System.out.println(
+                "Simulated completed. Please view output in out.txt file. Stats will be at the bottom of the file.");
+
     }
 
     /*
+     * This method reads in all the customers from the desired text file. Arrival
+     * events are scheduled upon customer construction. The method returns an
+     * arraylist of customer objects from the text file.
      * 
-    */
+     * @fileName name of the file to read customers from.
+     * 
+     * @eventList the main list of events that will happen. Each customer has access
+     * to this list.
+     * 
+     * @checkoutLanes is the checkout center with all the lanes for once they're
+     * done checking out.
+     */
     public static ArrayList<Customer> readCustomerList(String fileName, Queue<Event> eventList,
             CheckoutCenter checkoutLanes) throws IOException {
         FileReader reader = new FileReader(fileName);

@@ -1,9 +1,9 @@
 public class ArrivalEvent extends Event {
 
-        /*
-         * The arrival event has a time of occurence of when the customer arrives in the store, from the text file.
-         * When it executes, it just prints that it has arrived in the store.
-        */
+/*
+ * The arrival event has a time of occurence of when the customer arrives in the store, from the text file.
+ * When it executes, it just prints that it has arrived in the store, and schedules their done shopping event.
+*/
     public ArrivalEvent(Customer C) {
         super.setTimeOfOccurence(C.getArrivalTime());
         super.setCustomer(C);

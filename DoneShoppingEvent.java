@@ -1,8 +1,7 @@
 
 /*
  * The DoneShopping event is what is created when the customer finishes shopping.
- * It adds the customer to the checkout center when it executes. It also determines if the
- * Customer can use the express lane.
+ * It adds the customer to the checkout center when it executes. 
 */
 public class DoneShoppingEvent extends Event {
     private CheckoutCenter checkoutLanes;

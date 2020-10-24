@@ -1,12 +1,15 @@
 import java.util.PriorityQueue;
 /*
  * The lane object represents a line of people waiting to check out.
- * It has a method to add a customer to itself, as well as data to calculate how long it will take
- * for each customer to check out.
+ * It has a method to add a customer to itself, as well as methods to calculate how long it will take
+ * for each customer to check out. It is mostly interacted with from the checkoutCenter.
 */
 
 public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
 
+    /*
+     * Self explanatory local vars. 
+    */
     private static final long serialVersionUID = 1L;
     private int laneNumber;
     private double timeToCheckout;
@@ -15,12 +18,19 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
     private boolean isExpress;
     private double avgWaitTime;
     private int numberCustomersTotal = 0;
-    Customer customerCurrentlyCheckingOut;
 
     public Lane() {
 
     }
 
+    /*
+     * @isExpress is the boolean determining whether or not this lane is an express
+     * lane.
+     * 
+     * @laneNumber is just a number designated to each lane to help keep track of
+     * them.
+     * 
+     */
     public Lane(boolean isExpress, int laneNumber) {
         if (isExpress) {
             this.isExpress = true;
@@ -33,43 +43,61 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
         }
         this.laneNumber = laneNumber;
     }
-    // PIPE TIME ELAPSED STRAIGHT THROUGH ONCE A CUSTOMER IS BEING ADDED TO
-    // CHECKOUT.
 
-    public void addCustomerToCheckoutLine(Customer c) {
-        // If there's already someone checking out, they have to wait
-        // For them to check out. If there's multiple people in line, it will be
-        // Their checkout times plus however far along guy in the lead is.
+
+    /*
+     * @custyToBeAdded is the customer to be added to this lane. This method is
+     * called from the checkoutCenter, after the customer has been sorted to the
+     * shortest lane based on express elgibility.
+     */
+    public void addCustomerToCheckoutLine(Customer custyToBeAdded) {
+
+        // If there is nobody in line, they don't have to wait.
         if (this.peek() == null) {
-            c.setWaitTime(0);
-        } else if (this.size() == 1) {
-            timeToCheckout = ((this.peek().getShoppingList() * this.checkoutRate + this.paymentTime) - (c.getDoneShoppingTime() - this.peek().getDoneShoppingTime()));
-            //System.out.println((this.peek().getShoppingList() * this.checkoutRate + this.paymentTime) + " " + c.getDoneShoppingTime() + " " + this.peek().getDoneShoppingTime());
-            c.setWaitTime(this.timeToCheckout);
-            if(timeToCheckout <= 0){
-                c.setWaitTime(0);
+            custyToBeAdded.setWaitTime(0);
+        }
+
+        // If there's one person in line, they have to wait for them to be done
+        // shopping.
+        // This method calculates how far along they are based on when they arrived.
+        else if (this.size() == 1) {
+            timeToCheckout = ((this.peek().getShoppingList() * this.checkoutRate + this.paymentTime)
+                    - (custyToBeAdded.getDoneShoppingTime() - this.peek().getDoneShoppingTime()));
+            custyToBeAdded.setWaitTime(this.timeToCheckout);
+            if (timeToCheckout <= 0) {
+                custyToBeAdded.setWaitTime(0);
             }
         }
-        // Make it into absolute value, and fix the other one below.
+
+        // If there's multiple people in line, the customer joining the line will have
+        // to wait
+        // For everyone ahead of them to check out, as well as the guy at the front of
+        // the line.
         else if (this.size() > 1) {
-            this.timeToCheckout = (c.getDoneShoppingTime() - this.peek().getDoneShoppingTime()
+            this.timeToCheckout = (custyToBeAdded.getDoneShoppingTime() - this.peek().getDoneShoppingTime()
                     - (this.peek().getShoppingList() * this.checkoutRate + this.paymentTime));
-            c.setWaitTime(this.timeToCheckout + calculateWaitTime());
-            if(timeToCheckout <= 0){
-                c.setWaitTime(0);
+            custyToBeAdded.setWaitTime(this.timeToCheckout + calculateWaitTime());
+            if (timeToCheckout <= 0) {
+                custyToBeAdded.setWaitTime(0);
             }
         }
+        // After their wait time is calculated, they get added to the line, and their
+        // checked out
+        // event gets added to the event queue.
         avgWaitTime += Math.abs(this.timeToCheckout);
         numberCustomersTotal++;
-        c.setPeopleInFront(this.size());
-        this.offer(c);
-        c.addCheckedOutEvent(this);
+        custyToBeAdded.setPeopleInFront(this.size());
+        this.offer(custyToBeAdded);
+        custyToBeAdded.addCheckedOutEvent(this);
 
     }
 
-    public Customer currentCustomer() {
-        return this.customerCurrentlyCheckingOut;
-    }
+    /*
+     * If there are more than 2 people in this lane, then this method is called
+     * every time a customer tries to join the lane. It calculates how long it will
+     * take everyone in front of the customer to check out, excluding the customer
+     * at the head of the line, whos time is calculated above.
+     */
 
     public double calculateWaitTime() {
         double totalWaitTime = 0;
@@ -81,6 +109,8 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
         return totalWaitTime;
     }
 
+    // Various getters for statistical purposes, as well
+    // as for use in the checkoutCenter.
     public int getTotalCustomers() {
         return numberCustomersTotal;
     }
@@ -105,6 +135,9 @@ public class Lane extends PriorityQueue<Customer> implements Comparable<Lane> {
         return this.avgWaitTime / this.numberCustomersTotal;
     }
 
+    // I don't think this method actually gets used.. but just in case I filled it
+    // in
+    // since the class can't be comparable without it.
     @Override
     public int compareTo(Lane o) {
         if (this.getLaneNumber() > o.laneNumber) {

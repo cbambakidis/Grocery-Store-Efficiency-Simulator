@@ -1823,13 +1823,13 @@ Customer 403 waited 2.07
 Customer 416 waited 2.43
 Customer 419 waited 1.25
 ---------------------------------------------------------------------------------
-SIMULATION WITH (4) NORMAL LANES AND (2) EXPRESS LANES COMPLETE. STATS:
+SIMULATION WITH (4) NORMAL LANES AND (2) EXPRESS LANES - STATS:
 TOTAL CUSTOMERS PROCESSED: 452 (191 with under 12 items, 261 with over 12 items).
 AVERAGE WAIT TIME PER CUSTOMER: 0.079 minutes
 WAIT TIME FOR CUSTOMERS WITH OVER 12 ITEMS: 0.134 minutes
 WAIT TIME FOR CUSTOMERS WITH 12 OR LESS ITEMS: 0.005 minutes
 AVERAGE WAIT TIME FOR NORMAL LANES: 1.517 minutes
-AVERAGE WAIT TIME FOR EXPRESS LANES: 0.048 minutes
+AVERAGE WAIT TIME FOR EXPRESS LANES: 0.191 minutes
 AVERAGE LINE LENGTH: 0.381 customers
 LONGEST LINE LENGTH: 2
 STATS BY LANE: 
@@ -1840,4 +1840,4 @@ STATS BY LANE:
 		3				false			82				 2.32
 		4				true			68				 0.38
 		5				true			66				 0.00
--------------------------------PROGRAM TERMINATED---------------------------------
+------------------------------SIMULATION COMPLETE--------------------------------

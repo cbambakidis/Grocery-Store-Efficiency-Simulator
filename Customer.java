@@ -1,7 +1,4 @@
 import java.util.Queue;
-//Waitt time is time
-//it took for them to start checking out, not finish.
-//so subtract time it takes for me to check out?
 public class Customer implements Comparable {
     private double arrivalTime;
     private ArrivalEvent myArrivalEvent;
