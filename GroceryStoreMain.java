@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
+
 import java.util.Collections;
 /*
  * This project is intended to simulate the daily actions of customers in a grocery store,
@@ -26,7 +27,6 @@ public class GroceryStoreMain {
     public static void main(String[] args) throws IOException {
 
         PriorityQueue<Event> events = new PriorityQueue<Event>(15, new EventComparator());
-        CheckoutCenter checkoutLanes = new CheckoutCenter(4, 2);
         Scanner keyScan = new Scanner(System.in);
         /*
          * Output is printed to the out.txt file, not the console!
@@ -46,9 +46,10 @@ public class GroceryStoreMain {
             }
         } catch (InputMismatchException x) {
             System.out.println("Input Mismatch.");
+            keyScan.close();
             System.exit(0);
         }
-        keyScan.close();
+
         switch (choice) {
             case 1:
                 textFileChoice = "arrivalSimple.txt";
@@ -60,6 +61,39 @@ public class GroceryStoreMain {
                 textFileChoice = "arrivalBig.txt";
                 break;
         }
+        int numNormalLanes = 0;
+        int NumExpressLanes = 0;
+        boolean laneChoice = false;
+        boolean expressChoice = false;
+        System.out.println("Please enter the number of desired normal checkout lanes: ");
+        try {
+            while (!laneChoice) {
+                numNormalLanes = keyScan.nextInt();
+                if (numNormalLanes > 12 || numNormalLanes < 0) {
+                    System.out.println("Total number of lanes cannot exceed 12 or be negative. Please try again: ");
+                } else
+                    laneChoice = true;
+
+                System.out.println("Please enter the number of desired express checkout lanes: ");
+                while (!expressChoice) {
+                    NumExpressLanes = keyScan.nextInt();
+
+                    if (NumExpressLanes + numNormalLanes > 12 || NumExpressLanes < 0) {
+                        System.out.println(
+                                "You either entered a negative number or too many lanes. You can only have up to 12 lanes total. Please try again: ");
+                    } else
+                        expressChoice = true;
+                }
+
+            }
+        }
+
+        catch (InputMismatchException X) {
+            System.out.println("Input mismatch");
+            keyScan.close();
+            System.exit(0);
+        }
+        CheckoutCenter checkoutLanes = new CheckoutCenter(numNormalLanes, NumExpressLanes); //Edit lane numbers here if desired.
         PrintStream fileOut = new PrintStream("./out.txt");
         System.setOut(fileOut);
         ArrayList<Customer> customers = readCustomerList(textFileChoice, events, checkoutLanes);
@@ -151,7 +185,7 @@ public class GroceryStoreMain {
         System.out.println("------------------------------SIMULATION COMPLETE--------------------------------");
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
         System.out.println(
-                "Simulated completed. Please view output in out.txt file. Stats will be at the bottom of the file.");
+                "Simulation completed. Output can be viewed in out.txt file.");
 
     }
 
