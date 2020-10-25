@@ -30,6 +30,7 @@ public class GroceryStoreMain {
         Scanner keyScan = new Scanner(System.in);
         /*
          * Output is printed to the out.txt file, not the console!
+         * Code below gets user choice for file and amount of lanes.
          */
         boolean hasScanned = false;
         int choice = 0;
@@ -93,6 +94,8 @@ public class GroceryStoreMain {
             keyScan.close();
             System.exit(0);
         }
+
+        //Make new checkout center, set output to file, read in customer data, and begin.
         CheckoutCenter checkoutLanes = new CheckoutCenter(numNormalLanes, NumExpressLanes); //Edit lane numbers here if desired.
         PrintStream fileOut = new PrintStream("./out.txt");
         System.setOut(fileOut);
@@ -106,13 +109,19 @@ public class GroceryStoreMain {
 
         // Calculate avg wait times.
         double averageWaitTime = 0;
+        double biggestWaitTime = 0;
         for (Customer N : customers) {
             if (N.getWaitTime() != 0) {
-                System.out.printf("Customer " + N + " waited %.2f", N.getWaitTime());
-                System.out.println("");
+                // System.out.printf("Customer " + N + " waited %.2f", N.getWaitTime());
+                // System.out.println("");
+                if (N.getWaitTime() > biggestWaitTime){
+                    biggestWaitTime = N.getWaitTime();
+                    
+                }
             }
             averageWaitTime += N.getWaitTime();
         }
+
         double expressLaneWaitTime = 0;
         int counter = 0;
         for (Lane X : checkoutLanes) {
@@ -154,6 +163,7 @@ public class GroceryStoreMain {
             x += d;
         }
 
+        //Print stats to output file.
         System.out.println("---------------------------------------------------------------------------------");
         System.out.println("SIMULATION WITH (" + checkoutLanes.getNumNormalLanes() + ") NORMAL LANES AND ("
                 + checkoutLanes.getNumExpressLanes() + ") EXPRESS LANES - STATS:");
@@ -174,6 +184,8 @@ public class GroceryStoreMain {
         System.out.printf("AVERAGE LINE LENGTH: %.3f customers", (x / checkoutLanes.getAvgLength().size()));
         System.out.println();
         System.out.println("LONGEST LINE LENGTH: " + checkoutLanes.getLongestLineSize());
+        System.out.printf("LONGEST WAIT TIME: %.2f minutes", biggestWaitTime);
+        System.out.println();
         System.out.println("STATS BY LANE: ");
         System.out.println("\tLane Number\t\tIs Express\t\t# customers\t\tAverage wait time");
         Collections.sort(checkoutLanes);
@@ -185,7 +197,7 @@ public class GroceryStoreMain {
         System.out.println("------------------------------SIMULATION COMPLETE--------------------------------");
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
         System.out.println(
-                "Simulation completed. Output can be viewed in out.txt file.");
+                "Simulation complete. Output can be viewed in out.txt file.");
 
     }
 
